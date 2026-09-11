@@ -1,4 +1,4 @@
-
+<div>
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="sar-colorization-app/frontend/SatQuery-AI.png">
@@ -8,7 +8,7 @@
 </p>
 
 
-
+</div>
 
 <div align="center">
 
