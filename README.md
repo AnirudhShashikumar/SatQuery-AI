@@ -12,7 +12,6 @@
 
 <div align="center">
 
-# 🛰️ SatQuery AI
 
 ### Ask Earth Anything. Get Evidence, Not Just Answers.
 
