@@ -1,8 +1,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="frontend/public/SatQuery-AI.png">
-    <source media="(prefers-color-scheme: light)" srcset="frontend/public/SatQuery-AI.png">
+    <source media="(prefers-color-scheme: dark)" srcset="sar-colorization-app/public/SatQuery-AI.png">
+    <source media="(prefers-color-scheme: light)" srcset="fsar-colorization-app/public/SatQuery-AI.png">
     <img alt="SatQuery-AI" src="frontend/public/SatQuery-AI.png" width="540">
   </picture>
 </p>
