@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="100%" height="100%" fill="white"/>
+<text x="120" y="50" font-family="sans-serif" font-size="28" fill="#172b4d">In-process grounding latency (ms)</text>
+<line x1="120" y1="90" x2="120" y2="550" stroke="#6b778c" stroke-width="2"/>
+<line x1="120" y1="550" x2="1140" y2="550" stroke="#6b778c" stroke-width="2"/>
+<rect x="137.8" y="442.8" width="49.3" height="107.2" rx="8" fill="#1677ff"/>
+<text x="137.8" y="430.8" font-family="sans-serif" font-size="18" fill="#172b4d">10.0</text>
+<text x="137.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1141-1152</text>
+<rect x="222.8" y="292.7" width="49.3" height="257.3" rx="8" fill="#12b886"/>
+<text x="222.8" y="280.7" font-family="sans-serif" font-size="18" fill="#172b4d">24.0</text>
+<text x="222.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1152-1163</text>
+<rect x="307.9" y="131.8" width="49.3" height="418.2" rx="8" fill="#f59f00"/>
+<text x="307.9" y="119.8" font-family="sans-serif" font-size="18" fill="#172b4d">39.0</text>
+<text x="307.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1163-1174</text>
+<rect x="392.9" y="367.7" width="49.3" height="182.3" rx="8" fill="#e64980"/>
+<text x="392.9" y="355.7" font-family="sans-serif" font-size="18" fill="#172b4d">17.0</text>
+<text x="392.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1174-1184</text>
+<rect x="477.9" y="507.1" width="49.3" height="42.9" rx="8" fill="#845ef7"/>
+<text x="477.9" y="495.1" font-family="sans-serif" font-size="18" fill="#172b4d">4.0</text>
+<text x="477.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1184-1195</text>
+<rect x="562.9" y="507.1" width="49.3" height="42.9" rx="8" fill="#15aabf"/>
+<text x="562.9" y="495.1" font-family="sans-serif" font-size="18" fill="#172b4d">4.0</text>
+<text x="562.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1195-1206</text>
+<rect x="647.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#1677ff"/>
+<text x="647.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="647.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1206-1217</text>
+<rect x="732.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#12b886"/>
+<text x="732.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="732.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1217-1228</text>
+<rect x="817.9" y="539.3" width="49.3" height="10.7" rx="8" fill="#f59f00"/>
+<text x="817.9" y="527.3" font-family="sans-serif" font-size="18" fill="#172b4d">1.0</text>
+<text x="817.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1228-1239</text>
+<rect x="902.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#e64980"/>
+<text x="902.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="902.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1239-1249</text>
+<rect x="987.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#845ef7"/>
+<text x="987.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="987.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1249-1260</text>
+<rect x="1072.8" y="539.3" width="49.3" height="10.7" rx="8" fill="#15aabf"/>
+<text x="1072.8" y="527.3" font-family="sans-serif" font-size="18" fill="#172b4d">1.0</text>
+<text x="1072.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">1260-1271</text>
+</svg>

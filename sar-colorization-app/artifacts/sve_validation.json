@@ -1,0 +1,140 @@
+{
+  "artifact_verification": {
+    "checksum_fingerprint": "sha256:a99c0bf0fb44",
+    "verification_ms": 36,
+    "verified": true
+  },
+  "checks": {
+    "bi_temporal": {
+      "disclaimer": "Embedding differences are scene-level semantic evidence, not spatial change localization.",
+      "label": "Before/after scene-level semantic similarity",
+      "prior_changes": [
+        {
+          "after_similarity": 0.103684,
+          "before_similarity": 0.146791,
+          "difference": -0.043107,
+          "label": "arable land"
+        },
+        {
+          "after_similarity": 0.11527,
+          "before_similarity": 0.154631,
+          "difference": -0.039361,
+          "label": "urban or built-up area"
+        },
+        {
+          "after_similarity": 0.088824,
+          "before_similarity": 0.12352,
+          "difference": -0.034696,
+          "label": "industrial area"
+        },
+        {
+          "after_similarity": 0.0882,
+          "before_similarity": 0.121924,
+          "difference": -0.033724,
+          "label": "agricultural land"
+        },
+        {
+          "after_similarity": 0.080283,
+          "before_similarity": 0.113958,
+          "difference": -0.033675,
+          "label": "barren land"
+        }
+      ],
+      "similarity": 0.937879,
+      "status": "supporting_evidence"
+    },
+    "caption_reranking": {
+      "candidate_scores": [
+        0.128517,
+        0.136402
+      ],
+      "disclosure": "Similarity is scene-level consistency evidence, not caption correctness.",
+      "original_candidate_order": [
+        0,
+        1
+      ],
+      "original_candidates": [
+        "a satellite scene containing vegetation",
+        "an urban satellite scene"
+      ],
+      "reranked": true,
+      "reranked_candidate_order": [
+        1,
+        0
+      ],
+      "score": 0.136402,
+      "selected_candidate_index": 1
+    },
+    "controlled_vqa": {
+      "answer_source": "computed optical support maps and metadata",
+      "category": "presence_vegetation",
+      "supported": true
+    },
+    "embedding_exported": false,
+    "full_report_generation": {
+      "artifact_count": 4,
+      "formats": [
+        "pdf",
+        "json",
+        "csv",
+        "zip"
+      ],
+      "status": "success"
+    },
+    "grounding_support": {
+      "disclosure": "Scene-level plausibility does not validate or reject Grounding DINO detections.",
+      "related_scene_labels": [
+        "road network",
+        "urban or built-up area",
+        "residential area"
+      ],
+      "state": "supported",
+      "target": "road",
+      "warning": null
+    },
+    "optical_geotiff": "success",
+    "optical_png": "success",
+    "raw_sar": {
+      "comparison_status": "skipped_raw_sar",
+      "status": "unsupported_input"
+    },
+    "vqa_consistency": {
+      "explanation": "The VQA answer has limited scene-level embedding support.",
+      "similarity": 0.131064,
+      "state": "weak agreement",
+      "target_concept": "grassland"
+    }
+  },
+  "metrics": {
+    "average_runtime_ms": 1547.4,
+    "cache_hit_rate_percent": 60.6,
+    "caption_reranking_count": 1,
+    "checksum_failure_count": 0,
+    "cpu_fallback_count": 0,
+    "device_usage": {
+      "cpu": 5
+    },
+    "enabled": true,
+    "failure_count": 0,
+    "inference_count": 5,
+    "lifecycle_status": "ready",
+    "model_load_count": 1,
+    "model_reuse_count": 4,
+    "mps_fallback_count": 0,
+    "vqa_agreement_count": 0,
+    "vqa_disagreement_count": 0
+  },
+  "runtime": {
+    "bi_temporal_inference_ms": 176,
+    "cold_load_and_inference_ms": 7163,
+    "cpu_fallback_ms": null,
+    "device": "cpu",
+    "mps_available": false,
+    "mps_inference_ms": null,
+    "optical_geotiff_inference_ms": 225,
+    "peak_process_memory_mb": 3370.7,
+    "warm_cached_request_ms": 0,
+    "warm_uncached_image_inference_ms": 173
+  },
+  "schema_version": "sve-runtime-validation-1.0"
+}

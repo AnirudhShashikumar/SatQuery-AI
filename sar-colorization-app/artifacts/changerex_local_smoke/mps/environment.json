@@ -1,0 +1,15 @@
+{
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "macos_version": "26.6.2",
+  "architecture": "arm64",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "torch": "2.8.0",
+  "numpy": "2.0.2",
+  "pillow": "11.3.0",
+  "mps_built": true,
+  "mps_available": true,
+  "cuda_required": false,
+  "opencd_runtime_required": false,
+  "opencd_reference_version": "v1.1.0",
+  "opencd_reference_commit": "09c03eb1077f06191c5448ea1fcf2f2f88ec98c2"
+}

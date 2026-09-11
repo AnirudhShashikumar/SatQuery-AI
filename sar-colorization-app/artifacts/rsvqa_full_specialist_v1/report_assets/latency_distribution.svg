@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="100%" height="100%" fill="white"/>
+<text x="120" y="50" font-family="sans-serif" font-size="28" fill="#172b4d">Endpoint latency distribution (ms)</text>
+<line x1="120" y1="90" x2="120" y2="550" stroke="#6b778c" stroke-width="2"/>
+<line x1="120" y1="550" x2="1140" y2="550" stroke="#6b778c" stroke-width="2"/>
+<rect x="137.8" y="476.3" width="49.3" height="73.7" rx="8" fill="#1677ff"/>
+<text x="137.8" y="464.3" font-family="sans-serif" font-size="18" fill="#172b4d">1482.0</text>
+<text x="137.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">5-22</text>
+<rect x="222.8" y="131.8" width="49.3" height="418.2" rx="8" fill="#12b886"/>
+<text x="222.8" y="119.8" font-family="sans-serif" font-size="18" fill="#172b4d">8409.0</text>
+<text x="222.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">22-38</text>
+<rect x="307.9" y="549.3" width="49.3" height="0.7" rx="8" fill="#f59f00"/>
+<text x="307.9" y="537.3" font-family="sans-serif" font-size="18" fill="#172b4d">14.0</text>
+<text x="307.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">38-54</text>
+<rect x="392.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#e64980"/>
+<text x="392.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="392.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">54-71</text>
+<rect x="477.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#845ef7"/>
+<text x="477.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="477.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">71-88</text>
+<rect x="562.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#15aabf"/>
+<text x="562.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="562.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">88-104</text>
+<rect x="647.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#1677ff"/>
+<text x="647.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="647.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">104-120</text>
+<rect x="732.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#12b886"/>
+<text x="732.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="732.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">120-137</text>
+<rect x="817.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#f59f00"/>
+<text x="817.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="817.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">137-154</text>
+<rect x="902.9" y="550.0" width="49.3" height="0.0" rx="8" fill="#e64980"/>
+<text x="902.9" y="538.0" font-family="sans-serif" font-size="18" fill="#172b4d">0.0</text>
+<text x="902.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">154-170</text>
+<rect x="987.9" y="545.3" width="49.3" height="4.7" rx="8" fill="#845ef7"/>
+<text x="987.9" y="533.3" font-family="sans-serif" font-size="18" fill="#172b4d">95.0</text>
+<text x="987.9" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">170-186</text>
+<rect x="1072.8" y="549.8" width="49.3" height="0.2" rx="8" fill="#15aabf"/>
+<text x="1072.8" y="537.8" font-family="sans-serif" font-size="18" fill="#172b4d">4.0</text>
+<text x="1072.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">186-203</text>
+</svg>

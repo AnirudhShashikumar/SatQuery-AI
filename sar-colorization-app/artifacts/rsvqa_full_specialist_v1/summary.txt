@@ -1,0 +1,31 @@
+Official RSVQA-LR Test Benchmark — SatQuery RSVQA Specialist v1
+===============================================================
+Processed records: 10004
+Exact-match accuracy: 71.0516%
+Overflow-aware accuracy: 74.3103%
+Macro task accuracy: 74.0543%
+Coverage: 100.0000%
+Null answers: 0
+Endpoint errors: 0
+Specialist-use rate: 100.0000%
+Fallback-use rate: 0.0000%
+Average latency: 26.874 ms
+P95 latency: 30.000 ms
+Total wall-clock duration: 316.067 seconds
+
+Per-task exact accuracy:
+  presence: 2701/2955 (91.4044%); coverage=100.0000%
+  comp: 3541/4002 (88.4808%); coverage=100.0000%
+  count: 776/2947 (26.3319%); coverage=100.0000%
+  rural_urban: 90/100 (90.0000%); coverage=100.0000%
+
+Count metrics:
+  Exact accuracy: 26.3319%
+  MAE (numeric pairs only): 14.23758719737382
+  Within ±1 / ±2 / ±5: 0.43455067706196143 / 0.5100533442757489 / 0.629872794419368
+
+Majority baselines:
+  presence: yes (75.0254%)
+  comp: no (66.7416%)
+  count: 0 (25.5514%)
+  rural_urban: rural (56.0000%)

@@ -1,0 +1,10 @@
+SatQuery Grounding Specialist v1 Pilot step-100 — VRSBench Smoke-100
+======================================================================
+Completed: 100/100
+Mean / median IoU: 0.264419 / 0.070973
+Accuracy@0.25/@0.50/@0.75: 35.0000% / 28.0000% / 18.0000%
+Failure rate: 0.0000%
+Average / P95 latency: 1231.384 / 1428.115 ms
+Unique query indices / top-5 coverage: 28 / 73.0000%
+Collapse detected: True (one_query_index_above_25_percent, top_five_query_indices_above_60_percent)
+Recommendation: B. continue to 1,000-step balanced training

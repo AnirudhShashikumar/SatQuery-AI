@@ -1,0 +1,8 @@
+# Railway runs CPU-only inference. Give PyTorch's official CPU wheel index
+# precedence; packages not published there resolve from PyPI. This typically
+# removes roughly 2–3 GB of CUDA libraries from the Linux image.
+--index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://pypi.org/simple
+
+-r requirements-backend.txt
+torch==2.8.0

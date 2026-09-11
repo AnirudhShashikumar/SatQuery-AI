@@ -1,0 +1,5 @@
+ground_truth,total,rural,urban,<null>,<error>,<other>
+rural,56,51,5,0,0,0
+urban,44,5,39,0,0,0
+<null>,0,0,0,0,0,0
+<error>,0,0,0,0,0,0

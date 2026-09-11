@@ -1,0 +1,13 @@
+VRSBench Grounding Smoke-100 — SatQuery baseline
+======================================================
+Completed: 100/100
+Mean IoU (all): 0.128285
+Mean IoU (non-null): 0.3563478489472691
+Median IoU: 0.000000
+Accuracy@0.25/@0.50/@0.75: 22.0000% / 13.0000% / 6.0000%
+Null rate: 64.0000%
+Average latency: 1169.148 ms
+P95 latency: 1201.261 ms
+Runtime: 117.096 s
+Model loads/reuses: 1/104
+Recommendation: C. fine-tune/replace grounding specialist

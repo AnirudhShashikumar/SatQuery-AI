@@ -1,0 +1,21 @@
+{
+  "average_ground_truth_box_area": 0.111617,
+  "average_predicted_box_area": 0.33498325584881905,
+  "ground_truth_area_bucket_distribution": {
+    "large": 22,
+    "medium": 26,
+    "small": 16,
+    "tiny": 35,
+    "very_large": 1
+  },
+  "oversized_prediction_rate": 0.46,
+  "predicted_area_bucket_distribution": {
+    "large": 16,
+    "medium": 27,
+    "small": 20,
+    "tiny": 11,
+    "very_large": 26
+  },
+  "samples": 100,
+  "undersized_prediction_rate": 0.12
+}

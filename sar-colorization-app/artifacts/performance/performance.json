@@ -1,0 +1,77 @@
+{
+  "classification": "runtime benchmark only; no accuracy measured",
+  "environment": {
+    "cuda_available": false,
+    "machine": "arm64",
+    "mps_available": false,
+    "numpy": "2.0.2",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.9.6",
+    "timestamp": "2026-09-03T09:51:43.601740Z",
+    "torch": "2.8.0"
+  },
+  "warm_iterations": 1,
+  "workflows": {
+    "bitemporal": {
+      "cold_or_first_request_ms": 758.2288750000004,
+      "peak_rss_after_mb": 5575.015625,
+      "peak_rss_delta_mb": 397.28125,
+      "reported_model_load_ms": 96,
+      "reported_specialist_warm_mean_ms": 422.0,
+      "warm_request": {
+        "mean_ms": 452.2463329999997,
+        "median_ms": 452.2463329999997,
+        "p95_ms": 452.2463329999997
+      }
+    },
+    "grounding": {
+      "cold_or_first_request_ms": 2429.7595419999993,
+      "peak_rss_after_mb": 5164.578125,
+      "peak_rss_delta_mb": 231.265625,
+      "reported_model_load_ms": 372,
+      "reported_specialist_warm_mean_ms": 1071.0,
+      "warm_request": {
+        "mean_ms": 1079.707749999999,
+        "median_ms": 1079.707749999999,
+        "p95_ms": 1079.707749999999
+      }
+    },
+    "optical_sar": {
+      "cold_or_first_request_ms": 192.35175000000027,
+      "peak_rss_after_mb": 5177.546875,
+      "peak_rss_delta_mb": 4.34375,
+      "reported_model_load_ms": 0,
+      "reported_specialist_warm_mean_ms": 1.0,
+      "warm_request": {
+        "mean_ms": 23.962834000000655,
+        "median_ms": 23.962834000000655,
+        "p95_ms": 23.962834000000655
+      }
+    },
+    "sar_single_image": {
+      "cold_or_first_request_ms": 15.91170900000094,
+      "peak_rss_after_mb": 5173.140625,
+      "peak_rss_delta_mb": 8.53125,
+      "reported_model_load_ms": 0,
+      "reported_specialist_warm_mean_ms": 0.0,
+      "warm_request": {
+        "mean_ms": 6.939125000000601,
+        "median_ms": 6.939125000000601,
+        "p95_ms": 6.939125000000601
+      }
+    },
+    "single_image": {
+      "cold_or_first_request_ms": 7709.700875,
+      "peak_rss_after_mb": 4932.9375,
+      "peak_rss_delta_mb": 4163.984375,
+      "reported_model_load_ms": 3614,
+      "reported_specialist_warm_mean_ms": 1870.0,
+      "warm_request": {
+        "mean_ms": 942.3572910000005,
+        "median_ms": 942.3572910000005,
+        "p95_ms": 942.3572910000005
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "request_id": "19feb46a-44ca-47f4-8c13-c5502f0d8906",
+  "optical_file": "optical-source.png",
+  "sar_file": "sar-source.png",
+  "roles_validated": true,
+  "reversed_blocked": true,
+  "analysis_level": "qualitative",
+  "result_status": "COMPLETED",
+  "agreement_count": 16,
+  "evidence_products": 4,
+  "quantitative_request": "partial",
+  "report_formats": [
+    "pdf",
+    "json",
+    "zip"
+  ],
+  "health": {
+    "status": "ok",
+    "module": "satquery-agent",
+    "router": "ready",
+    "registry": "ready",
+    "specialists": {
+      "rs_captioner": {
+        "status": "unloaded",
+        "device": null,
+        "error": null
+      },
+      "rs_grounder": {
+        "status": "unloaded",
+        "device": null,
+        "error": null
+      },
+      "grounding_specialist_v1_1": {
+        "status": "unloaded",
+        "device": null,
+        "error": null
+      },
+      "satquery_vision_encoder_v1": {
+        "status": "ready",
+        "device": "cpu",
+        "error": null
+      },
+      "rsvqa_vqa_specialist": {
+        "status": "unloaded",
+        "device": null,
+        "error": null
+      },
+      "sar_translation_service": {
+        "status": "disabled",
+        "device": "cpu",
+        "error": null,
+        "enabled": false,
+        "selected_model": "sarfusionformer",
+        "fallback_available": true,
+        "color_corrector_available": true,
+        "load_count": 0,
+        "reuse_count": 0
+      },
+      "changerex_change_detector": {
+        "status": "unloaded",
+        "lifecycle": "unloaded",
+        "model": "ChangerEx IA-ResNetV1c-18 (LEVIR-CD)",
+        "device": null,
+        "checkpoint": "ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+        "checkpoint_fingerprint": "da3f569306da",
+        "loaded": false,
+        "load_count": 0,
+        "reuse_count": 0,
+        "inference_count": 0,
+        "errors": []
+      },
+      "ttp_change_detector": {
+        "status": "unavailable",
+        "lifecycle": "unavailable",
+        "device": null,
+        "checkpoint": "epoch_260.pth",
+        "loaded": false,
+        "load_count": 0,
+        "reuse_count": 0,
+        "inference_count": 0,
+        "errors": [
+          "TTP is unavailable; deterministic fallback was used."
+        ]
+      }
+    }
+  },
+  "browser_visual_verification": "separate manual check required"
+}

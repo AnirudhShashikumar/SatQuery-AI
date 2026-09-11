@@ -1,0 +1,29 @@
+{
+  "generic_openclip": {
+    "loss": 4.8016743659973145,
+    "image_to_text_r1": 0.0021824531722813845,
+    "text_to_image_r1": 0.0008729812107048929,
+    "image_to_text_r5": 0.010039283894002438,
+    "text_to_image_r5": 0.004364906344562769,
+    "image_to_text_r10": 0.021388040855526924,
+    "text_to_image_r10": 0.00654735928401351
+  },
+  "satquery_vision_encoder_v1": {
+    "loss": 4.120570659637451,
+    "image_to_text_r1": 0.005674378015100956,
+    "text_to_image_r1": 0.006110868416726589,
+    "image_to_text_r5": 0.022697512060403824,
+    "text_to_image_r5": 0.03491925075650215,
+    "image_to_text_r10": 0.050632912665605545,
+    "text_to_image_r10": 0.05805325135588646
+  },
+  "difference": {
+    "loss": -0.6811037063598633,
+    "image_to_text_r1": 0.0034919248428195715,
+    "text_to_image_r1": 0.005237887206021696,
+    "image_to_text_r5": 0.012658228166401386,
+    "text_to_image_r5": 0.030554344411939383,
+    "image_to_text_r10": 0.02924487181007862,
+    "text_to_image_r10": 0.05150589207187295
+  }
+}

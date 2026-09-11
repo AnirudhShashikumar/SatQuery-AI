@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="100%" height="100%" fill="white"/>
+<text x="120" y="50" font-family="sans-serif" font-size="28" fill="#172b4d">Exported validation vs official test accuracy</text>
+<line x1="120" y1="90" x2="120" y2="550" stroke="#6b778c" stroke-width="2"/>
+<line x1="120" y1="550" x2="1140" y2="550" stroke="#6b778c" stroke-width="2"/>
+<rect x="146.8" y="132.1" width="73.9" height="417.9" rx="8" fill="#1677ff"/>
+<text x="146.8" y="120.1" font-family="sans-serif" font-size="18" fill="#172b4d">90.9%</text>
+<text x="146.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">presence val</text>
+<rect x="274.3" y="129.5" width="73.9" height="420.5" rx="8" fill="#12b886"/>
+<text x="274.3" y="117.5" font-family="sans-serif" font-size="18" fill="#172b4d">91.4%</text>
+<text x="274.3" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">presence test</text>
+<rect x="401.8" y="131.4" width="73.9" height="418.6" rx="8" fill="#f59f00"/>
+<text x="401.8" y="119.4" font-family="sans-serif" font-size="18" fill="#172b4d">91.0%</text>
+<text x="401.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">comp val</text>
+<rect x="529.3" y="143.0" width="73.9" height="407.0" rx="8" fill="#e64980"/>
+<text x="529.3" y="131.0" font-family="sans-serif" font-size="18" fill="#172b4d">88.5%</text>
+<text x="529.3" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">comp test</text>
+<rect x="656.8" y="377.2" width="73.9" height="172.8" rx="8" fill="#845ef7"/>
+<text x="656.8" y="365.2" font-family="sans-serif" font-size="18" fill="#172b4d">37.6%</text>
+<text x="656.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">count val</text>
+<rect x="784.3" y="428.9" width="73.9" height="121.1" rx="8" fill="#15aabf"/>
+<text x="784.3" y="416.9" font-family="sans-serif" font-size="18" fill="#172b4d">26.3%</text>
+<text x="784.3" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">count test</text>
+<rect x="911.8" y="136.0" width="73.9" height="414.0" rx="8" fill="#1677ff"/>
+<text x="911.8" y="124.0" font-family="sans-serif" font-size="18" fill="#172b4d">90.0%</text>
+<text x="911.8" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">rural_urban val</text>
+<rect x="1039.3" y="136.0" width="73.9" height="414.0" rx="8" fill="#12b886"/>
+<text x="1039.3" y="124.0" font-family="sans-serif" font-size="18" fill="#172b4d">90.0%</text>
+<text x="1039.3" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">rural_urban test</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="100%" height="100%" fill="white"/>
+<text x="120" y="50" font-family="sans-serif" font-size="28" fill="#172b4d">Baseline vs specialist accuracy</text>
+<line x1="120" y1="90" x2="120" y2="550" stroke="#6b778c" stroke-width="2"/>
+<line x1="120" y1="550" x2="1140" y2="550" stroke="#6b778c" stroke-width="2"/>
+<rect x="155.7" y="448.8" width="98.6" height="101.2" rx="8" fill="#1677ff"/>
+<text x="155.7" y="436.8" font-family="sans-serif" font-size="18" fill="#172b4d">22.0%</text>
+<text x="155.7" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">B @0.25</text>
+<rect x="325.7" y="389.0" width="98.6" height="161.0" rx="8" fill="#12b886"/>
+<text x="325.7" y="377.0" font-family="sans-serif" font-size="18" fill="#172b4d">35.0%</text>
+<text x="325.7" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">S @0.25</text>
+<rect x="495.7" y="490.2" width="98.6" height="59.8" rx="8" fill="#f59f00"/>
+<text x="495.7" y="478.2" font-family="sans-serif" font-size="18" fill="#172b4d">13.0%</text>
+<text x="495.7" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">B @0.50</text>
+<rect x="665.7" y="421.2" width="98.6" height="128.8" rx="8" fill="#e64980"/>
+<text x="665.7" y="409.2" font-family="sans-serif" font-size="18" fill="#172b4d">28.0%</text>
+<text x="665.7" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">S @0.50</text>
+<rect x="835.7" y="522.4" width="98.6" height="27.6" rx="8" fill="#845ef7"/>
+<text x="835.7" y="510.4" font-family="sans-serif" font-size="18" fill="#172b4d">6.0%</text>
+<text x="835.7" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">B @0.75</text>
+<rect x="1005.7" y="467.2" width="98.6" height="82.8" rx="8" fill="#15aabf"/>
+<text x="1005.7" y="455.2" font-family="sans-serif" font-size="18" fill="#172b4d">18.0%</text>
+<text x="1005.7" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">S @0.75</text>
+</svg>

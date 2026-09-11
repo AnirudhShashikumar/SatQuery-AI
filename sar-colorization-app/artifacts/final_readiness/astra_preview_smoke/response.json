@@ -1,0 +1,1164 @@
+{
+  "request_id": "19feb46a-44ca-47f4-8c13-c5502f0d8906",
+  "task": "cross_modal_analysis",
+  "answer": "Both observations support water-like candidates in 7 of the nine image-relative sectors. Both observations support structural candidates in all nine image-relative sectors. This qualitative comparison uses optical appearance and native SAR backscatter/texture; candidates are not confirmed semantic classes. Pixel alignment is assumed from the supplied pairing; geospatial co-registration cannot be independently verified. Locations refer to image sectors, not geographic directions.",
+  "confidence": {
+    "level": "moderate",
+    "score": null,
+    "reason": "Both native sources were analyzed independently with conservative candidate rules; registration and semantic certainty remain unverified. This is not a calibrated probability."
+  },
+  "evidence": [
+    {
+      "evidence_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e:485dedc5-2f60-47cb-8663-3bf309db6d0e:optical",
+      "source_observation_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e",
+      "source_observation_ids": [
+        "8f560ae1-1cf1-420b-ace9-9fd41c4da00e"
+      ],
+      "source_role": "optical",
+      "source_modality": "optical_rgb",
+      "evidence_type": "source",
+      "type": "preview",
+      "label": "Optical source",
+      "description": "Native source evidence; candidate support is not semantic ground truth.",
+      "reference": "/api/agent/previews/f7d77400d5594f5488ffa1e339cccc8b.png"
+    },
+    {
+      "evidence_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e:485dedc5-2f60-47cb-8663-3bf309db6d0e:sar",
+      "source_observation_id": "485dedc5-2f60-47cb-8663-3bf309db6d0e",
+      "source_observation_ids": [
+        "485dedc5-2f60-47cb-8663-3bf309db6d0e"
+      ],
+      "source_role": "sar",
+      "source_modality": "sar_preview",
+      "evidence_type": "source",
+      "type": "preview",
+      "label": "SAR source",
+      "description": "Native source evidence; candidate support is not semantic ground truth.",
+      "reference": "/api/agent/previews/ed28ed09884b415c823e013305eee450.png"
+    },
+    {
+      "evidence_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e:485dedc5-2f60-47cb-8663-3bf309db6d0e:optical_evidence",
+      "source_observation_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e",
+      "source_observation_ids": [
+        "8f560ae1-1cf1-420b-ace9-9fd41c4da00e"
+      ],
+      "source_role": "optical",
+      "source_modality": "optical_rgb",
+      "evidence_type": "native_evidence",
+      "type": "preview",
+      "label": "Optical Evidence",
+      "description": "Native source evidence; candidate support is not semantic ground truth.",
+      "reference": "/api/agent/previews/27def7459d65429fba4a994406c5e88b.png"
+    },
+    {
+      "evidence_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e:485dedc5-2f60-47cb-8663-3bf309db6d0e:sar_evidence",
+      "source_observation_id": "485dedc5-2f60-47cb-8663-3bf309db6d0e",
+      "source_observation_ids": [
+        "485dedc5-2f60-47cb-8663-3bf309db6d0e"
+      ],
+      "source_role": "sar",
+      "source_modality": "sar_preview",
+      "evidence_type": "native_evidence",
+      "type": "preview",
+      "label": "Sar Evidence",
+      "description": "Native source evidence; candidate support is not semantic ground truth.",
+      "reference": "/api/agent/previews/52cbb15a476b437888eef27c28621c4d.png"
+    }
+  ],
+  "execution": {
+    "input_mode": "cross_modal",
+    "selected_tools": [
+      "input_validator",
+      "cross_modal_optical_sar_analyzer"
+    ],
+    "steps": [
+      {
+        "tool": "optical_upload_received",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "size_bytes": 150267
+        }
+      },
+      {
+        "tool": "sar_upload_received",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "size_bytes": 51584
+        }
+      },
+      {
+        "tool": "optical_metadata_extraction",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "width": 256,
+          "height": 256,
+          "bands": 3,
+          "georeferenced": false
+        }
+      },
+      {
+        "tool": "sar_metadata_extraction",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "width": 256,
+          "height": 256,
+          "bands": 1,
+          "georeferenced": false
+        }
+      },
+      {
+        "tool": "modality_validation",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "optical_modality": "optical_or_multispectral",
+          "sar_modality": "sar",
+          "role_validation_status": "match",
+          "optical_observation_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e",
+          "sar_observation_id": "485dedc5-2f60-47cb-8663-3bf309db6d0e"
+        }
+      },
+      {
+        "tool": "pair_compatibility_check",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "alignment_level": "visual_only",
+          "resampling_performed": false,
+          "reprojection_performed": false
+        }
+      },
+      {
+        "tool": "optical_preparation",
+        "status": "success",
+        "duration_ms": 2,
+        "parameters": {
+          "max_analysis_dimension": 1024,
+          "registration_performed": false
+        }
+      },
+      {
+        "tool": "sar_preparation",
+        "status": "success",
+        "duration_ms": 1,
+        "parameters": {
+          "log_transform": "none",
+          "calibrated_backscatter_claimed": false
+        }
+      },
+      {
+        "tool": "optical_evidence_extraction",
+        "status": "success",
+        "duration_ms": 10,
+        "parameters": {
+          "method": "visible_color_brightness_edges_local_texture"
+        }
+      },
+      {
+        "tool": "sar_evidence_extraction",
+        "status": "success",
+        "duration_ms": 6,
+        "parameters": {
+          "method": "relative_intensity_and_local_heterogeneity"
+        }
+      },
+      {
+        "tool": "joint_evidence_fusion",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "method": "independent_image_sector_comparison"
+        }
+      },
+      {
+        "tool": "region_extraction",
+        "status": "skipped",
+        "duration_ms": 0,
+        "parameters": {
+          "connectivity": 8,
+          "minimum_region_pixels": 6,
+          "reason": "No geospatial co-registration available."
+        }
+      },
+      {
+        "tool": "preview_generation",
+        "status": "success",
+        "duration_ms": 23,
+        "parameters": {
+          "format": "png",
+          "filesystem_paths_exposed": false
+        }
+      },
+      {
+        "tool": "quantitative_spatial_fusion_eligibility",
+        "status": "skipped",
+        "duration_ms": 0,
+        "parameters": {
+          "scientific_classification": "UNVERIFIABLE",
+          "reason": "No geospatial co-registration available."
+        }
+      },
+      {
+        "tool": "response_generation",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "template_generated_summary": true,
+          "language_model_used": false
+        }
+      },
+      {
+        "tool": "sve_artifact_verification",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "checksum_verified": true
+        }
+      },
+      {
+        "tool": "sve_model_load",
+        "status": "success",
+        "duration_ms": 4488,
+        "parameters": {
+          "device": "cpu",
+          "reused": false
+        }
+      },
+      {
+        "tool": "sve_eligibility_check",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "input": "optical_rgb_like"
+        }
+      },
+      {
+        "tool": "sve_image_preparation",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "transform": "verified_openclip_validation_transform"
+        }
+      },
+      {
+        "tool": "sve_image_embedding",
+        "status": "success",
+        "duration_ms": 259,
+        "parameters": {
+          "cache": "miss",
+          "device": "cpu"
+        }
+      },
+      {
+        "tool": "sve_scene_priors",
+        "status": "success",
+        "duration_ms": 4738,
+        "parameters": {
+          "top_labels": [
+            "agricultural land",
+            "urban or built-up area",
+            "arable land",
+            "residential area",
+            "industrial area"
+          ],
+          "calibrated": false
+        }
+      },
+      {
+        "tool": "sve_routing_support",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "support_state": "advisory",
+          "influence_applied": false
+        }
+      },
+      {
+        "tool": "sve_eligibility_check",
+        "status": "skipped",
+        "duration_ms": 0,
+        "parameters": {
+          "input": "raw_sar",
+          "reason": "validated_generated_rgb_required"
+        }
+      }
+    ],
+    "duration_ms": 9550,
+    "permitted_parameters": {
+      "query": "Where do both modalities agree?",
+      "input_mode": "cross_modal",
+      "primary_modality": "optical",
+      "secondary_modality": "sar",
+      "has_primary_image": true,
+      "has_secondary_image": true,
+      "primary_image_modality": "optical_rgb",
+      "primary_representation": "display_preview",
+      "primary_band_count": 3,
+      "primary_date": null,
+      "secondary_date": null,
+      "representation": "display_preview",
+      "auto_detected_modality": "optical_rgb",
+      "user_confirmed_modality": null,
+      "effective_modality": "optical_rgb"
+    },
+    "validation": {
+      "valid": true,
+      "errors": []
+    },
+    "selection_reason": "The selected Optical + SAR workflow requests source-aware joint or complementary evidence."
+  },
+  "warnings": [
+    "Pixel alignment is assumed from the supplied pairing; geospatial co-registration cannot be independently verified.",
+    "Display preview only \u2014 not a scientific product.",
+    "This deterministic baseline is not a trained or calibrated land-cover classifier.",
+    "Dark smooth terrain, cloud shadow, terrain shadow, and radar shadow can resemble water-like evidence.",
+    "Bright terrain, speckle, vegetation structure, and isolated strong scatterers can resemble built-up or structural evidence.",
+    "Visible-spectrum green dominance is only vegetation support; it is not NDVI and does not use NIR unless explicitly identified and implemented.",
+    "Analysis may use a reduced grid capped at 1024 pixels on the longest side, so small features can be omitted.",
+    "Qualitative analysis only. Locations use image top/bottom/left/right, not geographic north/south/east/west.",
+    "Sector co-occurrence is not verified pixel agreement. No intersection masks, joint percentages, coordinates or metric areas were computed.",
+    "SAR preview intensity is relative and uncalibrated. Confidence is not a calibrated probability."
+  ],
+  "status": "success",
+  "result_status": "COMPLETED",
+  "primary_image_metadata": {
+    "observation_role": "optical",
+    "file_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e",
+    "original_name": "optical-source.png",
+    "safe_name": "optical-source.png",
+    "format": "png",
+    "mime_type": "image/png",
+    "size_bytes": 150267,
+    "width": 256,
+    "height": 256,
+    "band_count": 3,
+    "dtype": "uint8",
+    "crs": null,
+    "transform": null,
+    "bounds": null,
+    "nodata": null,
+    "is_georeferenced": false,
+    "preview_url": "/api/agent/previews/f7d77400d5594f5488ffa1e339cccc8b.png",
+    "color_interpretation": [
+      "r",
+      "g",
+      "b"
+    ],
+    "band_descriptions": [
+      "r",
+      "g",
+      "b"
+    ],
+    "input_band_count": 3,
+    "available_band_names": [
+      "r",
+      "g",
+      "b"
+    ],
+    "selected_visual_bands": [
+      "r",
+      "g",
+      "b"
+    ],
+    "band_selection_reason": "color interpretation explicitly identifies red, green, and blue",
+    "band_statistics": [
+      {
+        "band": 1,
+        "description": "r",
+        "dtype": "uint8",
+        "minimum": 0.0,
+        "maximum": 255.0,
+        "mean": 69.93055725097656,
+        "standard_deviation": 58.9263744954353,
+        "percentile_1": 0.0,
+        "percentile_5": 3.0,
+        "percentile_50": 56.0,
+        "percentile_95": 183.0,
+        "percentile_99": 255.0,
+        "nan_count": 0,
+        "inf_count": 0,
+        "nodata_count": 0,
+        "valid_count": 65536
+      },
+      {
+        "band": 2,
+        "description": "g",
+        "dtype": "uint8",
+        "minimum": 0.0,
+        "maximum": 255.0,
+        "mean": 64.89900207519531,
+        "standard_deviation": 52.932847359371785,
+        "percentile_1": 0.0,
+        "percentile_5": 4.0,
+        "percentile_50": 55.0,
+        "percentile_95": 164.25,
+        "percentile_99": 255.0,
+        "nan_count": 0,
+        "inf_count": 0,
+        "nodata_count": 0,
+        "valid_count": 65536
+      },
+      {
+        "band": 3,
+        "description": "b",
+        "dtype": "uint8",
+        "minimum": 0.0,
+        "maximum": 255.0,
+        "mean": 55.27349853515625,
+        "standard_deviation": 52.738877674128204,
+        "percentile_1": 0.0,
+        "percentile_5": 2.0,
+        "percentile_50": 41.0,
+        "percentile_95": 157.0,
+        "percentile_99": 255.0,
+        "nan_count": 0,
+        "inf_count": 0,
+        "nodata_count": 0,
+        "valid_count": 65536
+      }
+    ],
+    "representation": "display_preview",
+    "auto_detected_modality": "optical_rgb",
+    "auto_detection_confidence": "high",
+    "auto_detection_reason": "The display image contains explicit RGB channels with normal chromatic variation.",
+    "user_confirmed_modality": null,
+    "effective_modality": "optical_rgb",
+    "modality_limitations": [],
+    "warnings": [
+      "Display preview only \u2014 not a scientific product."
+    ]
+  },
+  "secondary_image_metadata": {
+    "observation_role": "sar",
+    "file_id": "485dedc5-2f60-47cb-8663-3bf309db6d0e",
+    "original_name": "sar-source.png",
+    "safe_name": "sar-source.png",
+    "format": "png",
+    "mime_type": "image/png",
+    "size_bytes": 51584,
+    "width": 256,
+    "height": 256,
+    "band_count": 1,
+    "dtype": "uint8",
+    "crs": null,
+    "transform": null,
+    "bounds": null,
+    "nodata": null,
+    "is_georeferenced": false,
+    "preview_url": "/api/agent/previews/ed28ed09884b415c823e013305eee450.png",
+    "color_interpretation": [
+      "l"
+    ],
+    "band_descriptions": [
+      "l"
+    ],
+    "input_band_count": 1,
+    "available_band_names": [
+      "l"
+    ],
+    "selected_visual_bands": [
+      "l"
+    ],
+    "band_selection_reason": "single scientific band rendered as grayscale",
+    "band_statistics": [
+      {
+        "band": 1,
+        "description": "l",
+        "dtype": "uint8",
+        "minimum": 0.0,
+        "maximum": 255.0,
+        "mean": 100.66813659667969,
+        "standard_deviation": 50.880880525341496,
+        "percentile_1": 0.0,
+        "percentile_5": 23.0,
+        "percentile_50": 98.0,
+        "percentile_95": 197.0,
+        "percentile_99": 255.0,
+        "nan_count": 0,
+        "inf_count": 0,
+        "nodata_count": 0,
+        "valid_count": 65536
+      }
+    ],
+    "representation": "display_preview",
+    "auto_detected_modality": "sar_preview",
+    "auto_detection_confidence": "medium",
+    "auto_detection_reason": "One-channel display has SAR-like intensity statistics and a SAR metadata/filename hint; classified as SAR preview (intensity range p1-p99=255.0, coefficient of variation=0.505, local roughness=0.071).",
+    "user_confirmed_modality": null,
+    "effective_modality": "sar_preview",
+    "modality_limitations": [
+      "SAR-preview detection is based on display-image statistics and a secondary filename or metadata hint; it does not recover scientific SAR calibration."
+    ],
+    "warnings": [
+      "Display preview only \u2014 not a scientific product."
+    ]
+  },
+  "pair_compatibility": {
+    "role_validation_status": "match",
+    "optical_slot_detected_modality": "optical_rgb",
+    "sar_slot_detected_modality": "sar_preview",
+    "role_match": true,
+    "pair_valid": true,
+    "compatible": true,
+    "alignment_level": "visual_only",
+    "same_dimensions": true,
+    "same_crs": null,
+    "same_transform": null,
+    "bounds_overlap": null,
+    "overlap_ratio": null,
+    "resampling_required": false,
+    "scientific_classification": "UNVERIFIABLE",
+    "primary_resolution": null,
+    "secondary_resolution": null,
+    "same_resolution": null,
+    "same_orientation": null,
+    "nodata_compatible": null,
+    "recommended_action": "Same-size PNG/JPEG pairs can use disclosed qualitative native-source comparison. Provide verified CRS and affine transforms for quantitative fusion.",
+    "warnings": [
+      "Pixel alignment is assumed from the supplied pairing; geospatial co-registration cannot be independently verified."
+    ],
+    "errors": []
+  },
+  "model": null,
+  "caption_details": null,
+  "grounding_result": null,
+  "cross_modal_analysis": {
+    "analysis_level": "qualitative",
+    "quantitative_metrics_available": false,
+    "agreements": [
+      {
+        "category": "water",
+        "relative_location": "lower-center",
+        "optical_support": "dark/blue smooth optical appearance consistent with water",
+        "sar_support": "low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "water",
+        "relative_location": "lower-left",
+        "optical_support": "dark/blue smooth optical appearance consistent with water",
+        "sar_support": "low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "water",
+        "relative_location": "lower-right",
+        "optical_support": "dark/blue smooth optical appearance consistent with water",
+        "sar_support": "low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "water",
+        "relative_location": "middle-center",
+        "optical_support": "dark/blue smooth optical appearance consistent with water",
+        "sar_support": "low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "water",
+        "relative_location": "middle-left",
+        "optical_support": "dark/blue smooth optical appearance consistent with water",
+        "sar_support": "low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "water",
+        "relative_location": "middle-right",
+        "optical_support": "dark/blue smooth optical appearance consistent with water",
+        "sar_support": "low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "water",
+        "relative_location": "upper-right",
+        "optical_support": "dark/blue smooth optical appearance consistent with water",
+        "sar_support": "low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "lower-center",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "lower-left",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "lower-right",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "middle-center",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "middle-left",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "middle-right",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "upper-center",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "upper-left",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      },
+      {
+        "category": "structure",
+        "relative_location": "upper-right",
+        "optical_support": "visible edges and texture consistent with structural terrain",
+        "sar_support": "structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives",
+        "strength": "candidate"
+      }
+    ],
+    "disagreements": [
+      "Native SAR adds water candidate evidence in the upper-center image-relative sector without optical candidate support; this is not a confirmed semantic class or verified spatial difference.",
+      "Native SAR adds water candidate evidence in the upper-left image-relative sector without optical candidate support; this is not a confirmed semantic class or verified spatial difference."
+    ],
+    "complementary_findings": [
+      "Native SAR adds water candidate evidence in the upper-center image-relative sector without optical candidate support; this is not a confirmed semantic class or verified spatial difference.",
+      "Native SAR adds water candidate evidence in the upper-left image-relative sector without optical candidate support; this is not a confirmed semantic class or verified spatial difference."
+    ],
+    "limitations": [
+      "Pixel alignment is assumed from the supplied pairing; geospatial co-registration cannot be independently verified.",
+      "This deterministic baseline is not a trained or calibrated land-cover classifier.",
+      "Dark smooth terrain, cloud shadow, terrain shadow, and radar shadow can resemble water-like evidence.",
+      "Bright terrain, speckle, vegetation structure, and isolated strong scatterers can resemble built-up or structural evidence.",
+      "Visible-spectrum green dominance is only vegetation support; it is not NDVI and does not use NIR unless explicitly identified and implemented.",
+      "Analysis may use a reduced grid capped at 1024 pixels on the longest side, so small features can be omitted.",
+      "Qualitative analysis only. Locations use image top/bottom/left/right, not geographic north/south/east/west.",
+      "Sector co-occurrence is not verified pixel agreement. No intersection masks, joint percentages, coordinates or metric areas were computed.",
+      "SAR preview intensity is relative and uncalibrated. Confidence is not a calibrated probability."
+    ],
+    "evidence_products": [
+      {
+        "evidence_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e:485dedc5-2f60-47cb-8663-3bf309db6d0e:optical",
+        "source_observation_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e",
+        "source_observation_ids": [
+          "8f560ae1-1cf1-420b-ace9-9fd41c4da00e"
+        ],
+        "source_role": "optical",
+        "source_modality": "optical_rgb",
+        "evidence_type": "source",
+        "type": "preview",
+        "label": "Optical source",
+        "description": "Native source evidence; candidate support is not semantic ground truth.",
+        "reference": "/api/agent/previews/f7d77400d5594f5488ffa1e339cccc8b.png"
+      },
+      {
+        "evidence_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e:485dedc5-2f60-47cb-8663-3bf309db6d0e:sar",
+        "source_observation_id": "485dedc5-2f60-47cb-8663-3bf309db6d0e",
+        "source_observation_ids": [
+          "485dedc5-2f60-47cb-8663-3bf309db6d0e"
+        ],
+        "source_role": "sar",
+        "source_modality": "sar_preview",
+        "evidence_type": "source",
+        "type": "preview",
+        "label": "SAR source",
+        "description": "Native source evidence; candidate support is not semantic ground truth.",
+        "reference": "/api/agent/previews/ed28ed09884b415c823e013305eee450.png"
+      },
+      {
+        "evidence_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e:485dedc5-2f60-47cb-8663-3bf309db6d0e:optical_evidence",
+        "source_observation_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e",
+        "source_observation_ids": [
+          "8f560ae1-1cf1-420b-ace9-9fd41c4da00e"
+        ],
+        "source_role": "optical",
+        "source_modality": "optical_rgb",
+        "evidence_type": "native_evidence",
+        "type": "preview",
+        "label": "Optical Evidence",
+        "description": "Native source evidence; candidate support is not semantic ground truth.",
+        "reference": "/api/agent/previews/27def7459d65429fba4a994406c5e88b.png"
+      },
+      {
+        "evidence_id": "8f560ae1-1cf1-420b-ace9-9fd41c4da00e:485dedc5-2f60-47cb-8663-3bf309db6d0e:sar_evidence",
+        "source_observation_id": "485dedc5-2f60-47cb-8663-3bf309db6d0e",
+        "source_observation_ids": [
+          "485dedc5-2f60-47cb-8663-3bf309db6d0e"
+        ],
+        "source_role": "sar",
+        "source_modality": "sar_preview",
+        "evidence_type": "native_evidence",
+        "type": "preview",
+        "label": "Sar Evidence",
+        "description": "Native source evidence; candidate support is not semantic ground truth.",
+        "reference": "/api/agent/previews/52cbb15a476b437888eef27c28621c4d.png"
+      }
+    ],
+    "status": "success",
+    "summary": {
+      "optical_observations": [
+        "Optical water candidates: lower-center, lower-left, lower-right, middle-center, middle-left, middle-right, upper-right. Support: dark/blue smooth optical appearance consistent with water.",
+        "Optical structure candidates: lower-center, lower-left, lower-right, middle-center, middle-left, middle-right, upper-center, upper-left, upper-right. Support: visible edges and texture consistent with structural terrain."
+      ],
+      "sar_observations": [
+        "Native SAR water candidates: lower-center, lower-left, lower-right, middle-center, middle-left, middle-right, upper-center, upper-left, upper-right. Support: low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "Native SAR structure candidates: lower-center, lower-left, lower-right, middle-center, middle-left, middle-right, upper-center, upper-left, upper-right. Support: structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives."
+      ],
+      "joint_observations": [
+        "Qualitative water agreement in the lower-center image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "Qualitative water agreement in the lower-left image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "Qualitative water agreement in the lower-right image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "Qualitative water agreement in the middle-center image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "Qualitative water agreement in the middle-left image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "Qualitative water agreement in the middle-right image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "Qualitative water agreement in the upper-right image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "Qualitative structure agreement in the lower-center image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "Qualitative structure agreement in the lower-left image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "Qualitative structure agreement in the lower-right image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "Qualitative structure agreement in the middle-center image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "Qualitative structure agreement in the middle-left image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "Qualitative structure agreement in the middle-right image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "Qualitative structure agreement in the upper-center image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "Qualitative structure agreement in the upper-left image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "Qualitative structure agreement in the upper-right image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives."
+      ]
+    },
+    "statistics": null,
+    "regions": [],
+    "previews": {
+      "optical": "/api/agent/previews/7986ad5f152f477b93daefcd74e5609a.png",
+      "sar": "/api/agent/previews/d9d346e166d84b369213afa4719ebef8.png",
+      "optical_evidence": "/api/agent/previews/27def7459d65429fba4a994406c5e88b.png",
+      "sar_evidence": "/api/agent/previews/52cbb15a476b437888eef27c28621c4d.png",
+      "joint_evidence": null,
+      "water_likelihood": null,
+      "built_up_likelihood": null,
+      "vegetation_support": null,
+      "agreement": null,
+      "disagreement": null,
+      "joint_overlay": null
+    },
+    "confidence": {
+      "level": "moderate",
+      "score": null,
+      "reason": "Both native sources were analyzed independently with conservative candidate rules; registration and semantic certainty remain unverified. This is not a calibrated probability."
+    },
+    "method": {
+      "name": "Deterministic optical-SAR evidence fusion",
+      "version": "1.1",
+      "uses_trained_model": false,
+      "assumptions": [
+        "Full pixel fusion requires matching CRS, affine transform, bounds, and source dimensions.",
+        "Optical roles are validated against detected content; the first three prepared bands are treated as red, green, and blue when explicit names are unavailable.",
+        "SAR values are treated as relative uncalibrated intensity evidence, not physical calibrated backscatter.",
+        "Thresholds are relative to each uploaded scene and indicate candidate support rather than semantic probability."
+      ],
+      "limitations": [
+        "This deterministic baseline is not a trained or calibrated land-cover classifier.",
+        "Dark smooth terrain, cloud shadow, terrain shadow, and radar shadow can resemble water-like evidence.",
+        "Bright terrain, speckle, vegetation structure, and isolated strong scatterers can resemble built-up or structural evidence.",
+        "Visible-spectrum green dominance is only vegetation support; it is not NDVI and does not use NIR unless explicitly identified and implemented.",
+        "Analysis may use a reduced grid capped at 1024 pixels on the longest side, so small features can be omitted."
+      ]
+    },
+    "optical_preparation": {
+      "modality": "optical",
+      "band_count": 3,
+      "bands_used": [
+        "r",
+        "g",
+        "b"
+      ],
+      "channel_interpretation": [
+        "r",
+        "g",
+        "b"
+      ],
+      "stretch_method": "Per-channel finite-pixel 2nd/98th percentile clip (0\u2013255, 0\u2013255, 0\u2013255).",
+      "normalization": "Each selected visible channel scaled independently to [0, 1].",
+      "invalid_pixel_handling": "Non-finite and declared NoData pixels excluded and rendered as zero.",
+      "resize_status": "No resize; native source grid retained.",
+      "log_transform": "None."
+    },
+    "sar_preparation": {
+      "modality": "sar",
+      "band_count": 1,
+      "bands_used": [
+        "l"
+      ],
+      "channel_interpretation": [
+        "l"
+      ],
+      "stretch_method": "Per-channel finite-pixel 2nd/98th percentile clip (0\u2013255).",
+      "normalization": "Each available SAR channel scaled independently to [0, 1], then averaged for neutral intensity evidence.",
+      "invalid_pixel_handling": "Non-finite and declared NoData pixels excluded and rendered as zero.",
+      "resize_status": "No resize; native source grid retained.",
+      "log_transform": "None; source calibration and linear/dB encoding were not established."
+    },
+    "warnings": [
+      "Display preview only \u2014 not a scientific product.",
+      "Pixel alignment is assumed from the supplied pairing; geospatial co-registration cannot be independently verified.",
+      "This deterministic baseline is not a trained or calibrated land-cover classifier.",
+      "Dark smooth terrain, cloud shadow, terrain shadow, and radar shadow can resemble water-like evidence.",
+      "Bright terrain, speckle, vegetation structure, and isolated strong scatterers can resemble built-up or structural evidence.",
+      "Visible-spectrum green dominance is only vegetation support; it is not NDVI and does not use NIR unless explicitly identified and implemented.",
+      "Analysis may use a reduced grid capped at 1024 pixels on the longest side, so small features can be omitted.",
+      "Qualitative analysis only. Locations use image top/bottom/left/right, not geographic north/south/east/west.",
+      "Sector co-occurrence is not verified pixel agreement. No intersection masks, joint percentages, coordinates or metric areas were computed.",
+      "SAR preview intensity is relative and uncalibrated. Confidence is not a calibrated probability."
+    ],
+    "runtime_ms": 42,
+    "sve_result": {
+      "available": true,
+      "status": "success",
+      "model": "SatQuery Vision Encoder v1",
+      "model_version": "1.0.0",
+      "backbone": "OpenCLIP ViT-L-14",
+      "pretrained_weights": "laion2b_s32b_b82k",
+      "adaptation_dataset": "BigEarthNet.txt",
+      "adapter_checksum_fingerprint": "sha256:a99c0bf0fb44",
+      "embedding_dimension": 768,
+      "device": "cpu",
+      "runtime_ms": 9485,
+      "scene_priors": [
+        {
+          "label": "agricultural land",
+          "similarity": 0.260688
+        },
+        {
+          "label": "urban or built-up area",
+          "similarity": 0.255139
+        },
+        {
+          "label": "arable land",
+          "similarity": 0.243113
+        },
+        {
+          "label": "residential area",
+          "similarity": 0.242427
+        },
+        {
+          "label": "industrial area",
+          "similarity": 0.233264
+        }
+      ],
+      "caption_consistency": null,
+      "vqa_consistency": null,
+      "grounding_support": null,
+      "semantic_comparison": {
+        "label": "Optical-to-generated-RGB semantic consistency",
+        "status": "skipped_raw_sar",
+        "similarity": null,
+        "prior_changes": [],
+        "disclaimer": "Raw SAR is not encoded. A validated generated RGB-like product is required for this supporting comparison."
+      },
+      "limitations": [
+        "Adaptation used a geographically limited Lithuania subset.",
+        "Adaptation imagery is summer-only.",
+        "Version 1 supports RGB and scientifically approved RGB-like optical imagery only.",
+        "Evidence is scene-level and does not localize pixels or objects.",
+        "Similarity scores are not calibrated probabilities and are not ground truth.",
+        "Validation retrieval improved over generic OpenCLIP on the recorded split but remains low in absolute terms."
+      ],
+      "warning": "SVE skipped the raw SAR input; the existing cross-modal specialist remains unchanged.",
+      "fallback": null,
+      "disclaimer": "SatQuery Vision Encoder v1 provides scene-level embedding evidence. It does not produce pixel-level segmentation, object grounding, calibrated probabilities, or ground truth."
+    },
+    "evidence_facts": [
+      {
+        "source": "optical",
+        "kind": "water",
+        "statement": "Optical water candidates: lower-center, lower-left, lower-right, middle-center, middle-left, middle-right, upper-right. Support: dark/blue smooth optical appearance consistent with water.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "native_sar",
+        "kind": "water",
+        "statement": "Native SAR water candidates: lower-center, lower-left, lower-right, middle-center, middle-left, middle-right, upper-center, upper-left, upper-right. Support: low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "optical",
+        "kind": "structure",
+        "statement": "Optical structure candidates: lower-center, lower-left, lower-right, middle-center, middle-left, middle-right, upper-center, upper-left, upper-right. Support: visible edges and texture consistent with structural terrain.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "native_sar",
+        "kind": "structure",
+        "statement": "Native SAR structure candidates: lower-center, lower-left, lower-right, middle-center, middle-left, middle-right, upper-center, upper-left, upper-right. Support: structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative water agreement in the lower-center image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative water agreement in the lower-left image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative water agreement in the lower-right image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative water agreement in the middle-center image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative water agreement in the middle-left image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative water agreement in the middle-right image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative water agreement in the upper-right image-relative sector: optical dark/blue smooth optical appearance consistent with water; native SAR low-backscatter evidence consistent with water; radar shadow and smooth terrain remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the lower-center image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the lower-left image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the lower-right image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the middle-center image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the middle-left image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the middle-right image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the upper-center image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the upper-left image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      },
+      {
+        "source": "fused",
+        "kind": "qualitative_agreement",
+        "statement": "Qualitative structure agreement in the upper-right image-relative sector: optical visible edges and texture consistent with structural terrain; native SAR structural/high-return evidence consistent with built-up terrain; bright terrain and vegetation remain alternatives.",
+        "supporting_region_ids": [],
+        "calibrated_probability": false
+      }
+    ]
+  },
+  "change_analysis": null,
+  "vqa_details": {
+    "original_question": "Where do both modalities agree?",
+    "question_category": "cross_modal_agreement",
+    "target_concept": "agreement",
+    "answer_source": "deterministic optical-SAR qualitative native evidence",
+    "statistics_used": {
+      "analysis_level": "qualitative",
+      "evidence_sources": [
+        "optical",
+        "native_sar",
+        "fused"
+      ],
+      "quantitative_metrics_available": false
+    },
+    "evidence_references": [
+      "/api/agent/previews/f7d77400d5594f5488ffa1e339cccc8b.png",
+      "/api/agent/previews/ed28ed09884b415c823e013305eee450.png",
+      "/api/agent/previews/27def7459d65429fba4a994406c5e88b.png",
+      "/api/agent/previews/52cbb15a476b437888eef27c28621c4d.png"
+    ],
+    "method": {
+      "name": "Controlled GeoVision evidence-grounded VQA",
+      "version": "1.0",
+      "method_type": "controlled answers over deterministic optical-SAR fusion",
+      "uses_language_model": false,
+      "remote_sensing_adapted": false,
+      "assumptions": [
+        "Answers use published native-source findings or protected exact-grid statistics."
+      ],
+      "limitations": [
+        "Optical and SAR percentages are deterministic candidate evidence, not calibrated semantic probabilities.",
+        "Water-like and structural-likelihood evidence can be confused by shadow, terrain, speckle, and strong scatterers.",
+        "Quantitative joint answering requires exact pixel and geospatial alignment; qualitative source comparison does not."
+      ]
+    },
+    "confidence": {
+      "level": "moderate",
+      "score": null,
+      "reason": "Both native sources were analyzed independently with conservative candidate rules; registration and semantic certainty remain unverified. This is not a calibrated probability."
+    },
+    "supported": true,
+    "limitations": [
+      "Optical and SAR percentages are deterministic candidate evidence, not calibrated semantic probabilities.",
+      "Water-like and structural-likelihood evidence can be confused by shadow, terrain, speckle, and strong scatterers.",
+      "Quantitative joint answering requires exact pixel and geospatial alignment; qualitative source comparison does not."
+    ],
+    "single_image_evidence": null
+  },
+  "sar_water_analysis": null,
+  "sar_scene_analysis": null,
+  "classified_query": {
+    "task_type": "cross_modal_analysis",
+    "target": null,
+    "requested_output": "localization",
+    "requires_localization": true,
+    "requires_segmentation": false,
+    "requires_measurement": false
+  },
+  "cache": {
+    "cached": false,
+    "original_generation_timestamp": "2026-09-05T18:42:27.690720Z",
+    "retrieval_timestamp": "2026-09-05T18:42:27.690720Z",
+    "tool_version": "satquery-sar-routing-1.1",
+    "cache_key_prefix": "e42e6e1f2063"
+  },
+  "change_engine": null,
+  "ttp_result": null,
+  "mask_comparison": null,
+  "evidence_consistency": null,
+  "sve_result": {
+    "available": true,
+    "status": "success",
+    "model": "SatQuery Vision Encoder v1",
+    "model_version": "1.0.0",
+    "backbone": "OpenCLIP ViT-L-14",
+    "pretrained_weights": "laion2b_s32b_b82k",
+    "adaptation_dataset": "BigEarthNet.txt",
+    "adapter_checksum_fingerprint": "sha256:a99c0bf0fb44",
+    "embedding_dimension": 768,
+    "device": "cpu",
+    "runtime_ms": 9485,
+    "scene_priors": [
+      {
+        "label": "agricultural land",
+        "similarity": 0.260688
+      },
+      {
+        "label": "urban or built-up area",
+        "similarity": 0.255139
+      },
+      {
+        "label": "arable land",
+        "similarity": 0.243113
+      },
+      {
+        "label": "residential area",
+        "similarity": 0.242427
+      },
+      {
+        "label": "industrial area",
+        "similarity": 0.233264
+      }
+    ],
+    "caption_consistency": null,
+    "vqa_consistency": null,
+    "grounding_support": null,
+    "semantic_comparison": {
+      "label": "Optical-to-generated-RGB semantic consistency",
+      "status": "skipped_raw_sar",
+      "similarity": null,
+      "prior_changes": [],
+      "disclaimer": "Raw SAR is not encoded. A validated generated RGB-like product is required for this supporting comparison."
+    },
+    "limitations": [
+      "Adaptation used a geographically limited Lithuania subset.",
+      "Adaptation imagery is summer-only.",
+      "Version 1 supports RGB and scientifically approved RGB-like optical imagery only.",
+      "Evidence is scene-level and does not localize pixels or objects.",
+      "Similarity scores are not calibrated probabilities and are not ground truth.",
+      "Validation retrieval improved over generic OpenCLIP on the recorded split but remains low in absolute terms."
+    ],
+    "warning": "SVE skipped the raw SAR input; the existing cross-modal specialist remains unchanged.",
+    "fallback": null,
+    "disclaimer": "SatQuery Vision Encoder v1 provides scene-level embedding evidence. It does not produce pixel-level segmentation, object grounding, calibrated probabilities, or ground truth."
+  },
+  "sar_translated_optical_analysis": null,
+  "semantic_change_summary": null
+}

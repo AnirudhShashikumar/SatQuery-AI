@@ -1,0 +1,30 @@
+{
+  "recovery_status": "recovered_from_in_memory_epoch_8",
+  "selected_epoch": 8,
+  "note": "Original Drive checkpoints were corrupted. The compact specialist checkpoint was recovered from the live epoch-8 model.",
+  "final_validation": {
+    "overall_accuracy": 0.751024487756122,
+    "macro_accuracy": 0.7735176468969363,
+    "per_task_accuracy": {
+      "presence": 0.9085303186022611,
+      "comp": 0.9099502487562189,
+      "rural_urban": 0.9,
+      "count": 0.375590020229265
+    },
+    "per_task_loss": {
+      "presence": 0.23717375751584768,
+      "comp": 0.2084472465328872,
+      "rural_urban": 0.7192498920481574,
+      "count": 2.813879978656769
+    },
+    "samples": 10005
+  },
+  "best_observed_epoch": 7,
+  "best_observed_macro_accuracy": 0.7756275001335271,
+  "best_observed_overall_accuracy": 0.7537231384307846,
+  "selected_checkpoint_macro_accuracy": 0.7735176468969363,
+  "selected_checkpoint_overall_accuracy": 0.751024487756122,
+  "epochs_completed": 8,
+  "total_training_seconds": 7181.1675815582275,
+  "peak_gpu_memory_gib": 5.155579566955566
+}

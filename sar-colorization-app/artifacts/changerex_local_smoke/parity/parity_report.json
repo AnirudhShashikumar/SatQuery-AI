@@ -1,0 +1,64 @@
+{
+  "result": {
+    "probability_shape_match": true,
+    "mask_shape_match": true,
+    "probability_max_absolute_difference": 0.0,
+    "probability_mean_absolute_difference": 0.0,
+    "binary_mask_agreement": 1.0,
+    "mask_iou": 1.0,
+    "changed_percentage_difference": 0.0,
+    "floating_probability_pass": true,
+    "mask_pass": true,
+    "accepted": true
+  },
+  "thresholds": {
+    "binary_mask_agreement_minimum": 0.999,
+    "mask_iou_minimum": 0.998,
+    "changed_percentage_difference_maximum": 0.1,
+    "probability_max_absolute_difference_maximum": 0.0001,
+    "probability_mean_absolute_difference_maximum": 1e-05
+  },
+  "metadata": {
+    "comparison": "exact SyncBatchNorm standalone extraction versus pinned official Open-CD source execution",
+    "preprocessed_tensor_shape": [
+      1,
+      6,
+      768,
+      1024
+    ],
+    "preprocessed_tensor_sha256": "4891c980f62096fa1b8ee4c95f4be3090b90ce33de7aec835a76453f369b7311",
+    "preprocessed_tensor_summary": {
+      "shape": [
+        1,
+        6,
+        768,
+        1024
+      ],
+      "dtype": "torch.float32",
+      "sum": -2350626.75,
+      "mean": -0.49816274642944336,
+      "std": 0.4425937235355377,
+      "min": -2.1179039478302,
+      "max": 2.640000104904175
+    },
+    "logits_shape_extracted": [
+      1,
+      2,
+      768,
+      1024
+    ],
+    "logits_shape_reference": [
+      1,
+      2,
+      768,
+      1024
+    ],
+    "logits_max_absolute_difference": 0.0,
+    "logits_mean_absolute_difference": 0.0,
+    "strict_missing_keys": [],
+    "strict_unexpected_keys": [],
+    "key_transformations": [],
+    "checkpoint_sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+    "reference_environment_note": "Pinned official source files were executed on CPU with an inference-only framework import shim; no extracted model code was used by the reference model."
+  }
+}

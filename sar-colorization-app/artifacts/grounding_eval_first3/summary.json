@@ -1,0 +1,431 @@
+{
+  "benchmark_claim": false,
+  "dataset": {
+    "category_counts": {
+      "harbor": 1,
+      "vehicle": 2
+    },
+    "negative_sample_count": 0,
+    "positive_sample_count": 3,
+    "sample_count": 3,
+    "small_dataset_warning": "Results are exploratory and not statistically significant for a small local dataset."
+  },
+  "evaluation_gate": {
+    "analysis_only": true,
+    "candidate_floor": 0.3,
+    "maximum_localized_area_ratio": 0.85,
+    "minimum_alignment_score": 0.45,
+    "uses_production_reliability_values": true
+  },
+  "examples": {
+    "false_accepted_localization": [
+      "harbor_p0019_0002_q21"
+    ],
+    "low_score_rejection": [
+      "vehicle_p0003_0002_q0",
+      "vehicle_p0003_0004_q4",
+      "harbor_p0019_0002_q21"
+    ],
+    "missed_target": [
+      "vehicle_p0003_0002_q0",
+      "vehicle_p0003_0004_q4",
+      "harbor_p0019_0002_q21"
+    ],
+    "near_full_frame_rejection": [],
+    "reliable_localization": []
+  },
+  "framework": "GeoVision local Grounding DINO reliability evaluation",
+  "iou_definitions": {
+    "iou_25": "IoU >= 0.25",
+    "iou_50": "IoU >= 0.50",
+    "matching": "Greedy one-to-one matching by descending IoU."
+  },
+  "metrics": {
+    "acceptance_rate": 0.16666666666666666,
+    "accepted_count": 1,
+    "accepted_precision_iou_25": 0.0,
+    "accepted_precision_iou_50": 0.0,
+    "accepted_recall_iou_25": 0.0,
+    "accepted_recall_iou_50": 0.0,
+    "box_area_ratio_distribution": {
+      "count": 6,
+      "maximum": 0.87157702,
+      "mean": 0.35850839166666665,
+      "median": 0.31970126,
+      "minimum": 0.00433487
+    },
+    "candidate_count": 6,
+    "correct_rejection_count": 0,
+    "evaluated_sample_count": 3,
+    "false_localization_count": 1,
+    "false_localization_rate": 1.0,
+    "false_positive_count": 0,
+    "full_frame_acceptance_count": 0,
+    "full_frame_candidate_count": 0,
+    "full_frame_candidate_rate": 0.0,
+    "mean_accepted_best_iou": 0.08111367,
+    "median_accepted_best_iou": 0.08111367,
+    "missed_target_count": 3,
+    "missed_target_rate": 1.0,
+    "negative_sample_count": 0,
+    "no_prediction_count": 0,
+    "positive_sample_count": 3,
+    "reference_box_count": 3,
+    "rejected_count": 5,
+    "rejection_rate": 0.8333333333333334,
+    "score_distribution": {
+      "count": 6,
+      "maximum": 0.459628,
+      "mean": 0.36638796,
+      "median": 0.355528725,
+      "minimum": 0.32341439
+    },
+    "true_positive_count_iou_25": 0,
+    "true_positive_count_iou_50": 0,
+    "unavailable_sample_count": 0,
+    "weak_rejected_negative_count": 0
+  },
+  "model": {
+    "checkpoint": "IDEA-Research/grounding-dino-tiny",
+    "devices": [
+      "mps"
+    ]
+  },
+  "per_target": [
+    {
+      "acceptance_rate": 0.5,
+      "accepted_count": 1,
+      "accepted_precision_iou_25": 0.0,
+      "accepted_precision_iou_50": 0.0,
+      "accepted_recall_iou_25": 0.0,
+      "accepted_recall_iou_50": 0.0,
+      "box_area_ratio_distribution": {
+        "count": 2,
+        "maximum": 0.87157702,
+        "mean": 0.75147297,
+        "median": 0.75147297,
+        "minimum": 0.63136892
+      },
+      "candidate_count": 2,
+      "correct_rejection_count": 0,
+      "evaluated_sample_count": 1,
+      "false_localization_count": 1,
+      "false_localization_rate": 1.0,
+      "false_positive_count": 0,
+      "full_frame_acceptance_count": 0,
+      "full_frame_candidate_count": 0,
+      "full_frame_candidate_rate": 0.0,
+      "mean_accepted_best_iou": 0.08111367,
+      "median_accepted_best_iou": 0.08111367,
+      "missed_target_count": 1,
+      "missed_target_rate": 1.0,
+      "negative_sample_count": 0,
+      "no_prediction_count": 0,
+      "positive_sample_count": 1,
+      "reference_box_count": 1,
+      "rejected_count": 1,
+      "rejection_rate": 0.5,
+      "sample_count": 1,
+      "score_distribution": {
+        "count": 2,
+        "maximum": 0.459628,
+        "mean": 0.391521195,
+        "median": 0.391521195,
+        "minimum": 0.32341439
+      },
+      "target": "harbor",
+      "true_positive_count_iou_25": 0,
+      "true_positive_count_iou_50": 0,
+      "unavailable_sample_count": 0,
+      "weak_rejected_negative_count": 0
+    },
+    {
+      "acceptance_rate": 0.0,
+      "accepted_count": 0,
+      "accepted_precision_iou_25": null,
+      "accepted_precision_iou_50": null,
+      "accepted_recall_iou_25": 0.0,
+      "accepted_recall_iou_50": 0.0,
+      "box_area_ratio_distribution": {
+        "count": 4,
+        "maximum": 0.62278799,
+        "mean": 0.1620261025,
+        "median": 0.010490774999999999,
+        "minimum": 0.00433487
+      },
+      "candidate_count": 4,
+      "correct_rejection_count": 0,
+      "evaluated_sample_count": 2,
+      "false_localization_count": 0,
+      "false_localization_rate": null,
+      "false_positive_count": 0,
+      "full_frame_acceptance_count": 0,
+      "full_frame_candidate_count": 0,
+      "full_frame_candidate_rate": 0.0,
+      "mean_accepted_best_iou": null,
+      "median_accepted_best_iou": null,
+      "missed_target_count": 2,
+      "missed_target_rate": 1.0,
+      "negative_sample_count": 0,
+      "no_prediction_count": 0,
+      "positive_sample_count": 2,
+      "reference_box_count": 2,
+      "rejected_count": 4,
+      "rejection_rate": 1.0,
+      "sample_count": 2,
+      "score_distribution": {
+        "count": 4,
+        "maximum": 0.37423685,
+        "mean": 0.3538213425,
+        "median": 0.355528725,
+        "minimum": 0.32999107
+      },
+      "target": "vehicle",
+      "true_positive_count_iou_25": 0,
+      "true_positive_count_iou_50": 0,
+      "unavailable_sample_count": 0,
+      "weak_rejected_negative_count": 0
+    }
+  ],
+  "production_gate_reference": {
+    "calibration_status": "Operational reliability gates pending benchmark calibration.",
+    "maximum_localized_area_ratio": 0.85,
+    "minimum_alignment_score": 0.45,
+    "model_candidate_box_threshold": 0.35,
+    "model_text_threshold": 0.25
+  },
+  "samples": [
+    {
+      "accepted_count": 0,
+      "annotation_source": "VRSBench",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "accepted": false,
+          "alignment_score": 0.37210965,
+          "best_iou": 0.0,
+          "box_area_ratio": 0.00433487,
+          "box_source_xyxy": [
+            443.734375,
+            151.489807,
+            474.665527,
+            188.22818
+          ],
+          "center_point_inclusion": false,
+          "full_frame_prediction": false,
+          "matched_reference_box": [
+            131.0,
+            205.0,
+            169.0,
+            310.0
+          ],
+          "matched_reference_index": 0,
+          "meets_iou_25": false,
+          "meets_iou_50": false,
+          "outcome": "rejected_candidate",
+          "prediction_label": "vehicle",
+          "reference_ious": [
+            0.0
+          ],
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ]
+        },
+        {
+          "accepted": false,
+          "alignment_score": 0.3389478,
+          "best_iou": 0.02443952,
+          "box_area_ratio": 0.62278799,
+          "box_source_xyxy": [
+            0.065598,
+            14.413284,
+            327.895996,
+            512.4151
+          ],
+          "center_point_inclusion": true,
+          "full_frame_prediction": false,
+          "matched_reference_box": [
+            131.0,
+            205.0,
+            169.0,
+            310.0
+          ],
+          "matched_reference_index": 0,
+          "meets_iou_25": false,
+          "meets_iou_50": false,
+          "outcome": "rejected_candidate",
+          "prediction_label": "vehicle",
+          "reference_ious": [
+            0.02443952
+          ],
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ]
+        }
+      ],
+      "correct_rejection": false,
+      "inference_error_code": null,
+      "missed_target": true,
+      "no_model_candidate": false,
+      "reference_box_count": 1,
+      "rejected_count": 2,
+      "sample_id": "vehicle_p0003_0002_q0",
+      "target": "vehicle",
+      "target_present": true
+    },
+    {
+      "accepted_count": 0,
+      "annotation_source": "VRSBench",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "accepted": false,
+          "alignment_score": 0.32999107,
+          "best_iou": 0.0,
+          "box_area_ratio": 0.01661453,
+          "box_source_xyxy": [
+            0.016253,
+            443.068481,
+            63.271919,
+            511.922363
+          ],
+          "center_point_inclusion": false,
+          "full_frame_prediction": false,
+          "matched_reference_box": [
+            5.0,
+            205.0,
+            46.0,
+            310.0
+          ],
+          "matched_reference_index": 0,
+          "meets_iou_25": false,
+          "meets_iou_50": false,
+          "outcome": "rejected_candidate",
+          "prediction_label": "vehicle",
+          "reference_ious": [
+            0.0
+          ],
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ]
+        },
+        {
+          "accepted": false,
+          "alignment_score": 0.37423685,
+          "best_iou": 0.0,
+          "box_area_ratio": 0.00436702,
+          "box_source_xyxy": [
+            320.427948,
+            151.536453,
+            351.473053,
+            188.411453
+          ],
+          "center_point_inclusion": false,
+          "full_frame_prediction": false,
+          "matched_reference_box": [
+            5.0,
+            205.0,
+            46.0,
+            310.0
+          ],
+          "matched_reference_index": 0,
+          "meets_iou_25": false,
+          "meets_iou_50": false,
+          "outcome": "rejected_candidate",
+          "prediction_label": "vehicle",
+          "reference_ious": [
+            0.0
+          ],
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ]
+        }
+      ],
+      "correct_rejection": false,
+      "inference_error_code": null,
+      "missed_target": true,
+      "no_model_candidate": false,
+      "reference_box_count": 1,
+      "rejected_count": 2,
+      "sample_id": "vehicle_p0003_0004_q4",
+      "target": "vehicle",
+      "target_present": true
+    },
+    {
+      "accepted_count": 1,
+      "annotation_source": "VRSBench",
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "accepted": true,
+          "alignment_score": 0.459628,
+          "best_iou": 0.08111367,
+          "box_area_ratio": 0.87157702,
+          "box_source_xyxy": [
+            65.0,
+            0.0,
+            512.0,
+            512.0
+          ],
+          "center_point_inclusion": false,
+          "full_frame_prediction": false,
+          "matched_reference_box": [
+            340.0,
+            0.0,
+            496.0,
+            119.0
+          ],
+          "matched_reference_index": 0,
+          "meets_iou_25": false,
+          "meets_iou_50": false,
+          "outcome": "accepted_false_localization",
+          "prediction_label": "harbor",
+          "reference_ious": [
+            0.08111367
+          ],
+          "rejection_reasons": []
+        },
+        {
+          "accepted": false,
+          "alignment_score": 0.32341439,
+          "best_iou": 0.1121627,
+          "box_area_ratio": 0.63136892,
+          "box_source_xyxy": [
+            188.695541,
+            -0.025513,
+            511.956543,
+            511.974304
+          ],
+          "center_point_inclusion": false,
+          "full_frame_prediction": false,
+          "matched_reference_box": [
+            340.0,
+            0.0,
+            496.0,
+            119.0
+          ],
+          "matched_reference_index": 0,
+          "meets_iou_25": false,
+          "meets_iou_50": false,
+          "outcome": "rejected_candidate",
+          "prediction_label": "harbor",
+          "reference_ious": [
+            0.1121627
+          ],
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ]
+        }
+      ],
+      "correct_rejection": false,
+      "inference_error_code": null,
+      "missed_target": true,
+      "no_model_candidate": false,
+      "reference_box_count": 1,
+      "rejected_count": 1,
+      "sample_id": "harbor_p0019_0002_q21",
+      "target": "harbor",
+      "target_present": true
+    }
+  ]
+}

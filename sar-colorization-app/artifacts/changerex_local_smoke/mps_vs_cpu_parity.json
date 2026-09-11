@@ -1,0 +1,26 @@
+{
+  "result": {
+    "probability_shape_match": true,
+    "mask_shape_match": true,
+    "probability_max_absolute_difference": 2.950429916381836e-06,
+    "probability_mean_absolute_difference": 5.39955219372494e-09,
+    "binary_mask_agreement": 1.0,
+    "mask_iou": 1.0,
+    "changed_percentage_difference": 0.0,
+    "floating_probability_pass": true,
+    "mask_pass": true,
+    "accepted": true
+  },
+  "thresholds": {
+    "binary_mask_agreement_minimum": 0.999,
+    "mask_iou_minimum": 0.998,
+    "changed_percentage_difference_maximum": 0.1,
+    "probability_max_absolute_difference_maximum": 0.0001,
+    "probability_mean_absolute_difference_maximum": 1e-05
+  },
+  "metadata": {
+    "reference": "CPU float32",
+    "candidate": "MPS float32",
+    "pair": "NASA/USGS Hanford"
+  }
+}

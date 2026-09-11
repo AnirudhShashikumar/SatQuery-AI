@@ -1,0 +1,53 @@
+{
+  "input_scope": {
+    "supported_modalities": [
+      "optical_rgb",
+      "multispectral_rendered_rgb"
+    ],
+    "unsupported_modalities": [
+      "raw_sar",
+      "single_band_sar",
+      "unrendered_multispectral_tensor"
+    ],
+    "supported_formats_after_ingestion": [
+      "PNG",
+      "JPEG",
+      "WEBP",
+      "TIFF",
+      "GeoTIFF"
+    ]
+  },
+  "image_preprocessing": {
+    "bands": "first three image bands interpreted as RGB",
+    "display_conversion": "per-band 2nd to 98th percentile stretch, clipped to [0,1], converted to uint8 RGB",
+    "openclip_transform": "OpenCLIP ViT-L-14 validation transform",
+    "input_size": [
+      3,
+      224,
+      224
+    ]
+  },
+  "question_preprocessing": {
+    "tokenizer": "OpenCLIP ViT-L-14 tokenizer",
+    "context_length": 77,
+    "truncation": true
+  },
+  "answer_normalization": {
+    "presence": [
+      "no",
+      "yes"
+    ],
+    "comparison": [
+      "no",
+      "yes"
+    ],
+    "rural_urban": [
+      "rural",
+      "urban"
+    ],
+    "count": {
+      "exact_classes": "0 through 200",
+      "overflow_class": "201+"
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "count_prediction_distribution": {
+    "v1": {
+      "0": 13,
+      "null": 2
+    },
+    "v2": {
+      "1": 5,
+      "null": 10
+    }
+  },
+  "coverage_change": -0.29999999999999993,
+  "fixed_questions": 5,
+  "generated_at": "2026-08-27T17:35:46.286069+00:00",
+  "majority_baselines": {
+    "comp": {
+      "accuracy": 0.7333333333333333,
+      "label": "no",
+      "v1_exceeds": false,
+      "v2_exceeds": false
+    },
+    "count": {
+      "accuracy": 0.4,
+      "label": "0",
+      "v1_exceeds": false,
+      "v2_exceeds": false
+    },
+    "presence": {
+      "accuracy": 0.6,
+      "label": "yes",
+      "v1_exceeds": false,
+      "v2_exceeds": false
+    },
+    "rural_urban": {
+      "accuracy": 0.8,
+      "label": "urban",
+      "v1_exceeds": false,
+      "v2_exceeds": false
+    }
+  },
+  "null_answer_change": 15,
+  "overall_accuracy_change": -0.16,
+  "per_type": {
+    "comp": {
+      "accuracy_change": -0.33333333333333337,
+      "coverage_change": -0.5333333333333333,
+      "v1": {
+        "accuracy": 0.4,
+        "answered": 9,
+        "correct": 6,
+        "coverage": 0.6,
+        "endpoint_errors": 0,
+        "null_answers": 6,
+        "samples": 15
+      },
+      "v2": {
+        "accuracy": 0.06666666666666667,
+        "answered": 1,
+        "correct": 1,
+        "coverage": 0.06666666666666667,
+        "endpoint_errors": 0,
+        "null_answers": 14,
+        "samples": 15
+      }
+    },
+    "count": {
+      "accuracy_change": -0.4,
+      "coverage_change": -0.5333333333333334,
+      "v1": {
+        "accuracy": 0.4,
+        "answered": 13,
+        "correct": 6,
+        "coverage": 0.8666666666666667,
+        "endpoint_errors": 0,
+        "null_answers": 2,
+        "samples": 15
+      },
+      "v2": {
+        "accuracy": 0.0,
+        "answered": 5,
+        "correct": 0,
+        "coverage": 0.3333333333333333,
+        "endpoint_errors": 0,
+        "null_answers": 10,
+        "samples": 15
+      }
+    },
+    "presence": {
+      "accuracy_change": 0.13333333333333336,
+      "coverage_change": 0.19999999999999996,
+      "v1": {
+        "accuracy": 0.3333333333333333,
+        "answered": 8,
+        "correct": 5,
+        "coverage": 0.5333333333333333,
+        "endpoint_errors": 0,
+        "null_answers": 7,
+        "samples": 15
+      },
+      "v2": {
+        "accuracy": 0.4666666666666667,
+        "answered": 11,
+        "correct": 7,
+        "coverage": 0.7333333333333333,
+        "endpoint_errors": 0,
+        "null_answers": 4,
+        "samples": 15
+      }
+    },
+    "rural_urban": {
+      "accuracy_change": 0.19999999999999996,
+      "coverage_change": -0.4,
+      "v1": {
+        "accuracy": 0.4,
+        "answered": 5,
+        "correct": 2,
+        "coverage": 1.0,
+        "endpoint_errors": 0,
+        "null_answers": 0,
+        "samples": 5
+      },
+      "v2": {
+        "accuracy": 0.6,
+        "answered": 3,
+        "correct": 3,
+        "coverage": 0.6,
+        "endpoint_errors": 0,
+        "null_answers": 2,
+        "samples": 5
+      }
+    }
+  },
+  "regressions": 13,
+  "v1": {
+    "accuracy": 0.38,
+    "answered": 35,
+    "correct": 19,
+    "coverage": 0.7,
+    "endpoint_errors": 0,
+    "null_answers": 15,
+    "samples": 50
+  },
+  "v2": {
+    "accuracy": 0.22,
+    "answered": 20,
+    "correct": 11,
+    "coverage": 0.4,
+    "endpoint_errors": 0,
+    "null_answers": 30,
+    "samples": 50
+  }
+}

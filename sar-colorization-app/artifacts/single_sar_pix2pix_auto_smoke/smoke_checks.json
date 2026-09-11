@@ -1,0 +1,13 @@
+{
+  "automatically_detected_as_sar": true,
+  "generated_preview_created": true,
+  "no_duplicate_model_load": true,
+  "no_failure": true,
+  "no_manual_modality_override": true,
+  "normal_response_returned": true,
+  "original_query_processed": true,
+  "pix2pix_selected": true,
+  "required_trace_present": true,
+  "shared_model_reused": true,
+  "upload_accepted": true
+}

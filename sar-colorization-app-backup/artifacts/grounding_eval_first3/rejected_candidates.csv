@@ -1,0 +1,6 @@
+sample_id,target,candidate_index,prediction_label,alignment_score,box_source_xyxy,box_area_ratio,accepted,rejection_reasons,best_iou,matched_reference_index,matched_reference_box,center_point_inclusion,full_frame_prediction,outcome
+vehicle_p0003_0002_q0,vehicle,1,vehicle,0.37210965,"[443.734375, 151.489807, 474.665527, 188.22818]",0.00433487,False,"[""alignment_score_below_minimum""]",0.0,0,"[131.0, 205.0, 169.0, 310.0]",False,False,rejected_candidate
+vehicle_p0003_0002_q0,vehicle,2,vehicle,0.3389478,"[0.065598, 14.413284, 327.895996, 512.4151]",0.62278799,False,"[""alignment_score_below_minimum""]",0.02443952,0,"[131.0, 205.0, 169.0, 310.0]",True,False,rejected_candidate
+vehicle_p0003_0004_q4,vehicle,1,vehicle,0.32999107,"[0.016253, 443.068481, 63.271919, 511.922363]",0.01661453,False,"[""alignment_score_below_minimum""]",0.0,0,"[5.0, 205.0, 46.0, 310.0]",False,False,rejected_candidate
+vehicle_p0003_0004_q4,vehicle,2,vehicle,0.37423685,"[320.427948, 151.536453, 351.473053, 188.411453]",0.00436702,False,"[""alignment_score_below_minimum""]",0.0,0,"[5.0, 205.0, 46.0, 310.0]",False,False,rejected_candidate
+harbor_p0019_0002_q21,harbor,2,harbor,0.32341439,"[188.695541, -0.025513, 511.956543, 511.974304]",0.63136892,False,"[""alignment_score_below_minimum""]",0.1121627,0,"[340.0, 0.0, 496.0, 119.0]",False,False,rejected_candidate

@@ -1,0 +1,787 @@
+{
+  "artifacts": {
+    "confusion_matrix": null,
+    "per_class_metrics": "models/grounding_specialist_v1_1/validation_results.json",
+    "predictions": null,
+    "report": "models/grounding_specialist_v1_1/model_card.json",
+    "visual_examples": []
+  },
+  "benchmark_id": "grounding.specialist-v1-1.vrsbench-validation.step600",
+  "breakdowns": [
+    {
+      "dimension": "object_class",
+      "label": "airplane",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.3597279780967033
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.4188911704312115
+        }
+      ],
+      "sample_count": 1461
+    },
+    {
+      "dimension": "object_class",
+      "label": "airport",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.2730574051942079
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.26153846153846155
+        }
+      ],
+      "sample_count": 195
+    },
+    {
+      "dimension": "object_class",
+      "label": "baseball-diamond",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.42733569959520457
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.4592696629213483
+        }
+      ],
+      "sample_count": 712
+    },
+    {
+      "dimension": "object_class",
+      "label": "basketball-court",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.34086754165532446
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.30144927536231886
+        }
+      ],
+      "sample_count": 345
+    },
+    {
+      "dimension": "object_class",
+      "label": "bridge",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.08984673703459375
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.07957244655581948
+        }
+      ],
+      "sample_count": 842
+    },
+    {
+      "dimension": "object_class",
+      "label": "chimney",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.312518068401636
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.2823529411764706
+        }
+      ],
+      "sample_count": 170
+    },
+    {
+      "dimension": "object_class",
+      "label": "container-crane",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.05488635729610299
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.08333333333333333
+        }
+      ],
+      "sample_count": 12
+    },
+    {
+      "dimension": "object_class",
+      "label": "dam",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.30230051299002125
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.2808219178082192
+        }
+      ],
+      "sample_count": 146
+    },
+    {
+      "dimension": "object_class",
+      "label": "expressway-service-area",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.28987817760580814
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.2692307692307692
+        }
+      ],
+      "sample_count": 234
+    },
+    {
+      "dimension": "object_class",
+      "label": "expressway-toll-station",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.32300687543705436
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.3764705882352941
+        }
+      ],
+      "sample_count": 170
+    },
+    {
+      "dimension": "object_class",
+      "label": "golffield",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.2192738639721878
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.19834710743801653
+        }
+      ],
+      "sample_count": 121
+    },
+    {
+      "dimension": "object_class",
+      "label": "ground-track-field",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.387990548667073
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.4349775784753363
+        }
+      ],
+      "sample_count": 446
+    },
+    {
+      "dimension": "object_class",
+      "label": "harbor",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.13102694278629914
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.13314967860422405
+        }
+      ],
+      "sample_count": 1089
+    },
+    {
+      "dimension": "object_class",
+      "label": "helicopter",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.34682301378675867
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.42857142857142855
+        }
+      ],
+      "sample_count": 56
+    },
+    {
+      "dimension": "object_class",
+      "label": "helipad",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.9450750946998596
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 1.0
+        }
+      ],
+      "sample_count": 1
+    },
+    {
+      "dimension": "object_class",
+      "label": "overpass",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.2212844229557733
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.20047732696897375
+        }
+      ],
+      "sample_count": 419
+    },
+    {
+      "dimension": "object_class",
+      "label": "roundabout",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.1751746525737242
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.2153846153846154
+        }
+      ],
+      "sample_count": 195
+    },
+    {
+      "dimension": "object_class",
+      "label": "ship",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.2935679919757769
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.3254297569650267
+        }
+      ],
+      "sample_count": 1687
+    },
+    {
+      "dimension": "object_class",
+      "label": "soccer-ball-field",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.22712934121876527
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.21621621621621623
+        }
+      ],
+      "sample_count": 148
+    },
+    {
+      "dimension": "object_class",
+      "label": "stadium",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.5795737827617314
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.592741935483871
+        }
+      ],
+      "sample_count": 248
+    },
+    {
+      "dimension": "object_class",
+      "label": "storage-tank",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.2619862561070001
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.3084967320261438
+        }
+      ],
+      "sample_count": 765
+    },
+    {
+      "dimension": "object_class",
+      "label": "swimming-pool",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.16948257309737785
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.21189591078066913
+        }
+      ],
+      "sample_count": 269
+    },
+    {
+      "dimension": "object_class",
+      "label": "tennis-court",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.1472395561079025
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.05565371024734982
+        }
+      ],
+      "sample_count": 1132
+    },
+    {
+      "dimension": "object_class",
+      "label": "trainstation",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.24465397653586007
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.21296296296296297
+        }
+      ],
+      "sample_count": 216
+    },
+    {
+      "dimension": "object_class",
+      "label": "vehicle",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.1765532892185647
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.22058175407668576
+        }
+      ],
+      "sample_count": 4538
+    },
+    {
+      "dimension": "object_class",
+      "label": "windmill",
+      "metrics": [
+        {
+          "description": "Per-class mean IoU.",
+          "higher_is_better": true,
+          "id": "mean_iou",
+          "label": "Mean IoU",
+          "primary": false,
+          "unit": "ratio",
+          "value": 0.12284335871830068
+        },
+        {
+          "description": "Per-class IoU@0.50 accuracy.",
+          "higher_is_better": true,
+          "id": "accuracy_at_050",
+          "label": "Accuracy @ IoU 0.50",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.04158790170132325
+        }
+      ],
+      "sample_count": 529
+    }
+  ],
+  "display_name": "Grounding DINO + Grounding Specialist",
+  "evaluation": {
+    "dataset": "VRSBench grounding_v2",
+    "environment": {
+      "device": "GPU (model artifact does not identify model)",
+      "hardware": null,
+      "input_size": "Grounding DINO processor input",
+      "os": null,
+      "python": null,
+      "torch": null
+    },
+    "protocol": "Full saved validation run using highest specialist query logit; one predicted box per sample.",
+    "sample_count": 16146,
+    "split": "validation",
+    "status": "verified_validation",
+    "timestamp": "2026-08-30T06:20:42Z"
+  },
+  "limitations": [
+    "Confidence scores are not calibrated probabilities.",
+    "The model always selects one query unless inference fails.",
+    "Performance is weak for some classes including windmill, tennis-court, bridge and harbor.",
+    "Benchmark results apply to the verified VRSBench validation pipeline."
+  ],
+  "metrics": [
+    {
+      "description": "Mean intersection-over-union with one ground-truth box.",
+      "higher_is_better": true,
+      "id": "mean_iou",
+      "label": "Mean IoU",
+      "primary": true,
+      "unit": "ratio",
+      "value": 0.23478312188203337
+    },
+    {
+      "description": "Median intersection-over-union.",
+      "higher_is_better": true,
+      "id": "median_iou",
+      "label": "Median IoU",
+      "primary": false,
+      "unit": "ratio",
+      "value": 7.23072917026002e-05
+    },
+    {
+      "description": "Fraction with IoU at least 0.25.",
+      "higher_is_better": true,
+      "id": "accuracy_at_025",
+      "label": "Accuracy @ IoU 0.25",
+      "primary": false,
+      "unit": "ratio",
+      "value": 0.32484825963086833
+    },
+    {
+      "description": "Fraction with IoU at least 0.50.",
+      "higher_is_better": true,
+      "id": "accuracy_at_050",
+      "label": "Accuracy @ IoU 0.50",
+      "primary": true,
+      "unit": "ratio",
+      "value": 0.2505264461786201
+    },
+    {
+      "description": "Fraction with IoU at least 0.75.",
+      "higher_is_better": true,
+      "id": "accuracy_at_075",
+      "label": "Accuracy @ IoU 0.75",
+      "primary": false,
+      "unit": "ratio",
+      "value": 0.1434410999628391
+    },
+    {
+      "description": "Share of samples assigned to the most-used query; lower is more diverse.",
+      "higher_is_better": false,
+      "id": "top_1_query_usage",
+      "label": "Top-1 query usage",
+      "primary": false,
+      "unit": "ratio",
+      "value": 0.1013873405177753
+    },
+    {
+      "description": "Share assigned to the five most-used queries; descriptive only.",
+      "higher_is_better": null,
+      "id": "top_5_query_coverage",
+      "label": "Top-5 query coverage",
+      "primary": false,
+      "unit": "ratio",
+      "value": 0.28130806391675955
+    }
+  ],
+  "model": {
+    "adaptation": "Training recipe v1.1, balanced sampling, area and query-entropy regularization, step 600",
+    "architecture": "Grounding DINO Tiny backbone + SatQuery learned proposal-selection head",
+    "checkpoint": "grounding_specialist_v1_1_head.pt",
+    "checkpoint_sha256": "5e8db30becadb1d063fc0154614ee2a2a4b7a2c2923db3fce4ff036c65007342",
+    "license": "Apache-2.0 base model; specialist bundle repository terms",
+    "name": "SatQuery Grounding Specialist v1.1",
+    "source": "IDEA-Research/grounding-dino-tiny + repository specialist bundle",
+    "training_dataset": "VRSBench grounding_v2 training split",
+    "version": "1.1"
+  },
+  "notes": [
+    "This full validation result is preferred over the Smoke-100 pilot.",
+    "Confidence values are not presented as calibrated probabilities."
+  ],
+  "performance": {
+    "mean_latency_ms": 34.829105900159504,
+    "median_latency_ms": 34.59407400009695,
+    "model_load_ms": null,
+    "p95_latency_ms": 36.226647249804955,
+    "peak_memory_mb": 8373.78369140625,
+    "throughput_samples_per_second": 28.20472758473982,
+    "warm_reuse": true
+  },
+  "provenance": {
+    "generated_by": "scripts/import_existing_benchmarks.py",
+    "result_origin": "satquery_reproduced",
+    "source_artifacts": [
+      "models/grounding_specialist_v1_1/validation_results.json",
+      "models/grounding_specialist_v1_1/model_card.json",
+      "models/grounding_specialist_v1_1/sha256.json"
+    ],
+    "verified": true
+  },
+  "schema_version": "1.0.0",
+  "specialist_id": "grounding",
+  "task": "Referring-expression grounding"
+}

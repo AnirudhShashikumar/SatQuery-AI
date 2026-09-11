@@ -1,0 +1,181 @@
+{
+  "artifacts": {
+    "confusion_matrix": "artifacts/rsvqa_full_specialist_v1/confusion_comparison.csv",
+    "per_class_metrics": "artifacts/rsvqa_full_specialist_v1/metrics_by_type.csv",
+    "predictions": "artifacts/rsvqa_full_specialist_v1/predictions.csv",
+    "report": "artifacts/rsvqa_full_specialist_v1/benchmark_report.md",
+    "visual_examples": [
+      "artifacts/rsvqa_full_specialist_v1/report_assets/per_task_accuracy.png"
+    ]
+  },
+  "benchmark_id": "rsvqa.specialist-v1.official-test.2026-08-29",
+  "breakdowns": [
+    {
+      "dimension": "question_family",
+      "label": "comp",
+      "metrics": [
+        {
+          "description": "Exact normalized answer match for this question family.",
+          "higher_is_better": true,
+          "id": "accuracy",
+          "label": "Exact-match accuracy",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.8848075962018991
+        }
+      ],
+      "sample_count": 4002
+    },
+    {
+      "dimension": "question_family",
+      "label": "count",
+      "metrics": [
+        {
+          "description": "Exact normalized answer match for this question family.",
+          "higher_is_better": true,
+          "id": "accuracy",
+          "label": "Exact-match accuracy",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.26331862911435355
+        }
+      ],
+      "sample_count": 2947
+    },
+    {
+      "dimension": "question_family",
+      "label": "presence",
+      "metrics": [
+        {
+          "description": "Exact normalized answer match for this question family.",
+          "higher_is_better": true,
+          "id": "accuracy",
+          "label": "Exact-match accuracy",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.9140439932318105
+        }
+      ],
+      "sample_count": 2955
+    },
+    {
+      "dimension": "question_family",
+      "label": "rural_urban",
+      "metrics": [
+        {
+          "description": "Exact normalized answer match for this question family.",
+          "higher_is_better": true,
+          "id": "accuracy",
+          "label": "Exact-match accuracy",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.9
+        }
+      ],
+      "sample_count": 100
+    }
+  ],
+  "display_name": "RSVQA Specialist",
+  "evaluation": {
+    "dataset": "RSVQA-LR",
+    "environment": {
+      "device": "local runtime (device not captured)",
+      "hardware": null,
+      "input_size": "Rendered RGB from official test imagery",
+      "os": null,
+      "python": null,
+      "torch": null
+    },
+    "protocol": "Complete official test manifest through the production RSVQA endpoint; exact normalized answer match, with overflow-aware count accuracy reported separately.",
+    "sample_count": 10004,
+    "split": "official test",
+    "status": "verified_test",
+    "timestamp": "2026-08-29T14:57:00.806969+00:00"
+  },
+  "limitations": [
+    "Trained specifically on RSVQA-LR and may not generalize to unrelated VQA datasets.",
+    "Count accuracy is substantially lower than the other task families.",
+    "Counts are learned benchmark labels and are not guaranteed physical object inventories.",
+    "The 201+ label represents an overflow class rather than an exact count.",
+    "The model is intended for optical or rendered RGB imagery, not raw SAR.",
+    "Confidence scores are softmax values and are not calibrated probabilities.",
+    "The model does not produce spatial grounding or segmentation.",
+    "The model should not replace geospatial measurement or human analysis."
+  ],
+  "metrics": [
+    {
+      "description": "Exact normalized answer match over all official test questions.",
+      "higher_is_better": true,
+      "id": "exact_match_accuracy",
+      "label": "Exact-match accuracy",
+      "primary": true,
+      "unit": "ratio",
+      "value": 0.710515793682527
+    },
+    {
+      "description": "Count answers above 201 are treated as the exported 201+ label.",
+      "higher_is_better": true,
+      "id": "overflow_aware_accuracy",
+      "label": "Overflow-aware accuracy",
+      "primary": false,
+      "unit": "ratio",
+      "value": 0.7431027588964414
+    },
+    {
+      "description": "Unweighted mean of the four task-family accuracies.",
+      "higher_is_better": true,
+      "id": "macro_task_accuracy",
+      "label": "Macro task accuracy",
+      "primary": false,
+      "unit": "ratio",
+      "value": 0.7405425546370158
+    },
+    {
+      "description": "Fraction of questions receiving a non-null specialist response.",
+      "higher_is_better": true,
+      "id": "coverage",
+      "label": "Answer coverage",
+      "primary": false,
+      "unit": "ratio",
+      "value": 1.0
+    }
+  ],
+  "model": {
+    "adaptation": "Presence, comparison, count, and rural/urban task heads",
+    "architecture": "Frozen OpenCLIP ViT-L-14 + SatQuery Vision Encoder v1 adapter + four task heads",
+    "checkpoint": "rsvqa_specialist_v1_head.pt",
+    "checkpoint_sha256": "71c0ab56ee650813bd495e8a3bc777353b6907a097af860e417f60523efe56ad",
+    "license": null,
+    "name": "SatQuery RSVQA Specialist v1",
+    "source": "Repository model bundle",
+    "training_dataset": "RSVQA-LR official training split",
+    "version": "1.0.0"
+  },
+  "notes": [
+    "This is a reproduced official test-split result, not the earlier Smoke-50 snapshot.",
+    "Softmax confidence is not a calibrated probability."
+  ],
+  "performance": {
+    "mean_latency_ms": 26.873650539784087,
+    "median_latency_ms": 29.0,
+    "model_load_ms": null,
+    "p95_latency_ms": 30.0,
+    "peak_memory_mb": null,
+    "throughput_samples_per_second": 31.651516925208895,
+    "warm_reuse": true
+  },
+  "provenance": {
+    "generated_by": "scripts/import_existing_benchmarks.py",
+    "result_origin": "satquery_reproduced",
+    "source_artifacts": [
+      "artifacts/rsvqa_full_specialist_v1/results.json",
+      "artifacts/rsvqa_full_specialist_v1/run_state.json",
+      "models/rsvqa_specialist_v1/model_card.json",
+      "models/rsvqa_specialist_v1/sha256.json"
+    ],
+    "verified": true
+  },
+  "schema_version": "1.0.0",
+  "specialist_id": "rsvqa",
+  "task": "Remote-sensing visual question answering"
+}

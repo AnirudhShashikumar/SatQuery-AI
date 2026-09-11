@@ -1,0 +1,27 @@
+{
+  "fallback": [
+    "Display preview only \u2014 not a scientific product.",
+    "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2.",
+    "Scene statistics are deterministic qualitative evidence, not a trained semantic classification.",
+    "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+    "No trained SAR scene classifier was used and no model confidence is available.",
+    "The remote-sensing captioner is not configured in this local environment.",
+    "This optical-like image is generated from SAR by a learned translation model. It is not an observed optical image and may contain hallucinated, omitted, or spatially distorted features."
+  ],
+  "native": [
+    "Display preview only \u2014 not a scientific product.",
+    "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2.",
+    "Scene statistics are deterministic qualitative evidence, not a trained semantic classification.",
+    "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+    "No trained SAR scene classifier was used and no model confidence is available."
+  ],
+  "translated": [
+    "Display preview only \u2014 not a scientific product.",
+    "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2.",
+    "Scene statistics are deterministic qualitative evidence, not a trained semantic classification.",
+    "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+    "No trained SAR scene classifier was used and no model confidence is available.",
+    "The remote-sensing captioner is not configured in this local environment.",
+    "This optical-like image is generated from SAR by a learned translation model. It is not an observed optical image and may contain hallucinated, omitted, or spatially distorted features."
+  ]
+}

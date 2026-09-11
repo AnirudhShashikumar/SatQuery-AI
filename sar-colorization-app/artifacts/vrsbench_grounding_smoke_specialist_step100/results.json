@@ -1,0 +1,528 @@
+{
+  "base_model": "IDEA-Research/grounding-dino-tiny",
+  "baseline_comparison": [
+    {
+      "absolute_change": 0.13613348395132954,
+      "baseline": 0.12828522562101688,
+      "metric": "mean_iou",
+      "relative_change": 1.061178193297942,
+      "specialist": 0.2644187095723464
+    },
+    {
+      "absolute_change": 0.12999999999999998,
+      "baseline": 0.22,
+      "metric": "accuracy_at_0.25",
+      "relative_change": 0.5909090909090908,
+      "specialist": 0.35
+    },
+    {
+      "absolute_change": 0.15000000000000002,
+      "baseline": 0.13,
+      "metric": "accuracy_at_0.50",
+      "relative_change": 1.1538461538461542,
+      "specialist": 0.28
+    },
+    {
+      "absolute_change": 0.12,
+      "baseline": 0.06,
+      "metric": "accuracy_at_0.75",
+      "relative_change": 2.0,
+      "specialist": 0.18
+    },
+    {
+      "absolute_change": -0.64,
+      "baseline": 0.64,
+      "metric": "null_rate",
+      "relative_change": -1.0,
+      "specialist": 0.0
+    },
+    {
+      "absolute_change": 62.23650204000023,
+      "baseline": 1169.14752,
+      "metric": "average_latency_ms",
+      "relative_change": 0.053232377416324805,
+      "specialist": 1231.3840220400002
+    },
+    {
+      "absolute_change": 226.85400000000004,
+      "baseline": 1201.261,
+      "metric": "p95_latency_ms",
+      "relative_change": 0.1888465537464381,
+      "specialist": 1428.115
+    }
+  ],
+  "baseline_note": "Same manifest; baseline used production filtering and could return null, while the specialist always selects one learned query.",
+  "benchmark": "SatQuery Grounding Specialist v1 Pilot step-100 — VRSBench Smoke-100",
+  "checkpoint_metadata": {
+    "base_parameter_count": 172249090,
+    "strict_specialist_load": true,
+    "trainable_base_parameter_count": 0
+  },
+  "clipped_vs_unclipped": [
+    {
+      "accuracy_at_0.25": 0.5,
+      "accuracy_at_0.50": 0.35,
+      "accuracy_at_0.75": 0.25,
+      "average_confidence": 0.18408062346279622,
+      "group": "clipped",
+      "mean_iou": 0.3649438237567665,
+      "samples": 40
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.23333333333333334,
+      "accuracy_at_0.75": 0.13333333333333333,
+      "average_confidence": 0.18703804115454356,
+      "group": "unclipped",
+      "mean_iou": 0.19740196678273303,
+      "samples": 60
+    }
+  ],
+  "geometry_analysis": {
+    "average_ground_truth_box_area": 0.111617,
+    "average_predicted_box_area": 0.33498325584881905,
+    "ground_truth_area_bucket_distribution": {
+      "large": 22,
+      "medium": 26,
+      "small": 16,
+      "tiny": 35,
+      "very_large": 1
+    },
+    "oversized_prediction_rate": 0.46,
+    "predicted_area_bucket_distribution": {
+      "large": 16,
+      "medium": 27,
+      "small": 20,
+      "tiny": 11,
+      "very_large": 26
+    },
+    "samples": 100,
+    "undersized_prediction_rate": 0.12
+  },
+  "per_class": [
+    {
+      "accuracy_at_0.25": 0.5,
+      "accuracy_at_0.50": 0.5,
+      "accuracy_at_0.75": 0.5,
+      "average_confidence": 0.1764519102871418,
+      "group": "airplane",
+      "mean_iou": 0.4232399076281581,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.1740199215710163,
+      "group": "airport",
+      "mean_iou": 0.1967437043786049,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.25,
+      "accuracy_at_0.75": 0.25,
+      "average_confidence": 0.19160960987210274,
+      "group": "baseball-diamond",
+      "mean_iou": 0.2707858645298984,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.75,
+      "accuracy_at_0.50": 0.75,
+      "accuracy_at_0.75": 0.75,
+      "average_confidence": 0.20181863382458687,
+      "group": "basketball-court",
+      "mean_iou": 0.5981289893388748,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.16644658148288727,
+      "group": "bridge",
+      "mean_iou": 0.101451296635787,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 1.0,
+      "accuracy_at_0.50": 0.5,
+      "accuracy_at_0.75": 0.5,
+      "average_confidence": 0.19090371578931808,
+      "group": "chimney",
+      "mean_iou": 0.5847609117627144,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.25,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.17902231588959694,
+      "group": "container-crane",
+      "mean_iou": 0.18606952158734202,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.5,
+      "accuracy_at_0.50": 0.5,
+      "accuracy_at_0.75": 0.25,
+      "average_confidence": 0.172518040984869,
+      "group": "dam",
+      "mean_iou": 0.4572511538863182,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.75,
+      "accuracy_at_0.50": 0.75,
+      "accuracy_at_0.75": 0.25,
+      "average_confidence": 0.17350749671459198,
+      "group": "expressway-service-area",
+      "mean_iou": 0.5207336395978928,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.25,
+      "accuracy_at_0.75": 0.25,
+      "average_confidence": 0.18295732513070107,
+      "group": "expressway-toll-station",
+      "mean_iou": 0.26804576884023845,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.25,
+      "accuracy_at_0.75": 0.25,
+      "average_confidence": 0.19078759849071503,
+      "group": "golffield",
+      "mean_iou": 0.249910281971097,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.0,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.16976799070835114,
+      "group": "ground-track-field",
+      "mean_iou": 0.04070868791313842,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.0,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.20389309525489807,
+      "group": "harbor",
+      "mean_iou": 0.018676335690543056,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.75,
+      "accuracy_at_0.50": 0.75,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.1881593018770218,
+      "group": "helicopter",
+      "mean_iou": 0.4191860258579254,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 1.0,
+      "accuracy_at_0.50": 1.0,
+      "accuracy_at_0.75": 1.0,
+      "average_confidence": 0.21434426307678223,
+      "group": "helipad",
+      "mean_iou": 0.8456094264984131,
+      "samples": 1
+    },
+    {
+      "accuracy_at_0.25": 0.5,
+      "accuracy_at_0.50": 0.25,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.17138319462537766,
+      "group": "overpass",
+      "mean_iou": 0.28640539199113846,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.0,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.1678011603653431,
+      "group": "roundabout",
+      "mean_iou": 0.0017277332808589563,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.21096838265657425,
+      "group": "ship",
+      "mean_iou": 0.0789802148938179,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.25,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.17264334484934807,
+      "group": "soccer-ball-field",
+      "mean_iou": 0.18272604929370573,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 1.0,
+      "accuracy_at_0.50": 0.75,
+      "accuracy_at_0.75": 0.75,
+      "average_confidence": 0.22175132483243942,
+      "group": "stadium",
+      "mean_iou": 0.7610147148370743,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.5,
+      "accuracy_at_0.50": 0.5,
+      "accuracy_at_0.75": 0.25,
+      "average_confidence": 0.18992669880390167,
+      "group": "storage-tank",
+      "mean_iou": 0.36066724359989166,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.25,
+      "accuracy_at_0.50": 0.25,
+      "accuracy_at_0.75": 0.25,
+      "average_confidence": 0.21200990304350853,
+      "group": "swimming-pool",
+      "mean_iou": 0.20588072203099728,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.0,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.18391693383455276,
+      "group": "tennis-court",
+      "mean_iou": 0.06622602496645413,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.0,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.1660832017660141,
+      "group": "trainstation",
+      "mean_iou": 0.0421028989367187,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.0,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.1913459300994873,
+      "group": "vehicle",
+      "mean_iou": 0.0,
+      "samples": 4
+    },
+    {
+      "accuracy_at_0.25": 0.0,
+      "accuracy_at_0.50": 0.0,
+      "accuracy_at_0.75": 0.0,
+      "average_confidence": 0.1907962312301,
+      "group": "windmill",
+      "mean_iou": 0.10352306564648946,
+      "samples": 3
+    }
+  ],
+  "prediction_policy": "highest specialist query logit; no oracle selection",
+  "production_thresholds_applied": false,
+  "query_index_analysis": {
+    "box_size_pattern_distribution": {
+      "large": 16,
+      "medium": 27,
+      "small": 20,
+      "tiny": 11,
+      "very_large": 26
+    },
+    "collapse_detected": true,
+    "collapse_reasons": [
+      "one_query_index_above_25_percent",
+      "top_five_query_indices_above_60_percent"
+    ],
+    "dominant_box_size_pattern": "medium",
+    "dominant_box_size_pattern_rate": 0.27,
+    "most_frequent_query_indices": [
+      {
+        "count": 49,
+        "percentage": 0.49,
+        "query_index": 0
+      },
+      {
+        "count": 12,
+        "percentage": 0.12,
+        "query_index": 1
+      },
+      {
+        "count": 6,
+        "percentage": 0.06,
+        "query_index": 3
+      },
+      {
+        "count": 4,
+        "percentage": 0.04,
+        "query_index": 2
+      },
+      {
+        "count": 2,
+        "percentage": 0.02,
+        "query_index": 4
+      },
+      {
+        "count": 2,
+        "percentage": 0.02,
+        "query_index": 5
+      },
+      {
+        "count": 2,
+        "percentage": 0.02,
+        "query_index": 29
+      },
+      {
+        "count": 2,
+        "percentage": 0.02,
+        "query_index": 18
+      },
+      {
+        "count": 2,
+        "percentage": 0.02,
+        "query_index": 11
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 39
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 22
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 441
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 6
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 23
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 57
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 82
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 15
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 220
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 16
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 28
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 73
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 7
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 27
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 58
+      },
+      {
+        "count": 1,
+        "percentage": 0.01,
+        "query_index": 822
+      }
+    ],
+    "samples": 100,
+    "top_10_coverage": 0.82,
+    "top_1_coverage": 0.49,
+    "top_5_coverage": 0.73,
+    "unique_selected_query_indices": 28
+  },
+  "recommendation": {
+    "choice": "B",
+    "label": "continue to 1,000-step balanced training"
+  },
+  "reproducibility_command": "venv/bin/python scripts/run_vrsbench_grounding_specialist_smoke.py --checkpoint /Users/anirudhshashikumar/Desktop/VRSBench/pilot_step_100.pt --manifest /Users/anirudhshashikumar/Desktop/VRSBench/grounding_smoke100/vrsbench_grounding_smoke100.jsonl --image-root /Users/anirudhshashikumar/Desktop/VRSBench/grounding_smoke100/images --output-dir '/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/vrsbench_grounding_smoke_specialist_step100' --device cpu --batch-size 1",
+  "specialist_checkpoint": "/Users/anirudhshashikumar/Desktop/VRSBench/pilot_step_100.pt",
+  "specialist_checkpoint_sha256": "cfa56beaeb2d41c44660be80d1cf2400d71e0332e183d9b4bf8a78710c61c599",
+  "summary": {
+    "accuracy_at_0.25": 0.35,
+    "accuracy_at_0.50": 0.28,
+    "accuracy_at_0.75": 0.18,
+    "average_confidence": 0.18585507407784463,
+    "average_latency_ms": 1231.3840220400002,
+    "completed_samples": 100,
+    "inference_failures": 0,
+    "mean_iou": 0.2644187095723464,
+    "median_iou": 0.07097258791327477,
+    "median_latency_ms": 1191.6162079999992,
+    "null_or_failure_rate": 0.0,
+    "p95_latency_ms": 1428.115,
+    "runtime_seconds": 123.37,
+    "samples": 100,
+    "throughput_samples_per_second": 0.8105698305909054
+  },
+  "validation_gates": {
+    "base_model_frozen": true,
+    "class_count": 26,
+    "clipped_samples": 40,
+    "duplicate_smoke_ids": 0,
+    "expected_samples": true,
+    "highest_logit_selection": true,
+    "missing_smoke_ids": 0,
+    "one_prediction_per_completed_sample": true,
+    "oracle_best_iou_selection": false,
+    "processed_samples": true,
+    "production_behavior_modified": false,
+    "production_thresholds_applied": false,
+    "same_manifest_as_baseline": true,
+    "strict_specialist_state_dict": true
+  }
+}

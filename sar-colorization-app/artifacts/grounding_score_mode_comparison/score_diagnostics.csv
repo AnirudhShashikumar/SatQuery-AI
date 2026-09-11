@@ -1,0 +1,13 @@
+mode,proposal_index,original_grounding_score,specialist_score,final_score,score_mode,fallback_used,fallback_reason,calibration_method
+disabled,0,0.62446922,,0.62446922,disabled,False,,
+disabled,1,0.39528528,,0.39528528,disabled,False,,
+disabled,2,0.37613022,,0.37613022,disabled,False,,
+fallback,0,0.62446922,0.02515921,0.62446922,fallback,True,specialist_scores_extremely_small,identity_probability
+fallback,1,0.39528528,0.00368637,0.39528528,fallback,True,specialist_scores_extremely_small,identity_probability
+fallback,2,0.37613022,0.01188891,0.37613022,fallback,True,specialist_scores_extremely_small,identity_probability
+blend,0,0.62446922,0.02515921,0.73712845,blend,False,,min_max_probability_normalization
+blend,1,0.39528528,0.00368637,0.27669969,blend,False,,min_max_probability_normalization
+blend,2,0.37613022,0.01188891,0.37788992,blend,False,,min_max_probability_normalization
+specialist_only,0,0.62446922,0.02515921,0.02515921,specialist_only,False,,identity_probability
+specialist_only,1,0.39528528,0.00368637,0.00368637,specialist_only,False,,identity_probability
+specialist_only,2,0.37613022,0.01188891,0.01188891,specialist_only,False,,identity_probability

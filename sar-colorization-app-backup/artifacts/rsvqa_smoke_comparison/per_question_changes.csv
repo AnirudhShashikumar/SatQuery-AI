@@ -1,0 +1,51 @@
+question_id,image_id,question_type,question,ground_truth,v1_prediction,v2_prediction,v1_correct,v2_correct,v1_status,v2_status,change
+30059,300,comp,Is the number of roads equal to the number of commercial buildings?,no,yes,,False,False,partial,insufficient_evidence,newly_null
+31611,316,rural_urban,Is it a rural or an urban area,rural,rural,rural,True,True,success,success,unchanged_correct
+25837,258,count,What is the amount of medium roads next to a  water area?,0,0,,True,False,partial,insufficient_evidence,regression
+30957,309,comp,Are there less buildings than roads?,no,no,,True,False,partial,insufficient_evidence,regression
+30807,307,comp,Are there less medium buildings than grass areas?,yes,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null
+32705,326,comp,Are there less water areas than roads?,yes,no,,False,False,partial,insufficient_evidence,newly_null
+26824,268,count,What is the number of medium commercial buildings in the image?,10,0,1,False,False,partial,success,unchanged_wrong_or_null
+29666,296,presence,Is there a heath?,yes,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null
+23945,239,count,How many large commercial buildings are there?,0,0,,True,False,partial,insufficient_evidence,regression
+25064,250,count,How many rectangular roads are there?,0,0,,True,False,partial,insufficient_evidence,regression
+29658,296,comp,Is the number of buildings equal to the number of forests?,no,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null
+30204,301,presence,Is there a square building?,no,yes,,False,False,partial,insufficient_evidence,newly_null
+29114,291,count,What is the number of roads?,33,0,,False,False,partial,insufficient_evidence,newly_null
+33052,330,count,What is the number of medium residential buildings?,27,0,,False,False,partial,insufficient_evidence,newly_null
+31476,314,count,How many rectangular roads are there?,0,0,,True,False,partial,insufficient_evidence,regression
+25400,253,presence,Is there a rectangular road?,no,yes,yes,False,False,partial,success,unchanged_wrong_or_null
+27827,278,presence,Is there a building?,yes,yes,yes,True,True,partial,partial,unchanged_correct
+32302,322,comp,Are there more large roads than water areas?,no,no,,True,False,partial,insufficient_evidence,regression
+29804,297,count,What is the number of small residential buildings?,3428,0,,False,False,partial,insufficient_evidence,newly_null
+26196,261,comp,Are there less forests than commercial buildings?,no,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null
+29458,294,count,How many forests are there?,20,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null
+25808,258,rural_urban,Is it a rural or an urban area,urban,rural,,False,False,success,insufficient_evidence,newly_null
+26908,269,rural_urban,Is it a rural or an urban area,urban,rural,,False,False,success,insufficient_evidence,newly_null
+26429,264,count,How many grass areas are there?,246,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null
+28457,284,presence,Is there a circular road?,no,yes,yes,False,False,partial,partial,unchanged_wrong_or_null
+30936,309,count,How many commercial buildings are there?,8,0,1,False,False,partial,success,unchanged_wrong_or_null
+30988,309,comp,Are there more roads than buildings?,no,no,,True,False,partial,insufficient_evidence,regression
+24219,242,presence,Is a commercial building present?,yes,,yes,False,True,success,success,fixed
+24397,243,presence,Is there a wetland?,yes,,yes,False,True,insufficient_evidence,partial,fixed
+31206,311,comp,Are there less residential buildings than circular scrubs?,no,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null
+26377,263,count,What is the number of large roads?,0,0,1,True,False,partial,success,regression
+23410,234,count,What is the number of commercial buildings?,2,0,1,False,False,partial,success,unchanged_wrong_or_null
+32611,326,rural_urban,Is it a rural or an urban area,urban,urban,urban,True,True,partial,partial,unchanged_correct
+30001,299,comp,Are there more commercial buildings than water areas?,yes,no,,False,False,partial,insufficient_evidence,newly_null
+30137,301,comp,Is the number of forests equal to the number of roads in the image?,no,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null
+30715,307,presence,Is there a grass area?,yes,yes,yes,True,True,partial,partial,unchanged_correct
+32661,326,count,What is the number of rectangular roads?,0,0,1,True,False,partial,success,regression
+27648,276,presence,Is a rectangular water area present?,yes,,yes,False,True,success,success,fixed
+30433,304,presence,Is there a small grass area?,yes,yes,,True,False,partial,insufficient_evidence,regression
+25351,253,count,What is the amount of medium water areas?,4,0,,False,False,partial,insufficient_evidence,newly_null
+29390,293,comp,Are there less commercial buildings than water areas?,no,no,,True,False,partial,insufficient_evidence,regression
+29461,294,presence,Is there a rectangular industrial?,no,,yes,False,False,insufficient_evidence,partial,newly_answered_wrong
+27508,275,rural_urban,Is it a rural or an urban area,urban,rural,urban,False,True,success,success,fixed
+31412,314,presence,Is there a commercial building in the image?,yes,yes,,True,False,partial,insufficient_evidence,regression
+29023,290,presence,Is there a medium grass area?,yes,yes,yes,True,True,partial,partial,unchanged_correct
+27760,277,comp,Are there more square buildings than commercial buildings?,no,no,no,True,True,partial,success,unchanged_correct
+23533,235,presence,Is a circular scrub present?,no,,no,False,True,not_implemented,partial,fixed
+32033,320,comp,Are there more water areas than buildings?,no,no,,True,False,partial,insufficient_evidence,regression
+28236,282,presence,Is a large road present in the image?,no,,yes,False,False,not_implemented,partial,newly_answered_wrong
+23777,237,comp,Are there more grass areas than roads?,yes,,,False,False,insufficient_evidence,insufficient_evidence,unchanged_wrong_or_null

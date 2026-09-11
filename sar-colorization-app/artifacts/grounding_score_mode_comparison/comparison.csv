@@ -1,0 +1,5 @@
+mode,accepted_count,rejected_count,scores,boxes_pixels,labels,wall_runtime_ms,backbone_initialization_ms,model_load_ms,model_reused,same_geometry_and_labels_as_disabled,fallback_used,fallback_reason,calibration_methods,error
+disabled,1,2,[0.624469],"[[68, 63, 122, 118]]","[""building""]",2358,1812,0,True,True,False,,[],
+fallback,1,2,[0.624469],"[[68, 63, 122, 118]]","[""building""]",1200,1812,0,True,True,True,specialist_scores_extremely_small,"[""identity_probability""]",
+blend,1,2,[0.737128],"[[68, 63, 122, 118]]","[""building""]",1173,1812,0,True,True,False,,"[""min_max_probability_normalization""]",
+specialist_only,0,3,[],[],[],1173,1812,0,True,False,False,,"[""identity_probability""]",

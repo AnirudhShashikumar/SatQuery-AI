@@ -1,0 +1,1 @@
+a99c0bf0fb44044988ef1698483888c8a2e3a047d2d2d56478837575cf7626ea  satquery_vision_encoder_v1_adapter.pt

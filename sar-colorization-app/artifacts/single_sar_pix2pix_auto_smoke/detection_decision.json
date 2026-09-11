@@ -1,0 +1,9 @@
+{
+  "auto_detected_modality": "sar_preview",
+  "confidence": "medium",
+  "effective_modality": "sar_preview",
+  "limitations": [
+    "SAR-preview detection is based on display-image statistics and a secondary filename or metadata hint; it does not recover scientific SAR calibration."
+  ],
+  "reason": "One-channel display has SAR-like intensity statistics and a SAR metadata/filename hint; classified as SAR preview (intensity range p1-p99=244.0, coefficient of variation=0.299, local roughness=0.045)."
+}

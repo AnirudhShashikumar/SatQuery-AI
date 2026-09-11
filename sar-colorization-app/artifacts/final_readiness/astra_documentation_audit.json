@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "checks": {
+    "required_docs": {
+      "README.md": true,
+      "docs/SIH_FINAL_ENGINEERING_AUDIT.md": true,
+      "docs/PROBLEM_STATEMENT_26167_COMPLIANCE.md": true,
+      "docs/OPTICAL_SAR_EVALUATION_PROTOCOL.md": true,
+      "docs/MODEL_DATASET_PROVENANCE.md": true,
+      "docs/CARTOSAT_RISAT_READINESS.md": true,
+      "docs/OFFLINE_DEMO_CHECKLIST.md": true,
+      "docs/SIH_FINAL_SUBMISSION_AUDIT.md": true
+    },
+    "private_absolute_paths": [],
+    "apparent_secrets": [],
+    "large_accidental_files": [],
+    "readme_reproducibility_markers": {
+      "Python 3.11": true,
+      "npm": true,
+      "verify_models.py": true,
+      "smoke_all_workflows.py": true,
+      "MODEL_DATASET_PROVENANCE.md": true
+    },
+    "provenance_document_present": true,
+    "models": {
+      "status": "ready",
+      "required_ok": true,
+      "models": [
+        {
+          "name": "SVE adapter",
+          "path": "models/satquery_vision_encoder_v1/satquery_vision_encoder_v1_adapter.pt",
+          "required": true,
+          "present": true,
+          "expected_sha256": "a99c0bf0fb44044988ef1698483888c8a2e3a047d2d2d56478837575cf7626ea",
+          "actual_sha256": "a99c0bf0fb44044988ef1698483888c8a2e3a047d2d2d56478837575cf7626ea",
+          "verified": true
+        },
+        {
+          "name": "RSVQA specialist",
+          "path": "models/rsvqa_specialist_v1/rsvqa_specialist_v1_head.pt",
+          "required": true,
+          "present": true,
+          "expected_sha256": "71c0ab56ee650813bd495e8a3bc777353b6907a097af860e417f60523efe56ad",
+          "actual_sha256": "71c0ab56ee650813bd495e8a3bc777353b6907a097af860e417f60523efe56ad",
+          "verified": true
+        },
+        {
+          "name": "Grounding specialist",
+          "path": "models/grounding_specialist_v1_1/grounding_specialist_v1_1_head.pt",
+          "required": true,
+          "present": true,
+          "expected_sha256": "5e8db30becadb1d063fc0154614ee2a2a4b7a2c2923db3fce4ff036c65007342",
+          "actual_sha256": "5e8db30becadb1d063fc0154614ee2a2a4b7a2c2923db3fce4ff036c65007342",
+          "verified": true
+        },
+        {
+          "name": "ChangerEx",
+          "path": "models/changerex/ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+          "required": true,
+          "present": true,
+          "expected_sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+          "actual_sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+          "verified": true
+        },
+        {
+          "name": "SARFusionFormer",
+          "path": "../models/checkpoints/sarfusionformer_256_decoder_best.pt",
+          "required": false,
+          "present": true,
+          "expected_sha256": null,
+          "actual_sha256": null,
+          "verified": true
+        },
+        {
+          "name": "Color corrector",
+          "path": "../models/checkpoints/color_corrector_256_best.pt",
+          "required": false,
+          "present": true,
+          "expected_sha256": null,
+          "actual_sha256": null,
+          "verified": true
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "command": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/bin/python scripts/validate_benchmark_results.py",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": "Validated 9 benchmark records and the demo gallery\n"
+    }
+  ]
+}

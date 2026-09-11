@@ -1,0 +1,18 @@
+{
+  "status": "failed",
+  "error": "RuntimeError: TTP did not execute as primary; engine={'mode': 'deterministic_fallback', 'primary_tool': 'deterministic_change_analyzer', 'supporting_tool': None, 'fallback_used': True, 'fallback_reason': 'unavailable'}",
+  "total_runtime_ms": 1392.5,
+  "ttp_health": {
+    "status": "unavailable",
+    "lifecycle": "unavailable",
+    "device": null,
+    "checkpoint": "epoch_260.pth",
+    "loaded": false,
+    "load_count": 0,
+    "reuse_count": 0,
+    "inference_count": 0,
+    "errors": [
+      "TTP is unavailable; deterministic fallback was used."
+    ]
+  }
+}

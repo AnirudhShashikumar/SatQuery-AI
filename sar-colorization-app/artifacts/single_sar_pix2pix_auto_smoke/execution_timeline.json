@@ -1,0 +1,190 @@
+[
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "success",
+    "tool": "upload_received"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "success",
+    "tool": "file_type_validation"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "success",
+    "tool": "metadata_extraction"
+  },
+  {
+    "duration_ms": 7,
+    "parameters": {},
+    "status": "success",
+    "tool": "preview_generation"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {
+      "auto_detected": "sar_preview",
+      "confidence": "medium",
+      "effective_modality": "sar_preview",
+      "reason": "One-channel display has SAR-like intensity statistics and a SAR metadata/filename hint; classified as SAR preview (intensity range p1-p99=244.0, coefficient of variation=0.299, local roughness=0.045)."
+    },
+    "status": "success",
+    "tool": "modality_detection"
+  },
+  {
+    "duration_ms": 4,
+    "parameters": {},
+    "status": "success",
+    "tool": "query_routing"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "failed",
+    "tool": "question_classification"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "skipped",
+    "tool": "optical_image_preparation"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "skipped",
+    "tool": "evidence_extraction"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "skipped",
+    "tool": "scene_summary_computation"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "skipped",
+    "tool": "controlled_answer_generation"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "skipped",
+    "tool": "evidence_preview_generation"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {},
+    "status": "success",
+    "tool": "response_generation"
+  },
+  {
+    "duration_ms": 6,
+    "parameters": {
+      "method": "deterministic_intensity_texture_summary"
+    },
+    "status": "success",
+    "tool": "sar_native_supporting_analysis"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {
+      "band_count": 1,
+      "eligible": true,
+      "finite_value_ratio": 1.0,
+      "reason": null,
+      "requested_model": "pix2pix",
+      "selected_model": "pix2pix"
+    },
+    "status": "success",
+    "tool": "sar_translation_eligibility"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {
+      "color_correction_used": false,
+      "fallback_used": false,
+      "model": "Pix2Pix"
+    },
+    "status": "success",
+    "tool": "sar_translation_model_load"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {
+      "color_correction_used": false,
+      "fallback_used": false,
+      "model": "Pix2Pix"
+    },
+    "status": "success",
+    "tool": "sar_translation_preprocessing"
+  },
+  {
+    "duration_ms": 77,
+    "parameters": {
+      "color_correction_used": false,
+      "fallback_used": false,
+      "model": "Pix2Pix"
+    },
+    "status": "success",
+    "tool": "sar_translation_inference"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {
+      "color_correction_used": false,
+      "fallback_used": false,
+      "model": "Pix2Pix"
+    },
+    "status": "success",
+    "tool": "sar_translation_color_correction"
+  },
+  {
+    "duration_ms": 8,
+    "parameters": {
+      "color_correction_used": false,
+      "fallback_used": false,
+      "model": "Pix2Pix"
+    },
+    "status": "success",
+    "tool": "sar_translation_artifact_generation"
+  },
+  {
+    "duration_ms": 8755,
+    "parameters": {
+      "generated_representation": true
+    },
+    "status": "success",
+    "tool": "translated_optical_sve"
+  },
+  {
+    "duration_ms": 60,
+    "parameters": {
+      "generated_representation": true,
+      "task_head": "presence"
+    },
+    "status": "success",
+    "tool": "translated_optical_vqa"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {
+      "agreement": "suggested_by_translation_only",
+      "calibrated": false
+    },
+    "status": "success",
+    "tool": "sar_optical_evidence_fusion"
+  },
+  {
+    "duration_ms": 0,
+    "parameters": {
+      "source": "translated_optical_specialist"
+    },
+    "status": "success",
+    "tool": "response_generation"
+  }
+]

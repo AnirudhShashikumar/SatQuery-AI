@@ -1,0 +1,1094 @@
+[
+  {
+    "workflow": "sar_only",
+    "http_status": 200,
+    "response": {
+      "request_id": "9d5c1e11-3169-42e7-a565-2a63a2439217",
+      "task": "sar_scene_analysis",
+      "answer": "The SAR intensity representation is relatively smooth. Low-, mid-, and high-normalized-return pixels account for approximately 33.7%, 5.9%, and 60.3% of valid pixels. These are backscatter-pattern observations, not semantic land-cover labels.",
+      "confidence": {
+        "level": "unavailable",
+        "score": null,
+        "reason": "A deterministic SAR summary was used; no trained classifier probability is available."
+      },
+      "evidence": [
+        {
+          "evidence_id": null,
+          "source_observation_id": null,
+          "source_observation_ids": [],
+          "source_role": null,
+          "source_modality": null,
+          "evidence_type": null,
+          "type": "normalized_sar_preview",
+          "label": "Normalized SAR intensity preview",
+          "description": "The normalized values used for the reported distribution and texture statistics.",
+          "reference": "/api/agent/previews/1279cbca442244d6a44cbc075bcf6763.png"
+        }
+      ],
+      "execution": {
+        "input_mode": "single",
+        "selected_tools": [
+          "input_validator",
+          "sar_scene_analyzer"
+        ],
+        "steps": [
+          {
+            "tool": "upload_received",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {}
+          },
+          {
+            "tool": "file_type_validation",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {}
+          },
+          {
+            "tool": "metadata_extraction",
+            "status": "success",
+            "duration_ms": 8,
+            "parameters": {}
+          },
+          {
+            "tool": "preview_generation",
+            "status": "success",
+            "duration_ms": 8,
+            "parameters": {}
+          },
+          {
+            "tool": "representation_detection",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "representation": "scientific_raster"
+            }
+          },
+          {
+            "tool": "modality_detection",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "auto_detected": "sar_vv_vh",
+              "confidence": "low",
+              "effective_modality": "sar_vv_vh",
+              "reason": "SAR filename/metadata hints and two scientific bands suggest a dual-polarization raster."
+            }
+          },
+          {
+            "tool": "user_modality_override",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "confirmed_modality": "sar_vv_vh"
+            }
+          },
+          {
+            "tool": "query_routing",
+            "status": "success",
+            "duration_ms": 1,
+            "parameters": {}
+          },
+          {
+            "tool": "compatibility_validation",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "specialist": "sar_scene_analyzer",
+              "rejection_reasons": []
+            }
+          },
+          {
+            "tool": "specialist_selection",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {}
+          },
+          {
+            "tool": "query_classification",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "task": "sar_scene_analysis"
+            }
+          },
+          {
+            "tool": "sar_preprocessing",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "version": "sar-preprocess-1.0",
+              "log_transform": false
+            }
+          },
+          {
+            "tool": "sar_scene_statistics",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "trained_classifier": false,
+              "texture_index": 0.0
+            }
+          },
+          {
+            "tool": "evidence_generation",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "product_count": 1
+            }
+          },
+          {
+            "tool": "result_assembly",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {}
+          }
+        ],
+        "duration_ms": 22,
+        "permitted_parameters": {
+          "query": "Describe the major radar-backscatter patterns.",
+          "input_mode": "single",
+          "primary_modality": "sar",
+          "secondary_modality": null,
+          "has_primary_image": true,
+          "has_secondary_image": false,
+          "primary_image_modality": "sar_vv_vh",
+          "primary_representation": "scientific_raster",
+          "primary_band_count": 2,
+          "primary_date": null,
+          "secondary_date": null,
+          "representation": "scientific_raster",
+          "auto_detected_modality": "sar_vv_vh",
+          "user_confirmed_modality": "sar_vv_vh",
+          "effective_modality": "sar_vv_vh"
+        },
+        "validation": {
+          "valid": true,
+          "errors": []
+        },
+        "selection_reason": "The effective modality is SAR and the query requests qualitative SAR intensity/quality analysis."
+      },
+      "warnings": [
+        "Display preview only \u2014 not a scientific product.",
+        "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2.",
+        "Scene statistics are deterministic qualitative evidence, not a trained semantic classification.",
+        "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+        "No trained SAR scene classifier was used and no model confidence is available."
+      ],
+      "status": "partial",
+      "result_status": "COMPLETED_WITH_LIMITATIONS",
+      "primary_image_metadata": {
+        "observation_role": null,
+        "file_id": "918b3989-72d4-4283-9bf4-f15f394c2dbc",
+        "original_name": "cross-sar.tif",
+        "safe_name": "cross-sar.tif",
+        "format": "geotiff",
+        "mime_type": "image/tiff",
+        "size_bytes": 131546,
+        "width": 128,
+        "height": 128,
+        "band_count": 2,
+        "dtype": "float32",
+        "crs": "EPSG:4326",
+        "transform": [
+          0.01,
+          0.0,
+          70.0,
+          0.0,
+          -0.01,
+          20.0
+        ],
+        "bounds": {
+          "left": 70.0,
+          "bottom": 18.72,
+          "right": 71.28,
+          "top": 20.0
+        },
+        "nodata": null,
+        "is_georeferenced": true,
+        "preview_url": "/api/agent/previews/e51e7ea5dc724a9ba0a347b4f088cb0c.png",
+        "color_interpretation": [
+          "band_1",
+          "band_2"
+        ],
+        "band_descriptions": [
+          null,
+          null
+        ],
+        "input_band_count": 2,
+        "available_band_names": [
+          "band_1",
+          "band_2"
+        ],
+        "selected_visual_bands": [
+          "band_1",
+          "band_2"
+        ],
+        "band_selection_reason": "two scientific bands retained for a disclosed false-color preview",
+        "band_statistics": [
+          {
+            "band": 1,
+            "description": null,
+            "dtype": "float32",
+            "minimum": 0.23267973959445953,
+            "maximum": 0.7150326371192932,
+            "mean": 0.46822790319129126,
+            "standard_deviation": 0.14898471336950425,
+            "percentile_1": 0.23267973959445953,
+            "percentile_5": 0.23267973959445953,
+            "percentile_50": 0.5607843399047852,
+            "percentile_95": 0.7150326371192932,
+            "percentile_99": 0.7150326371192932,
+            "nan_count": 0,
+            "inf_count": 0,
+            "nodata_count": 0,
+            "valid_count": 16384
+          },
+          {
+            "band": 2,
+            "description": null,
+            "dtype": "float32",
+            "minimum": 0.27079737186431885,
+            "maximum": 0.6663267612457275,
+            "mean": 0.4639468641835265,
+            "standard_deviation": 0.12216746765457527,
+            "percentile_1": 0.27079737186431885,
+            "percentile_5": 0.27079737186431885,
+            "percentile_50": 0.5398431420326233,
+            "percentile_95": 0.6663267612457275,
+            "percentile_99": 0.6663267612457275,
+            "nan_count": 0,
+            "inf_count": 0,
+            "nodata_count": 0,
+            "valid_count": 16384
+          }
+        ],
+        "representation": "scientific_raster",
+        "auto_detected_modality": "sar_vv_vh",
+        "auto_detection_confidence": "low",
+        "auto_detection_reason": "SAR filename/metadata hints and two scientific bands suggest a dual-polarization raster.",
+        "user_confirmed_modality": "sar_vv_vh",
+        "effective_modality": "sar_vv_vh",
+        "modality_limitations": [
+          "SAR channel order could not be verified from band descriptions."
+        ],
+        "warnings": [
+          "Display preview only \u2014 not a scientific product.",
+          "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2."
+        ]
+      },
+      "secondary_image_metadata": null,
+      "pair_compatibility": null,
+      "model": null,
+      "caption_details": null,
+      "grounding_result": null,
+      "cross_modal_analysis": null,
+      "change_analysis": null,
+      "vqa_details": null,
+      "sar_water_analysis": null,
+      "sar_scene_analysis": {
+        "execution_status": "completed_with_limitations",
+        "task": "sar_scene_analysis",
+        "method": "deterministic_intensity_texture_summary",
+        "method_version": "deterministic-sar-scene-1.0",
+        "valid_pixel_percent": 100.0,
+        "low_backscatter_percent": 33.7402,
+        "mid_backscatter_percent": 5.9326,
+        "high_backscatter_percent": 60.3271,
+        "normalized_mean": 0.488332,
+        "normalized_standard_deviation": 0.308871,
+        "texture_index": 0.0,
+        "input_quality_score": 1.0,
+        "evidence_products": [
+          {
+            "id": "f3bc837d4641402ab791ddd0ff29326c",
+            "type": "normalized_sar_preview",
+            "label": "Normalized SAR intensity preview",
+            "description": "The normalized values used for the reported distribution and texture statistics.",
+            "source": "sar_scene_analyzer",
+            "authoritative": true,
+            "reference": "/api/agent/previews/1279cbca442244d6a44cbc075bcf6763.png",
+            "width": 128,
+            "height": 128,
+            "generation_method": "finite non-NoData 1st/99th percentile per channel, then channel mean"
+          }
+        ],
+        "preprocessing": {
+          "version": "sar-preprocess-1.0",
+          "input_value_domain": "amplitude_or_power_like_unverified",
+          "log_transform_applied": false,
+          "normalization": "finite non-NoData 1st/99th percentile per channel, then channel mean",
+          "percentile_low": 0.2517385557293892,
+          "percentile_high": 0.6906796991825104,
+          "invalid_pixel_count": 0,
+          "nodata_pixel_count": 0,
+          "denoising": "3x3 median filter",
+          "resized": false,
+          "input_dtype": "float32",
+          "input_channel_count": 2,
+          "polarization_labels": [
+            "VV",
+            "VH"
+          ],
+          "value_domain_reason": "Floating values are non-negative (p1=0.23268, p99=0.715033); amplitude versus power is not inferred.",
+          "percentile_lows": [
+            0.23267973959445953,
+            0.27079737186431885
+          ],
+          "percentile_highs": [
+            0.7150326371192932,
+            0.6663267612457275
+          ]
+        },
+        "limitations": [
+          "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+          "No trained SAR scene classifier was used and no model confidence is available."
+        ],
+        "warnings": [
+          "Scene statistics are deterministic qualitative evidence, not a trained semantic classification."
+        ],
+        "runtime_ms": 2
+      },
+      "classified_query": {
+        "task_type": "sar_scene_analysis",
+        "target": null,
+        "requested_output": "text",
+        "requires_localization": false,
+        "requires_segmentation": false,
+        "requires_measurement": false
+      },
+      "cache": {
+        "cached": false,
+        "original_generation_timestamp": "2026-09-05T18:42:19.016227Z",
+        "retrieval_timestamp": "2026-09-05T18:42:19.016227Z",
+        "tool_version": "satquery-sar-routing-1.1",
+        "cache_key_prefix": "c8cf621d6a00"
+      },
+      "change_engine": null,
+      "ttp_result": null,
+      "mask_comparison": null,
+      "evidence_consistency": null,
+      "sve_result": null,
+      "sar_translated_optical_analysis": null,
+      "semantic_change_summary": null
+    }
+  },
+  {
+    "workflow": "grounding",
+    "http_status": 200,
+    "response": {
+      "request_id": "9c2d05e1-aed9-45e4-96eb-9cffd2f3ee67",
+      "task": "grounding",
+      "answer": "Grounding DINO produced 2 accepted localized region(s) for 'water body'. Review the accepted model scores and annotated preview.",
+      "confidence": {
+        "level": "moderate",
+        "score": 0.61057,
+        "reason": "The score is Grounding DINO text-region alignment, not calibrated confidence for remote-sensing imagery."
+      },
+      "evidence": [
+        {
+          "evidence_id": null,
+          "source_observation_id": null,
+          "source_observation_ids": [],
+          "source_role": null,
+          "source_modality": null,
+          "evidence_type": null,
+          "type": "model_produced_grounding",
+          "label": "Grounding DINO annotated detections",
+          "description": "Model-produced candidate boxes; not ground truth.",
+          "reference": "/api/agent/previews/c6487521e2cc45a397a002feb340d14f.png"
+        }
+      ],
+      "execution": {
+        "input_mode": "single",
+        "selected_tools": [
+          "input_validator",
+          "rs_grounder"
+        ],
+        "steps": [
+          {
+            "tool": "upload_received",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {}
+          },
+          {
+            "tool": "file_type_validation",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {}
+          },
+          {
+            "tool": "metadata_extraction",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {}
+          },
+          {
+            "tool": "preview_generation",
+            "status": "success",
+            "duration_ms": 2,
+            "parameters": {}
+          },
+          {
+            "tool": "query_routing",
+            "status": "success",
+            "duration_ms": 2,
+            "parameters": {}
+          },
+          {
+            "tool": "target_phrase_extraction",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "target_phrase": "water body"
+            }
+          },
+          {
+            "tool": "grounding_image_preparation",
+            "status": "success",
+            "duration_ms": 12,
+            "parameters": {
+              "representation": "percentile-stretched RGB display representation",
+              "model_input_width": 800,
+              "model_input_height": 800
+            }
+          },
+          {
+            "tool": "grounder_model_load",
+            "status": "success",
+            "duration_ms": 1561,
+            "parameters": {
+              "checkpoint": "IDEA-Research/grounding-dino-tiny",
+              "device": "cpu",
+              "reused": false
+            }
+          },
+          {
+            "tool": "grounding_inference",
+            "status": "success",
+            "duration_ms": 3923,
+            "parameters": {
+              "model_produced": true
+            }
+          },
+          {
+            "tool": "grounding_postprocessing",
+            "status": "success",
+            "duration_ms": 5,
+            "parameters": {
+              "candidate_count": 3,
+              "box_threshold": 0.35,
+              "text_threshold": 0.25
+            }
+          },
+          {
+            "tool": "grounding_quality_filter",
+            "status": "success",
+            "duration_ms": 1,
+            "parameters": {
+              "candidate_count": 3,
+              "accepted_count": 2,
+              "rejected_count": 1,
+              "minimum_score": 0.45,
+              "maximum_localized_area_ratio": 0.85,
+              "rejection_reason_counts": {
+                "alignment_score_below_minimum": 1
+              }
+            }
+          },
+          {
+            "tool": "grounding_preview_generation",
+            "status": "success",
+            "duration_ms": 12,
+            "parameters": {
+              "ground_truth_claimed": false,
+              "mask_refinement": false
+            }
+          },
+          {
+            "tool": "response_generation",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {}
+          },
+          {
+            "tool": "sve_artifact_verification",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "checksum_verified": true
+            }
+          },
+          {
+            "tool": "sve_model_load",
+            "status": "success",
+            "duration_ms": 3291,
+            "parameters": {
+              "device": "cpu",
+              "reused": false
+            }
+          },
+          {
+            "tool": "sve_eligibility_check",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "input": "optical_rgb_like"
+            }
+          },
+          {
+            "tool": "sve_image_preparation",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "transform": "verified_openclip_validation_transform"
+            }
+          },
+          {
+            "tool": "sve_image_embedding",
+            "status": "success",
+            "duration_ms": 215,
+            "parameters": {
+              "cache": "miss",
+              "device": "cpu"
+            }
+          },
+          {
+            "tool": "sve_scene_priors",
+            "status": "success",
+            "duration_ms": 3343,
+            "parameters": {
+              "top_labels": [
+                "arable land",
+                "urban or built-up area",
+                "pasture",
+                "grassland",
+                "agricultural land"
+              ],
+              "calibrated": false
+            }
+          },
+          {
+            "tool": "sve_routing_support",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "support_state": "advisory",
+              "influence_applied": false
+            }
+          },
+          {
+            "tool": "sve_grounding_support",
+            "status": "success",
+            "duration_ms": 0,
+            "parameters": {
+              "support_state": "weak"
+            }
+          }
+        ],
+        "duration_ms": 12374,
+        "permitted_parameters": {
+          "query": "Highlight the water body.",
+          "input_mode": "single",
+          "primary_modality": "optical",
+          "secondary_modality": null,
+          "has_primary_image": true,
+          "has_secondary_image": false,
+          "primary_image_modality": "optical_rgb",
+          "primary_representation": "display_preview",
+          "primary_band_count": 3,
+          "primary_date": null,
+          "secondary_date": null,
+          "representation": "display_preview",
+          "auto_detected_modality": "optical_rgb",
+          "user_confirmed_modality": "optical_rgb",
+          "effective_modality": "optical_rgb",
+          "box_threshold": 0.35,
+          "text_threshold": 0.25,
+          "nms_iou_threshold": 0.5,
+          "maximum_detections": 20,
+          "maximum_source_dimension": 1024,
+          "minimum_reliable_alignment_score": 0.45,
+          "maximum_localized_area_ratio": 0.85,
+          "quality_policy_label": "Operational reliability gates pending benchmark calibration.",
+          "checkpoint": "IDEA-Research/grounding-dino-tiny",
+          "model_input_width": 800,
+          "model_input_height": 800,
+          "target_phrase": "water body",
+          "mask_refinement": false
+        },
+        "validation": {
+          "valid": true,
+          "errors": []
+        },
+        "selection_reason": "The query requests spatial localization of a supported concrete target."
+      },
+      "warnings": [
+        "Display preview only \u2014 not a scientific product."
+      ],
+      "status": "success",
+      "result_status": "COMPLETED",
+      "primary_image_metadata": {
+        "observation_role": null,
+        "file_id": "c41ee135-27ed-4f18-8e90-aba1ad864aad",
+        "original_name": "single-optical.png",
+        "safe_name": "single-optical.png",
+        "format": "png",
+        "mime_type": "image/png",
+        "size_bytes": 547,
+        "width": 128,
+        "height": 128,
+        "band_count": 3,
+        "dtype": "uint8",
+        "crs": null,
+        "transform": null,
+        "bounds": null,
+        "nodata": null,
+        "is_georeferenced": false,
+        "preview_url": "/api/agent/previews/9fa658f167244c839e22750fbc1cc14c.png",
+        "color_interpretation": [
+          "r",
+          "g",
+          "b"
+        ],
+        "band_descriptions": [
+          "r",
+          "g",
+          "b"
+        ],
+        "input_band_count": 3,
+        "available_band_names": [
+          "r",
+          "g",
+          "b"
+        ],
+        "selected_visual_bands": [
+          "r",
+          "g",
+          "b"
+        ],
+        "band_selection_reason": "color interpretation explicitly identifies red, green, and blue",
+        "band_statistics": [
+          {
+            "band": 1,
+            "description": "r",
+            "dtype": "uint8",
+            "minimum": 24.0,
+            "maximum": 188.0,
+            "mean": 122.78564453125,
+            "standard_deviation": 59.862928951651845,
+            "percentile_1": 24.0,
+            "percentile_5": 24.0,
+            "percentile_50": 167.0,
+            "percentile_95": 188.0,
+            "percentile_99": 188.0,
+            "nan_count": 0,
+            "inf_count": 0,
+            "nodata_count": 0,
+            "valid_count": 16384
+          },
+          {
+            "band": 2,
+            "description": "g",
+            "dtype": "uint8",
+            "minimum": 62.0,
+            "maximum": 184.0,
+            "mean": 130.967529296875,
+            "standard_deviation": 37.15150792843493,
+            "percentile_1": 62.0,
+            "percentile_5": 62.0,
+            "percentile_50": 150.0,
+            "percentile_95": 184.0,
+            "percentile_99": 184.0,
+            "nan_count": 0,
+            "inf_count": 0,
+            "nodata_count": 0,
+            "valid_count": 16384
+          },
+          {
+            "band": 3,
+            "description": "b",
+            "dtype": "uint8",
+            "minimum": 63.0,
+            "maximum": 175.0,
+            "mean": 104.441162109375,
+            "standard_deviation": 26.54217889998628,
+            "percentile_1": 63.0,
+            "percentile_5": 63.0,
+            "percentile_50": 112.0,
+            "percentile_95": 175.0,
+            "percentile_99": 175.0,
+            "nan_count": 0,
+            "inf_count": 0,
+            "nodata_count": 0,
+            "valid_count": 16384
+          }
+        ],
+        "representation": "display_preview",
+        "auto_detected_modality": "optical_rgb",
+        "auto_detection_confidence": "high",
+        "auto_detection_reason": "The display image contains explicit RGB channels with normal chromatic variation.",
+        "user_confirmed_modality": "optical_rgb",
+        "effective_modality": "optical_rgb",
+        "modality_limitations": [],
+        "warnings": [
+          "Display preview only \u2014 not a scientific product."
+        ]
+      },
+      "secondary_image_metadata": null,
+      "pair_compatibility": null,
+      "model": {
+        "tool_id": "rs_grounder",
+        "checkpoint": "IDEA-Research/grounding-dino-tiny",
+        "base_architecture": "Grounding DINO Tiny + SatQuery Grounding Specialist v1.1",
+        "adaptation_dataset": "VRSBench",
+        "remote_sensing_adapted": true,
+        "license": "Apache-2.0",
+        "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny; verified local SatQuery Grounding Specialist v1.1 export, training recipe v1.1, step 600"
+      },
+      "caption_details": null,
+      "grounding_result": {
+        "original_query": "Highlight the water body.",
+        "target_phrase": "water body",
+        "detections": [
+          {
+            "label": "water body",
+            "score": 0.61057,
+            "bbox_pixels": [
+              68,
+              64,
+              122,
+              118
+            ],
+            "bbox_normalized": [
+              0.53125,
+              0.5,
+              0.953125,
+              0.921875
+            ],
+            "bbox_world": null,
+            "crs": null,
+            "mask_url": null,
+            "source": "Grounding DINO",
+            "quality": {
+              "source_width": 128,
+              "source_height": 128,
+              "box_width": 54.153427,
+              "box_height": 54.382935,
+              "box_area": 2945.022284,
+              "image_area": 16384,
+              "box_area_ratio": 0.1797499,
+              "alignment_score": 0.61057043,
+              "finite_score": true,
+              "finite_coordinates": true,
+              "positive_area": true,
+              "in_bounds": true,
+              "rejection_reasons": []
+            }
+          },
+          {
+            "label": "water body",
+            "score": 0.575167,
+            "bbox_pixels": [
+              8,
+              70,
+              62,
+              118
+            ],
+            "bbox_normalized": [
+              0.0625,
+              0.546875,
+              0.484375,
+              0.921875
+            ],
+            "bbox_world": null,
+            "crs": null,
+            "mask_url": null,
+            "source": "Grounding DINO",
+            "quality": {
+              "source_width": 128,
+              "source_height": 128,
+              "box_width": 54.351097,
+              "box_height": 48.416229,
+              "box_area": 2631.475177,
+              "image_area": 16384,
+              "box_area_ratio": 0.1606125,
+              "alignment_score": 0.57516658,
+              "finite_score": true,
+              "finite_coordinates": true,
+              "positive_area": true,
+              "in_bounds": true,
+              "rejection_reasons": []
+            }
+          }
+        ],
+        "accepted_detections": [
+          {
+            "label": "water body",
+            "score": 0.61057,
+            "bbox_pixels": [
+              68,
+              64,
+              122,
+              118
+            ],
+            "bbox_normalized": [
+              0.53125,
+              0.5,
+              0.953125,
+              0.921875
+            ],
+            "bbox_world": null,
+            "crs": null,
+            "mask_url": null,
+            "source": "Grounding DINO",
+            "quality": {
+              "source_width": 128,
+              "source_height": 128,
+              "box_width": 54.153427,
+              "box_height": 54.382935,
+              "box_area": 2945.022284,
+              "image_area": 16384,
+              "box_area_ratio": 0.1797499,
+              "alignment_score": 0.61057043,
+              "finite_score": true,
+              "finite_coordinates": true,
+              "positive_area": true,
+              "in_bounds": true,
+              "rejection_reasons": []
+            }
+          },
+          {
+            "label": "water body",
+            "score": 0.575167,
+            "bbox_pixels": [
+              8,
+              70,
+              62,
+              118
+            ],
+            "bbox_normalized": [
+              0.0625,
+              0.546875,
+              0.484375,
+              0.921875
+            ],
+            "bbox_world": null,
+            "crs": null,
+            "mask_url": null,
+            "source": "Grounding DINO",
+            "quality": {
+              "source_width": 128,
+              "source_height": 128,
+              "box_width": 54.351097,
+              "box_height": 48.416229,
+              "box_area": 2631.475177,
+              "image_area": 16384,
+              "box_area_ratio": 0.1606125,
+              "alignment_score": 0.57516658,
+              "finite_score": true,
+              "finite_coordinates": true,
+              "positive_area": true,
+              "in_bounds": true,
+              "rejection_reasons": []
+            }
+          }
+        ],
+        "rejected_candidates": [
+          {
+            "label": "water body",
+            "score": 0.37134287,
+            "bbox_source_xyxy": [
+              9.872856,
+              11.692072,
+              62.242966,
+              56.054634
+            ],
+            "bbox_pixels": [
+              10,
+              12,
+              62,
+              56
+            ],
+            "box_area_ratio": 0.14180128,
+            "rejection_reasons": [
+              "alignment_score_below_minimum"
+            ],
+            "quality": {
+              "source_width": 128,
+              "source_height": 128,
+              "box_width": 52.37011,
+              "box_height": 44.362562,
+              "box_area": 2323.272242,
+              "image_area": 16384,
+              "box_area_ratio": 0.14180128,
+              "alignment_score": 0.37134287,
+              "finite_score": true,
+              "finite_coordinates": true,
+              "positive_area": true,
+              "in_bounds": true,
+              "rejection_reasons": [
+                "alignment_score_below_minimum"
+              ]
+            },
+            "source": "Grounding DINO"
+          }
+        ],
+        "accepted_detection_count": 2,
+        "rejected_candidate_count": 1,
+        "quality_policy": {
+          "minimum_alignment_score": 0.45,
+          "maximum_localized_area_ratio": 0.85,
+          "localized_targets": [
+            "water body",
+            "river",
+            "lake",
+            "building",
+            "buildings",
+            "road",
+            "bridge",
+            "aircraft",
+            "airplane",
+            "stadium",
+            "ship"
+          ],
+          "calibration_status": "Operational reliability gates pending benchmark calibration."
+        },
+        "empty_result_explanation": null,
+        "operational_threshold_disclaimer": "Operational reliability gates pending benchmark calibration.",
+        "annotated_preview_url": "/api/agent/previews/c6487521e2cc45a397a002feb340d14f.png",
+        "confidence": {
+          "level": "moderate",
+          "score": 0.61057,
+          "reason": "The score is Grounding DINO text-region alignment, not calibrated confidence for remote-sensing imagery."
+        },
+        "model": {
+          "tool_id": "rs_grounder",
+          "checkpoint": "IDEA-Research/grounding-dino-tiny",
+          "base_architecture": "Grounding DINO Tiny + SatQuery Grounding Specialist v1.1",
+          "adaptation_dataset": "VRSBench",
+          "remote_sensing_adapted": true,
+          "license": "Apache-2.0",
+          "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny; verified local SatQuery Grounding Specialist v1.1 export, training recipe v1.1, step 600"
+        },
+        "input": {
+          "modality": "optical",
+          "bands_used": [
+            "r",
+            "g",
+            "b"
+          ],
+          "representation": "percentile-stretched RGB display representation",
+          "original_width": 128,
+          "original_height": 128,
+          "model_input_width": 800,
+          "model_input_height": 800,
+          "normalization_method": "Official Grounding DINO processor resize and ImageNet normalization"
+        },
+        "device": "cpu",
+        "warnings": [
+          "Display preview only \u2014 not a scientific product."
+        ],
+        "limitations": [
+          "Grounding DINO remains authoritative; the VRSBench-trained specialist head is governed by the configured non-suppressing score policy.",
+          "Small, densely packed, low-contrast, or unusual-scale objects may be missed or localized imprecisely.",
+          "Clouds, shadows, roofs, terrain, seasonal appearance, and sensor differences can cause false or missed detections.",
+          "Detection scores are learned proposal scores, not calibrated scientific confidence or ground-truth probability.",
+          "Predicted boxes are model-produced evidence and must be reviewed against the source imagery.",
+          "Grounding currently returns model-produced bounding boxes; SAM/SAM2 mask refinement is not connected and remains a planned enhancement."
+        ],
+        "runtime_ms": 5516,
+        "model_load_ms": 1561,
+        "model_reused": false
+      },
+      "cross_modal_analysis": null,
+      "change_analysis": null,
+      "vqa_details": null,
+      "sar_water_analysis": null,
+      "sar_scene_analysis": null,
+      "classified_query": {
+        "task_type": "grounding",
+        "target": "water",
+        "requested_output": "localization",
+        "requires_localization": true,
+        "requires_segmentation": false,
+        "requires_measurement": false
+      },
+      "cache": {
+        "cached": false,
+        "original_generation_timestamp": "2026-09-05T18:42:31.392979Z",
+        "retrieval_timestamp": "2026-09-05T18:42:31.392979Z",
+        "tool_version": "satquery-sar-routing-1.1",
+        "cache_key_prefix": "1f05834c80f8"
+      },
+      "change_engine": null,
+      "ttp_result": null,
+      "mask_comparison": null,
+      "evidence_consistency": null,
+      "sve_result": {
+        "available": true,
+        "status": "success",
+        "model": "SatQuery Vision Encoder v1",
+        "model_version": "1.0.0",
+        "backbone": "OpenCLIP ViT-L-14",
+        "pretrained_weights": "laion2b_s32b_b82k",
+        "adaptation_dataset": "BigEarthNet.txt",
+        "adapter_checksum_fingerprint": "sha256:a99c0bf0fb44",
+        "embedding_dimension": 768,
+        "device": "cpu",
+        "runtime_ms": 6849,
+        "scene_priors": [
+          {
+            "label": "arable land",
+            "similarity": 0.172428
+          },
+          {
+            "label": "urban or built-up area",
+            "similarity": 0.146119
+          },
+          {
+            "label": "pasture",
+            "similarity": 0.145951
+          },
+          {
+            "label": "grassland",
+            "similarity": 0.140809
+          },
+          {
+            "label": "agricultural land",
+            "similarity": 0.136824
+          }
+        ],
+        "caption_consistency": null,
+        "vqa_consistency": null,
+        "grounding_support": {
+          "state": "weak",
+          "target": "water body",
+          "related_scene_labels": [
+            "inland water",
+            "marine water",
+            "wetland"
+          ],
+          "warning": null,
+          "disclosure": "Scene-level plausibility does not validate or reject Grounding DINO detections."
+        },
+        "semantic_comparison": null,
+        "limitations": [
+          "Adaptation used a geographically limited Lithuania subset.",
+          "Adaptation imagery is summer-only.",
+          "Version 1 supports RGB and scientifically approved RGB-like optical imagery only.",
+          "Evidence is scene-level and does not localize pixels or objects.",
+          "Similarity scores are not calibrated probabilities and are not ground truth.",
+          "Validation retrieval improved over generic OpenCLIP on the recorded split but remains low in absolute terms."
+        ],
+        "warning": null,
+        "fallback": null,
+        "disclaimer": "SatQuery Vision Encoder v1 provides scene-level embedding evidence. It does not produce pixel-level segmentation, object grounding, calibrated probabilities, or ground truth."
+      },
+      "sar_translated_optical_analysis": null,
+      "semantic_change_summary": null
+    }
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "report_formats": [
+    "json"
+  ],
+  "required_routes": [
+    "/api/agent/compliance",
+    "/api/agent/health",
+    "/api/agent/query",
+    "/api/agent/report"
+  ],
+  "required_routes_present": true,
+  "specialist_health": {
+    "changerex_change_detector": {
+      "checkpoint": "ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+      "checkpoint_fingerprint": "da3f569306da",
+      "device": "cpu",
+      "errors": [],
+      "inference_count": 1,
+      "lifecycle": "ready",
+      "load_count": 1,
+      "loaded": true,
+      "model": "ChangerEx IA-ResNetV1c-18 (LEVIR-CD)",
+      "reuse_count": 0,
+      "status": "ready"
+    },
+    "grounding_specialist_v1_1": {
+      "device": null,
+      "error": null,
+      "model_id": "SatQuery Grounding Specialist v1.1 step 600",
+      "smoke_verified": false,
+      "status": "unloaded"
+    },
+    "rs_captioner": {
+      "device": "cpu",
+      "error": null,
+      "status": "ready"
+    },
+    "rs_grounder": {
+      "device": null,
+      "error": null,
+      "model_id": "IDEA-Research/grounding-dino-tiny",
+      "smoke_verified": false,
+      "status": "unloaded"
+    },
+    "rsvqa_vqa_specialist": {
+      "device": null,
+      "error": null,
+      "status": "unloaded"
+    },
+    "sar_translation_service": {
+      "color_corrector_available": true,
+      "device": "cpu",
+      "enabled": false,
+      "error": null,
+      "fallback_available": true,
+      "load_count": 0,
+      "reuse_count": 0,
+      "selected_model": "sarfusionformer",
+      "status": "disabled"
+    },
+    "satquery_vision_encoder_v1": {
+      "device": "cpu",
+      "error": null,
+      "status": "ready"
+    },
+    "ttp_change_detector": {
+      "checkpoint": "epoch_260.pth",
+      "device": null,
+      "errors": [
+        "TTP is unavailable; deterministic fallback was used."
+      ],
+      "inference_count": 0,
+      "lifecycle": "unavailable",
+      "load_count": 0,
+      "loaded": false,
+      "reuse_count": 0,
+      "status": "unavailable"
+    }
+  },
+  "status": "passed",
+  "workflows": [
+    {
+      "answer_present": true,
+      "evidence_count": 0,
+      "http_status": 200,
+      "result_status": "COMPLETED",
+      "selected_tools": [
+        "input_validator",
+        "rs_captioner"
+      ],
+      "status": "success",
+      "trace_steps": 24,
+      "warnings": [
+        "Display preview only \u2014 not a scientific product."
+      ],
+      "workflow": "single"
+    },
+    {
+      "answer_present": true,
+      "evidence_count": 11,
+      "http_status": 200,
+      "result_status": "COMPLETED",
+      "selected_tools": [
+        "input_validator",
+        "cross_modal_optical_sar_analyzer"
+      ],
+      "status": "success",
+      "trace_steps": 23,
+      "warnings": [
+        "Display preview only \u2014 not a scientific product.",
+        "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2.",
+        "Low-backscatter candidates can include smooth surfaces, radar shadow, and terrain effects.",
+        "Structural-likelihood candidates can include bright terrain, vegetation structure, speckle, or isolated strong scatterers.",
+        "Percentages describe deterministic candidate evidence, not calibrated semantic probabilities."
+      ],
+      "workflow": "optical_sar"
+    },
+    {
+      "answer_present": true,
+      "evidence_count": 7,
+      "http_status": 200,
+      "result_status": "COMPLETED",
+      "selected_tools": [
+        "input_validator",
+        "changerex_change_detector",
+        "deterministic_change_analyzer"
+      ],
+      "status": "success",
+      "trace_steps": 27,
+      "warnings": [
+        "Pixel alignment is assumed from the supplied pairing; geospatial co-registration cannot be independently verified.",
+        "Display preview only \u2014 not a scientific product.",
+        "No georeferencing was available; pixel alignment was assumed from equal dimensions and was not independently verified.",
+        "Change products measure normalized visual differences only; no semantic interpretation was generated.",
+        "MPS was unavailable or failed verification; auto selected CPU.",
+        "ChangerEx was trained on LEVIR-CD building-change imagery. Generalization may be weaker for vegetation change, flooding, seasonal variation, unfamiliar sensors, SAR imagery or non-urban scenes.",
+        "Mask agreement is evidence consistency, not ground-truth accuracy.",
+        "ChangerEx output is a model-generated binary change prediction and is not ground truth."
+      ],
+      "workflow": "bitemporal"
+    }
+  ]
+}

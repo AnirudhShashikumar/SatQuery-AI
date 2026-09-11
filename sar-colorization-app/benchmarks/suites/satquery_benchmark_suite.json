@@ -1,0 +1,56 @@
+{
+  "benchmark_record_ids": [
+    "captioning.unavailable.v1",
+    "changerex.r18.hanford-mps-operational",
+    "cross_modal.unavailable.v1",
+    "grounding.dino-tiny.vrsbench-smoke100.baseline",
+    "grounding.specialist-v1-1.vrsbench-validation.step600",
+    "rsvqa.specialist-v1.official-test.2026-08-29",
+    "rsvqa.specialist-v1.validation.epoch8",
+    "sar-translation.pix2pix.single-image-operational",
+    "sar_translation_sarfusionformer.unavailable.v1"
+  ],
+  "coverage": {
+    "external_reported": 0,
+    "operational_only": 2,
+    "partial_validation": 0,
+    "smoke_only": 0,
+    "unavailable": 3,
+    "verified_test": 1,
+    "verified_validation": 1
+  },
+  "generated_at": "2026-09-01T14:15:53Z",
+  "known_gaps": [
+    "No verified caption quality benchmark.",
+    "No paired SAR translation quality benchmark for Pix2Pix or SARFusionFormer.",
+    "No controlled ground-truthed Optical + SAR fusion benchmark.",
+    "ChangerEx has operational parity and runtime evidence but no SatQuery-reproduced LEVIR-CD quality benchmark."
+  ],
+  "name": "SatQuery AI Evidence-Based Benchmark Suite",
+  "preferred_record_by_specialist": {
+    "captioning": "captioning.unavailable.v1",
+    "changerex": "changerex.r18.hanford-mps-operational",
+    "cross_modal": "cross_modal.unavailable.v1",
+    "grounding": "grounding.specialist-v1-1.vrsbench-validation.step600",
+    "rsvqa": "rsvqa.specialist-v1.official-test.2026-08-29",
+    "sar_translation_pix2pix": "sar-translation.pix2pix.single-image-operational",
+    "sar_translation_sarfusionformer": "sar_translation_sarfusionformer.unavailable.v1"
+  },
+  "reproducibility_notes": [
+    "All displayed numbers are copied from named repository artifacts.",
+    "Smoke and operational records are never promoted to test accuracy.",
+    "Missing values remain null; unavailable records contain no fabricated metrics."
+  ],
+  "schema_version": "1.0.0",
+  "source_commit": "c251991aa696e4dcd37ddd926a6c2be17042a096",
+  "specialists": [
+    "rsvqa",
+    "grounding",
+    "changerex",
+    "sar_translation_pix2pix",
+    "captioning",
+    "sar_translation_sarfusionformer",
+    "cross_modal"
+  ],
+  "suite_version": "1.0.0"
+}

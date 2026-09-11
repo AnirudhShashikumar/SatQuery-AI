@@ -1,0 +1,32 @@
+model,question_type,ground_truth,total,0,10,2,20,201+,246,27,3,33,3428,4,40,53,8,9,<null>,no,rural,urban,yes
+Old heuristic,comp,no,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,6,0,0,1
+Old heuristic,comp,yes,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0
+Old heuristic,count,0,6,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old heuristic,count,10,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old heuristic,count,2,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old heuristic,count,20,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Old heuristic,count,246,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Old heuristic,count,27,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old heuristic,count,33,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old heuristic,count,3428,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old heuristic,count,4,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old heuristic,count,8,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Old heuristic,presence,no,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,3
+Old heuristic,presence,yes,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,5
+Old heuristic,rural_urban,rural,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Old heuristic,rural_urban,urban,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,0
+RSVQA Specialist v1,comp,no,11,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,0,0,0
+RSVQA Specialist v1,comp,yes,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,2
+RSVQA Specialist v1,count,0,6,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RSVQA Specialist v1,count,10,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RSVQA Specialist v1,count,2,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+RSVQA Specialist v1,count,20,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+RSVQA Specialist v1,count,201+,2,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+RSVQA Specialist v1,count,27,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+RSVQA Specialist v1,count,33,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+RSVQA Specialist v1,count,4,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+RSVQA Specialist v1,count,8,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+RSVQA Specialist v1,presence,no,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,1
+RSVQA Specialist v1,presence,yes,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9
+RSVQA Specialist v1,rural_urban,rural,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+RSVQA Specialist v1,rural_urban,urban,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0

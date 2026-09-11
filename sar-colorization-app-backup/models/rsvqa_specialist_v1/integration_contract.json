@@ -1,0 +1,40 @@
+{
+  "registry_name": "rsvqa_vqa_specialist",
+  "display_name": "SatQuery RSVQA Specialist v1",
+  "supported_question_types": [
+    "presence",
+    "comp",
+    "rural_urban",
+    "count"
+  ],
+  "input": {
+    "image_tensor_shape": [
+      "batch",
+      3,
+      224,
+      224
+    ],
+    "question_token_shape": [
+      "batch",
+      77
+    ],
+    "task_id_mapping": {
+      "presence": 0,
+      "comp": 1,
+      "rural_urban": 2,
+      "count": 3
+    }
+  },
+  "output": {
+    "answer": "yes, no, rural, urban, integer string, 201+, or null",
+    "confidence": "maximum task-head softmax score",
+    "task": "presence, comp, rural_urban, or count",
+    "model_used": "SatQuery RSVQA Specialist v1"
+  },
+  "routing_priority": {
+    "single_image_rsvqa_style_vqa": "primary",
+    "captioner": "supporting evidence",
+    "satquery_vision_encoder": "supporting evidence",
+    "grounding_dino": "optional visual evidence only; not the source of benchmark count answers"
+  }
+}

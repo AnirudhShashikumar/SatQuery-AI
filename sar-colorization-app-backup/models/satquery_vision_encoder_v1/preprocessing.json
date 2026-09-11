@@ -1,0 +1,14 @@
+{
+  "model_name": "ViT-L-14",
+  "pretrained": "laion2b_s32b_b82k",
+  "input_size": 224,
+  "color_mode": "RGB",
+  "sentinel_2_band_order": [
+    "B04",
+    "B03",
+    "B02"
+  ],
+  "reflectance_scale": 10000.0,
+  "embedding_normalization": "L2",
+  "openclip_transform": true
+}

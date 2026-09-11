@@ -1,0 +1,1234 @@
+[
+  {
+    "mode": "disabled",
+    "accepted_count": 1,
+    "rejected_count": 2,
+    "scores": [
+      0.624469
+    ],
+    "boxes_pixels": [
+      [
+        68,
+        63,
+        122,
+        118
+      ]
+    ],
+    "boxes_normalized": [
+      [
+        0.53125,
+        0.492188,
+        0.953125,
+        0.921875
+      ]
+    ],
+    "labels": [
+      "building"
+    ],
+    "wall_runtime_ms": 2358,
+    "reported_runtime_ms": 2358,
+    "backbone_initialization_ms": 1812,
+    "model_load_ms": 0,
+    "model_reused": true,
+    "fallback_used": false,
+    "fallback_reason": null,
+    "calibration_methods": [],
+    "score_diagnostics": [
+      {
+        "proposal_index": 0,
+        "original_grounding_score": 0.62446922,
+        "specialist_score": null,
+        "final_score": 0.62446922,
+        "score_mode": "disabled",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": null
+      },
+      {
+        "proposal_index": 1,
+        "original_grounding_score": 0.39528528,
+        "specialist_score": null,
+        "final_score": 0.39528528,
+        "score_mode": "disabled",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": null
+      },
+      {
+        "proposal_index": 2,
+        "original_grounding_score": 0.37613022,
+        "specialist_score": null,
+        "final_score": 0.37613022,
+        "score_mode": "disabled",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": null
+      }
+    ],
+    "detections": [
+      {
+        "label": "building",
+        "score": 0.624469,
+        "bbox_pixels": [
+          68,
+          63,
+          122,
+          118
+        ],
+        "bbox_normalized": [
+          0.53125,
+          0.492188,
+          0.953125,
+          0.921875
+        ],
+        "bbox_world": null,
+        "crs": null,
+        "mask_url": null,
+        "source": "Grounding DINO",
+        "quality": {
+          "source_width": 128,
+          "source_height": 128,
+          "box_width": 54.512878,
+          "box_height": 54.880905,
+          "box_area": 2991.71611,
+          "image_area": 16384,
+          "box_area_ratio": 0.18259986,
+          "alignment_score": 0.62446922,
+          "finite_score": true,
+          "finite_coordinates": true,
+          "positive_area": true,
+          "in_bounds": true,
+          "rejection_reasons": []
+        }
+      }
+    ],
+    "response": {
+      "original_query": "Locate the buildings.",
+      "target_phrase": "building",
+      "detections": [
+        {
+          "label": "building",
+          "score": 0.624469,
+          "bbox_pixels": [
+            68,
+            63,
+            122,
+            118
+          ],
+          "bbox_normalized": [
+            0.53125,
+            0.492188,
+            0.953125,
+            0.921875
+          ],
+          "bbox_world": null,
+          "crs": null,
+          "mask_url": null,
+          "source": "Grounding DINO",
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.512878,
+            "box_height": 54.880905,
+            "box_area": 2991.71611,
+            "image_area": 16384,
+            "box_area_ratio": 0.18259986,
+            "alignment_score": 0.62446922,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": []
+          }
+        }
+      ],
+      "accepted_detections": [
+        {
+          "label": "building",
+          "score": 0.624469,
+          "bbox_pixels": [
+            68,
+            63,
+            122,
+            118
+          ],
+          "bbox_normalized": [
+            0.53125,
+            0.492188,
+            0.953125,
+            0.921875
+          ],
+          "bbox_world": null,
+          "crs": null,
+          "mask_url": null,
+          "source": "Grounding DINO",
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.512878,
+            "box_height": 54.880905,
+            "box_area": 2991.71611,
+            "image_area": 16384,
+            "box_area_ratio": 0.18259986,
+            "alignment_score": 0.62446922,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": []
+          }
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "label": "building",
+          "score": 0.39528528,
+          "bbox_source_xyxy": [
+            0.01091,
+            -0.06049,
+            128.010895,
+            127.938904
+          ],
+          "bbox_pixels": [
+            0,
+            0,
+            128,
+            128
+          ],
+          "box_area_ratio": 0.99999514,
+          "rejection_reasons": [
+            "alignment_score_below_minimum",
+            "localized_box_area_ratio_above_maximum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 127.999985,
+            "box_height": 127.999393,
+            "box_area": 16383.92041,
+            "image_area": 16384,
+            "box_area_ratio": 0.99999514,
+            "alignment_score": 0.39528528,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": false,
+            "rejection_reasons": [
+              "alignment_score_below_minimum",
+              "localized_box_area_ratio_above_maximum"
+            ]
+          },
+          "source": "Grounding DINO"
+        },
+        {
+          "label": "building",
+          "score": 0.37613022,
+          "bbox_source_xyxy": [
+            7.836306,
+            69.617279,
+            62.241028,
+            118.16124
+          ],
+          "bbox_pixels": [
+            8,
+            70,
+            62,
+            118
+          ],
+          "box_area_ratio": 0.16119511,
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.404722,
+            "box_height": 48.543961,
+            "box_area": 2641.02069,
+            "image_area": 16384,
+            "box_area_ratio": 0.16119511,
+            "alignment_score": 0.37613022,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": [
+              "alignment_score_below_minimum"
+            ]
+          },
+          "source": "Grounding DINO"
+        }
+      ],
+      "accepted_detection_count": 1,
+      "rejected_candidate_count": 2,
+      "quality_policy": {
+        "minimum_alignment_score": 0.45,
+        "maximum_localized_area_ratio": 0.85,
+        "localized_targets": [
+          "water body",
+          "river",
+          "lake",
+          "building",
+          "buildings",
+          "road",
+          "bridge",
+          "aircraft",
+          "airplane",
+          "stadium",
+          "ship"
+        ],
+        "calibration_status": "Operational reliability gates pending benchmark calibration."
+      },
+      "empty_result_explanation": null,
+      "operational_threshold_disclaimer": "Operational reliability gates pending benchmark calibration.",
+      "annotated_preview_url": "/api/agent/previews/995a13e34cab40a0b5e1fd691051ed46.png",
+      "confidence": {
+        "level": "moderate",
+        "score": 0.624469,
+        "reason": "The score is Grounding DINO text-region alignment, not calibrated confidence for remote-sensing imagery."
+      },
+      "model": {
+        "tool_id": "rs_grounder",
+        "checkpoint": "IDEA-Research/grounding-dino-tiny",
+        "base_architecture": "Grounding DINO Tiny + SatQuery Grounding Specialist v1.1",
+        "adaptation_dataset": "VRSBench",
+        "remote_sensing_adapted": true,
+        "license": "Apache-2.0",
+        "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny; verified local SatQuery Grounding Specialist v1.1 export, training recipe v1.1, step 600"
+      },
+      "input": {
+        "modality": "optical",
+        "bands_used": [
+          "r",
+          "g",
+          "b"
+        ],
+        "representation": "RGB comparison input",
+        "original_width": 128,
+        "original_height": 128,
+        "model_input_width": 800,
+        "model_input_height": 800,
+        "normalization_method": "Official Grounding DINO processor resize and ImageNet normalization"
+      },
+      "device": "cpu",
+      "warnings": [],
+      "limitations": [
+        "Grounding DINO remains authoritative; the VRSBench-trained specialist head is governed by the configured non-suppressing score policy.",
+        "Small, densely packed, low-contrast, or unusual-scale objects may be missed or localized imprecisely.",
+        "Clouds, shadows, roofs, terrain, seasonal appearance, and sensor differences can cause false or missed detections.",
+        "Detection scores are learned proposal scores, not calibrated scientific confidence or ground-truth probability.",
+        "Predicted boxes are model-produced evidence and must be reviewed against the source imagery.",
+        "Grounding currently returns model-produced bounding boxes; SAM/SAM2 mask refinement is not connected and remains a planned enhancement."
+      ],
+      "runtime_ms": 2358,
+      "model_load_ms": 0,
+      "model_reused": true
+    },
+    "error": null,
+    "same_geometry_and_labels_as_disabled": true
+  },
+  {
+    "mode": "fallback",
+    "accepted_count": 1,
+    "rejected_count": 2,
+    "scores": [
+      0.624469
+    ],
+    "boxes_pixels": [
+      [
+        68,
+        63,
+        122,
+        118
+      ]
+    ],
+    "boxes_normalized": [
+      [
+        0.53125,
+        0.492188,
+        0.953125,
+        0.921875
+      ]
+    ],
+    "labels": [
+      "building"
+    ],
+    "wall_runtime_ms": 1200,
+    "reported_runtime_ms": 1200,
+    "backbone_initialization_ms": 1812,
+    "model_load_ms": 0,
+    "model_reused": true,
+    "fallback_used": true,
+    "fallback_reason": "specialist_scores_extremely_small",
+    "calibration_methods": [
+      "identity_probability"
+    ],
+    "score_diagnostics": [
+      {
+        "proposal_index": 0,
+        "original_grounding_score": 0.62446922,
+        "specialist_score": 0.02515921,
+        "final_score": 0.62446922,
+        "score_mode": "fallback",
+        "fallback_used": true,
+        "fallback_reason": "specialist_scores_extremely_small",
+        "calibration_method": "identity_probability"
+      },
+      {
+        "proposal_index": 1,
+        "original_grounding_score": 0.39528528,
+        "specialist_score": 0.00368637,
+        "final_score": 0.39528528,
+        "score_mode": "fallback",
+        "fallback_used": true,
+        "fallback_reason": "specialist_scores_extremely_small",
+        "calibration_method": "identity_probability"
+      },
+      {
+        "proposal_index": 2,
+        "original_grounding_score": 0.37613022,
+        "specialist_score": 0.01188891,
+        "final_score": 0.37613022,
+        "score_mode": "fallback",
+        "fallback_used": true,
+        "fallback_reason": "specialist_scores_extremely_small",
+        "calibration_method": "identity_probability"
+      }
+    ],
+    "detections": [
+      {
+        "label": "building",
+        "score": 0.624469,
+        "bbox_pixels": [
+          68,
+          63,
+          122,
+          118
+        ],
+        "bbox_normalized": [
+          0.53125,
+          0.492188,
+          0.953125,
+          0.921875
+        ],
+        "bbox_world": null,
+        "crs": null,
+        "mask_url": null,
+        "source": "Grounding DINO",
+        "quality": {
+          "source_width": 128,
+          "source_height": 128,
+          "box_width": 54.512878,
+          "box_height": 54.880905,
+          "box_area": 2991.71611,
+          "image_area": 16384,
+          "box_area_ratio": 0.18259986,
+          "alignment_score": 0.62446922,
+          "finite_score": true,
+          "finite_coordinates": true,
+          "positive_area": true,
+          "in_bounds": true,
+          "rejection_reasons": []
+        }
+      }
+    ],
+    "response": {
+      "original_query": "Locate the buildings.",
+      "target_phrase": "building",
+      "detections": [
+        {
+          "label": "building",
+          "score": 0.624469,
+          "bbox_pixels": [
+            68,
+            63,
+            122,
+            118
+          ],
+          "bbox_normalized": [
+            0.53125,
+            0.492188,
+            0.953125,
+            0.921875
+          ],
+          "bbox_world": null,
+          "crs": null,
+          "mask_url": null,
+          "source": "Grounding DINO",
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.512878,
+            "box_height": 54.880905,
+            "box_area": 2991.71611,
+            "image_area": 16384,
+            "box_area_ratio": 0.18259986,
+            "alignment_score": 0.62446922,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": []
+          }
+        }
+      ],
+      "accepted_detections": [
+        {
+          "label": "building",
+          "score": 0.624469,
+          "bbox_pixels": [
+            68,
+            63,
+            122,
+            118
+          ],
+          "bbox_normalized": [
+            0.53125,
+            0.492188,
+            0.953125,
+            0.921875
+          ],
+          "bbox_world": null,
+          "crs": null,
+          "mask_url": null,
+          "source": "Grounding DINO",
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.512878,
+            "box_height": 54.880905,
+            "box_area": 2991.71611,
+            "image_area": 16384,
+            "box_area_ratio": 0.18259986,
+            "alignment_score": 0.62446922,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": []
+          }
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "label": "building",
+          "score": 0.39528528,
+          "bbox_source_xyxy": [
+            0.01091,
+            -0.06049,
+            128.010895,
+            127.938904
+          ],
+          "bbox_pixels": [
+            0,
+            0,
+            128,
+            128
+          ],
+          "box_area_ratio": 0.99999514,
+          "rejection_reasons": [
+            "alignment_score_below_minimum",
+            "localized_box_area_ratio_above_maximum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 127.999985,
+            "box_height": 127.999393,
+            "box_area": 16383.92041,
+            "image_area": 16384,
+            "box_area_ratio": 0.99999514,
+            "alignment_score": 0.39528528,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": false,
+            "rejection_reasons": [
+              "alignment_score_below_minimum",
+              "localized_box_area_ratio_above_maximum"
+            ]
+          },
+          "source": "Grounding DINO"
+        },
+        {
+          "label": "building",
+          "score": 0.37613022,
+          "bbox_source_xyxy": [
+            7.836306,
+            69.617279,
+            62.241028,
+            118.16124
+          ],
+          "bbox_pixels": [
+            8,
+            70,
+            62,
+            118
+          ],
+          "box_area_ratio": 0.16119511,
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.404722,
+            "box_height": 48.543961,
+            "box_area": 2641.02069,
+            "image_area": 16384,
+            "box_area_ratio": 0.16119511,
+            "alignment_score": 0.37613022,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": [
+              "alignment_score_below_minimum"
+            ]
+          },
+          "source": "Grounding DINO"
+        }
+      ],
+      "accepted_detection_count": 1,
+      "rejected_candidate_count": 2,
+      "quality_policy": {
+        "minimum_alignment_score": 0.45,
+        "maximum_localized_area_ratio": 0.85,
+        "localized_targets": [
+          "water body",
+          "river",
+          "lake",
+          "building",
+          "buildings",
+          "road",
+          "bridge",
+          "aircraft",
+          "airplane",
+          "stadium",
+          "ship"
+        ],
+        "calibration_status": "Operational reliability gates pending benchmark calibration."
+      },
+      "empty_result_explanation": null,
+      "operational_threshold_disclaimer": "Operational reliability gates pending benchmark calibration.",
+      "annotated_preview_url": "/api/agent/previews/99972fad11f34987a88f881bda0a0460.png",
+      "confidence": {
+        "level": "moderate",
+        "score": 0.624469,
+        "reason": "The score is Grounding DINO text-region alignment, not calibrated confidence for remote-sensing imagery."
+      },
+      "model": {
+        "tool_id": "rs_grounder",
+        "checkpoint": "IDEA-Research/grounding-dino-tiny",
+        "base_architecture": "Grounding DINO Tiny + SatQuery Grounding Specialist v1.1",
+        "adaptation_dataset": "VRSBench",
+        "remote_sensing_adapted": true,
+        "license": "Apache-2.0",
+        "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny; verified local SatQuery Grounding Specialist v1.1 export, training recipe v1.1, step 600"
+      },
+      "input": {
+        "modality": "optical",
+        "bands_used": [
+          "r",
+          "g",
+          "b"
+        ],
+        "representation": "RGB comparison input",
+        "original_width": 128,
+        "original_height": 128,
+        "model_input_width": 800,
+        "model_input_height": 800,
+        "normalization_method": "Official Grounding DINO processor resize and ImageNet normalization"
+      },
+      "device": "cpu",
+      "warnings": [],
+      "limitations": [
+        "Grounding DINO remains authoritative; the VRSBench-trained specialist head is governed by the configured non-suppressing score policy.",
+        "Small, densely packed, low-contrast, or unusual-scale objects may be missed or localized imprecisely.",
+        "Clouds, shadows, roofs, terrain, seasonal appearance, and sensor differences can cause false or missed detections.",
+        "Detection scores are learned proposal scores, not calibrated scientific confidence or ground-truth probability.",
+        "Predicted boxes are model-produced evidence and must be reviewed against the source imagery.",
+        "Grounding currently returns model-produced bounding boxes; SAM/SAM2 mask refinement is not connected and remains a planned enhancement."
+      ],
+      "runtime_ms": 1200,
+      "model_load_ms": 0,
+      "model_reused": true
+    },
+    "error": null,
+    "same_geometry_and_labels_as_disabled": true
+  },
+  {
+    "mode": "blend",
+    "accepted_count": 1,
+    "rejected_count": 2,
+    "scores": [
+      0.737128
+    ],
+    "boxes_pixels": [
+      [
+        68,
+        63,
+        122,
+        118
+      ]
+    ],
+    "boxes_normalized": [
+      [
+        0.53125,
+        0.492188,
+        0.953125,
+        0.921875
+      ]
+    ],
+    "labels": [
+      "building"
+    ],
+    "wall_runtime_ms": 1173,
+    "reported_runtime_ms": 1173,
+    "backbone_initialization_ms": 1812,
+    "model_load_ms": 0,
+    "model_reused": true,
+    "fallback_used": false,
+    "fallback_reason": null,
+    "calibration_methods": [
+      "min_max_probability_normalization"
+    ],
+    "score_diagnostics": [
+      {
+        "proposal_index": 0,
+        "original_grounding_score": 0.62446922,
+        "specialist_score": 0.02515921,
+        "final_score": 0.73712845,
+        "score_mode": "blend",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": "min_max_probability_normalization"
+      },
+      {
+        "proposal_index": 1,
+        "original_grounding_score": 0.39528528,
+        "specialist_score": 0.00368637,
+        "final_score": 0.27669969,
+        "score_mode": "blend",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": "min_max_probability_normalization"
+      },
+      {
+        "proposal_index": 2,
+        "original_grounding_score": 0.37613022,
+        "specialist_score": 0.01188891,
+        "final_score": 0.37788992,
+        "score_mode": "blend",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": "min_max_probability_normalization"
+      }
+    ],
+    "detections": [
+      {
+        "label": "building",
+        "score": 0.737128,
+        "bbox_pixels": [
+          68,
+          63,
+          122,
+          118
+        ],
+        "bbox_normalized": [
+          0.53125,
+          0.492188,
+          0.953125,
+          0.921875
+        ],
+        "bbox_world": null,
+        "crs": null,
+        "mask_url": null,
+        "source": "Grounding DINO",
+        "quality": {
+          "source_width": 128,
+          "source_height": 128,
+          "box_width": 54.512878,
+          "box_height": 54.880905,
+          "box_area": 2991.71611,
+          "image_area": 16384,
+          "box_area_ratio": 0.18259986,
+          "alignment_score": 0.73712845,
+          "finite_score": true,
+          "finite_coordinates": true,
+          "positive_area": true,
+          "in_bounds": true,
+          "rejection_reasons": []
+        }
+      }
+    ],
+    "response": {
+      "original_query": "Locate the buildings.",
+      "target_phrase": "building",
+      "detections": [
+        {
+          "label": "building",
+          "score": 0.737128,
+          "bbox_pixels": [
+            68,
+            63,
+            122,
+            118
+          ],
+          "bbox_normalized": [
+            0.53125,
+            0.492188,
+            0.953125,
+            0.921875
+          ],
+          "bbox_world": null,
+          "crs": null,
+          "mask_url": null,
+          "source": "Grounding DINO",
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.512878,
+            "box_height": 54.880905,
+            "box_area": 2991.71611,
+            "image_area": 16384,
+            "box_area_ratio": 0.18259986,
+            "alignment_score": 0.73712845,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": []
+          }
+        }
+      ],
+      "accepted_detections": [
+        {
+          "label": "building",
+          "score": 0.737128,
+          "bbox_pixels": [
+            68,
+            63,
+            122,
+            118
+          ],
+          "bbox_normalized": [
+            0.53125,
+            0.492188,
+            0.953125,
+            0.921875
+          ],
+          "bbox_world": null,
+          "crs": null,
+          "mask_url": null,
+          "source": "Grounding DINO",
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.512878,
+            "box_height": 54.880905,
+            "box_area": 2991.71611,
+            "image_area": 16384,
+            "box_area_ratio": 0.18259986,
+            "alignment_score": 0.73712845,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": []
+          }
+        }
+      ],
+      "rejected_candidates": [
+        {
+          "label": "building",
+          "score": 0.27669969,
+          "bbox_source_xyxy": [
+            0.01091,
+            -0.06049,
+            128.010895,
+            127.938904
+          ],
+          "bbox_pixels": [
+            0,
+            0,
+            128,
+            128
+          ],
+          "box_area_ratio": 0.99999514,
+          "rejection_reasons": [
+            "alignment_score_below_minimum",
+            "localized_box_area_ratio_above_maximum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 127.999985,
+            "box_height": 127.999393,
+            "box_area": 16383.92041,
+            "image_area": 16384,
+            "box_area_ratio": 0.99999514,
+            "alignment_score": 0.27669969,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": false,
+            "rejection_reasons": [
+              "alignment_score_below_minimum",
+              "localized_box_area_ratio_above_maximum"
+            ]
+          },
+          "source": "Grounding DINO"
+        },
+        {
+          "label": "building",
+          "score": 0.37788992,
+          "bbox_source_xyxy": [
+            7.836306,
+            69.617279,
+            62.241028,
+            118.16124
+          ],
+          "bbox_pixels": [
+            8,
+            70,
+            62,
+            118
+          ],
+          "box_area_ratio": 0.16119511,
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.404722,
+            "box_height": 48.543961,
+            "box_area": 2641.02069,
+            "image_area": 16384,
+            "box_area_ratio": 0.16119511,
+            "alignment_score": 0.37788992,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": [
+              "alignment_score_below_minimum"
+            ]
+          },
+          "source": "Grounding DINO"
+        }
+      ],
+      "accepted_detection_count": 1,
+      "rejected_candidate_count": 2,
+      "quality_policy": {
+        "minimum_alignment_score": 0.45,
+        "maximum_localized_area_ratio": 0.85,
+        "localized_targets": [
+          "water body",
+          "river",
+          "lake",
+          "building",
+          "buildings",
+          "road",
+          "bridge",
+          "aircraft",
+          "airplane",
+          "stadium",
+          "ship"
+        ],
+        "calibration_status": "Operational reliability gates pending benchmark calibration."
+      },
+      "empty_result_explanation": null,
+      "operational_threshold_disclaimer": "Operational reliability gates pending benchmark calibration.",
+      "annotated_preview_url": "/api/agent/previews/f6d5a59c6c4444f6b5ae6317fef040ba.png",
+      "confidence": {
+        "level": "moderate",
+        "score": 0.737128,
+        "reason": "The score blends Grounding DINO alignment with min-max-normalized specialist probabilities; it is not calibrated confidence."
+      },
+      "model": {
+        "tool_id": "rs_grounder",
+        "checkpoint": "IDEA-Research/grounding-dino-tiny",
+        "base_architecture": "Grounding DINO Tiny + SatQuery Grounding Specialist v1.1",
+        "adaptation_dataset": "VRSBench",
+        "remote_sensing_adapted": true,
+        "license": "Apache-2.0",
+        "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny; verified local SatQuery Grounding Specialist v1.1 export, training recipe v1.1, step 600"
+      },
+      "input": {
+        "modality": "optical",
+        "bands_used": [
+          "r",
+          "g",
+          "b"
+        ],
+        "representation": "RGB comparison input",
+        "original_width": 128,
+        "original_height": 128,
+        "model_input_width": 800,
+        "model_input_height": 800,
+        "normalization_method": "Official Grounding DINO processor resize and ImageNet normalization"
+      },
+      "device": "cpu",
+      "warnings": [],
+      "limitations": [
+        "Grounding DINO remains authoritative; the VRSBench-trained specialist head is governed by the configured non-suppressing score policy.",
+        "Small, densely packed, low-contrast, or unusual-scale objects may be missed or localized imprecisely.",
+        "Clouds, shadows, roofs, terrain, seasonal appearance, and sensor differences can cause false or missed detections.",
+        "Detection scores are learned proposal scores, not calibrated scientific confidence or ground-truth probability.",
+        "Predicted boxes are model-produced evidence and must be reviewed against the source imagery.",
+        "Grounding currently returns model-produced bounding boxes; SAM/SAM2 mask refinement is not connected and remains a planned enhancement."
+      ],
+      "runtime_ms": 1173,
+      "model_load_ms": 0,
+      "model_reused": true
+    },
+    "error": null,
+    "same_geometry_and_labels_as_disabled": true
+  },
+  {
+    "mode": "specialist_only",
+    "accepted_count": 0,
+    "rejected_count": 3,
+    "scores": [],
+    "boxes_pixels": [],
+    "boxes_normalized": [],
+    "labels": [],
+    "wall_runtime_ms": 1173,
+    "reported_runtime_ms": 1173,
+    "backbone_initialization_ms": 1812,
+    "model_load_ms": 0,
+    "model_reused": true,
+    "fallback_used": false,
+    "fallback_reason": null,
+    "calibration_methods": [
+      "identity_probability"
+    ],
+    "score_diagnostics": [
+      {
+        "proposal_index": 0,
+        "original_grounding_score": 0.62446922,
+        "specialist_score": 0.02515921,
+        "final_score": 0.02515921,
+        "score_mode": "specialist_only",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": "identity_probability"
+      },
+      {
+        "proposal_index": 1,
+        "original_grounding_score": 0.39528528,
+        "specialist_score": 0.00368637,
+        "final_score": 0.00368637,
+        "score_mode": "specialist_only",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": "identity_probability"
+      },
+      {
+        "proposal_index": 2,
+        "original_grounding_score": 0.37613022,
+        "specialist_score": 0.01188891,
+        "final_score": 0.01188891,
+        "score_mode": "specialist_only",
+        "fallback_used": false,
+        "fallback_reason": null,
+        "calibration_method": "identity_probability"
+      }
+    ],
+    "detections": [],
+    "response": {
+      "original_query": "Locate the buildings.",
+      "target_phrase": "building",
+      "detections": [],
+      "accepted_detections": [],
+      "rejected_candidates": [
+        {
+          "label": "building",
+          "score": 0.02515921,
+          "bbox_source_xyxy": [
+            67.923958,
+            63.434418,
+            122.436836,
+            118.315323
+          ],
+          "bbox_pixels": [
+            68,
+            63,
+            122,
+            118
+          ],
+          "box_area_ratio": 0.18259986,
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.512878,
+            "box_height": 54.880905,
+            "box_area": 2991.71611,
+            "image_area": 16384,
+            "box_area_ratio": 0.18259986,
+            "alignment_score": 0.02515921,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": [
+              "alignment_score_below_minimum"
+            ]
+          },
+          "source": "Grounding DINO"
+        },
+        {
+          "label": "building",
+          "score": 0.00368637,
+          "bbox_source_xyxy": [
+            0.01091,
+            -0.06049,
+            128.010895,
+            127.938904
+          ],
+          "bbox_pixels": [
+            0,
+            0,
+            128,
+            128
+          ],
+          "box_area_ratio": 0.99999514,
+          "rejection_reasons": [
+            "alignment_score_below_minimum",
+            "localized_box_area_ratio_above_maximum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 127.999985,
+            "box_height": 127.999393,
+            "box_area": 16383.92041,
+            "image_area": 16384,
+            "box_area_ratio": 0.99999514,
+            "alignment_score": 0.00368637,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": false,
+            "rejection_reasons": [
+              "alignment_score_below_minimum",
+              "localized_box_area_ratio_above_maximum"
+            ]
+          },
+          "source": "Grounding DINO"
+        },
+        {
+          "label": "building",
+          "score": 0.01188891,
+          "bbox_source_xyxy": [
+            7.836306,
+            69.617279,
+            62.241028,
+            118.16124
+          ],
+          "bbox_pixels": [
+            8,
+            70,
+            62,
+            118
+          ],
+          "box_area_ratio": 0.16119511,
+          "rejection_reasons": [
+            "alignment_score_below_minimum"
+          ],
+          "quality": {
+            "source_width": 128,
+            "source_height": 128,
+            "box_width": 54.404722,
+            "box_height": 48.543961,
+            "box_area": 2641.02069,
+            "image_area": 16384,
+            "box_area_ratio": 0.16119511,
+            "alignment_score": 0.01188891,
+            "finite_score": true,
+            "finite_coordinates": true,
+            "positive_area": true,
+            "in_bounds": true,
+            "rejection_reasons": [
+              "alignment_score_below_minimum"
+            ]
+          },
+          "source": "Grounding DINO"
+        }
+      ],
+      "accepted_detection_count": 0,
+      "rejected_candidate_count": 3,
+      "quality_policy": {
+        "minimum_alignment_score": 0.45,
+        "maximum_localized_area_ratio": 0.85,
+        "localized_targets": [
+          "water body",
+          "river",
+          "lake",
+          "building",
+          "buildings",
+          "road",
+          "bridge",
+          "aircraft",
+          "airplane",
+          "stadium",
+          "ship"
+        ],
+        "calibration_status": "Operational reliability gates pending benchmark calibration."
+      },
+      "empty_result_explanation": "No reliable localized region was found for 'building'. The model produced a weak scene-level match rather than a precise object region.",
+      "operational_threshold_disclaimer": "Operational reliability gates pending benchmark calibration.",
+      "annotated_preview_url": null,
+      "confidence": {
+        "level": "unavailable",
+        "score": null,
+        "reason": "No model candidate met the operational reliability gates for precise localization; no box was invented."
+      },
+      "model": {
+        "tool_id": "rs_grounder",
+        "checkpoint": "IDEA-Research/grounding-dino-tiny",
+        "base_architecture": "Grounding DINO Tiny + SatQuery Grounding Specialist v1.1",
+        "adaptation_dataset": "VRSBench",
+        "remote_sensing_adapted": true,
+        "license": "Apache-2.0",
+        "source": "https://huggingface.co/IDEA-Research/grounding-dino-tiny; verified local SatQuery Grounding Specialist v1.1 export, training recipe v1.1, step 600"
+      },
+      "input": {
+        "modality": "optical",
+        "bands_used": [
+          "r",
+          "g",
+          "b"
+        ],
+        "representation": "RGB comparison input",
+        "original_width": 128,
+        "original_height": 128,
+        "model_input_width": 800,
+        "model_input_height": 800,
+        "normalization_method": "Official Grounding DINO processor resize and ImageNet normalization"
+      },
+      "device": "cpu",
+      "warnings": [
+        "No reliable localized region was found for 'building'."
+      ],
+      "limitations": [
+        "Grounding DINO remains authoritative; the VRSBench-trained specialist head is governed by the configured non-suppressing score policy.",
+        "Small, densely packed, low-contrast, or unusual-scale objects may be missed or localized imprecisely.",
+        "Clouds, shadows, roofs, terrain, seasonal appearance, and sensor differences can cause false or missed detections.",
+        "Detection scores are learned proposal scores, not calibrated scientific confidence or ground-truth probability.",
+        "Predicted boxes are model-produced evidence and must be reviewed against the source imagery.",
+        "Grounding currently returns model-produced bounding boxes; SAM/SAM2 mask refinement is not connected and remains a planned enhancement."
+      ],
+      "runtime_ms": 1173,
+      "model_load_ms": 0,
+      "model_reused": true
+    },
+    "error": null,
+    "same_geometry_and_labels_as_disabled": false
+  }
+]

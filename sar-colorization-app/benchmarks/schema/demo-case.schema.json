@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://satquery.ai/schemas/demo-case.schema.json",
+  "title": "SatQuery demo gallery manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "gallery_version", "generated_at", "cases"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "gallery_version": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["demo_id", "title", "workflow", "category", "primary_image", "secondary_image", "modality", "dates", "question", "expected_response_type", "expected_visual_output_type", "expected_result_classification", "expected_behavior", "purpose", "difficulty", "limitations", "source", "attribution", "license", "required_specialists", "readiness", "launch_path"],
+        "properties": {
+          "demo_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+          "title": { "type": "string", "minLength": 1 },
+          "workflow": { "enum": ["single_image", "grounding", "bi_temporal", "cross_modal", "sar_translation"] },
+          "category": { "type": "string", "minLength": 1 },
+          "primary_image": { "type": "string", "pattern": "^/demos/" },
+          "secondary_image": { "type": ["string", "null"] },
+          "modality": { "type": "string", "minLength": 1 },
+          "dates": { "type": "array", "items": { "type": "string", "format": "date" }, "maxItems": 2 },
+          "question": { "type": "string", "minLength": 1 },
+          "expected_response_type": { "type": "string", "minLength": 1 },
+          "expected_visual_output_type": { "type": "string", "minLength": 1 },
+          "expected_result_classification": { "enum": ["benchmark_ground_truth", "curated_expected_behavior", "illustrative_only"] },
+          "expected_behavior": { "type": "string", "minLength": 1 },
+          "purpose": { "type": "string", "minLength": 1 },
+          "difficulty": { "enum": ["introductory", "moderate", "challenging"] },
+          "limitations": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 },
+          "source": { "type": "string", "minLength": 1 },
+          "attribution": { "type": "string", "minLength": 1 },
+          "license": { "type": "string", "minLength": 1 },
+          "required_specialists": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 },
+          "readiness": { "enum": ["ready", "guided_only", "unavailable"] },
+          "launch_path": { "type": "string", "pattern": "^/" }
+        }
+      }
+    }
+  }
+}

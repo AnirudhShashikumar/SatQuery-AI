@@ -1,0 +1,76 @@
+{
+  "model_name": "SatQuery RSVQA Specialist v1",
+  "version": "1.0.0",
+  "task": "Single-image remote-sensing visual question answering",
+  "intended_use": [
+    "RSVQA-LR-style presence questions",
+    "RSVQA-LR-style comparison questions",
+    "RSVQA-LR rural-versus-urban classification",
+    "RSVQA-LR count-answer classification",
+    "SatQuery AI single-image VQA routing"
+  ],
+  "architecture": {
+    "vision_language_backbone": "OpenCLIP ViT-L-14",
+    "pretrained_weights": "laion2b_s32b_b82k",
+    "remote_sensing_adapter": "SatQuery Vision Encoder v1",
+    "backbone_state": "frozen during specialist training",
+    "fusion": "projected image and text features, elementwise product, and absolute difference",
+    "task_heads": {
+      "presence": 2,
+      "comparison": 2,
+      "rural_urban": 2,
+      "count": 202
+    },
+    "trainable_parameters": 4297936,
+    "question_context_length": 77
+  },
+  "training_data": {
+    "dataset": "RSVQA-LR official training split",
+    "training_questions": 57223,
+    "training_images": 572,
+    "validation_questions": 10005,
+    "validation_images": 100
+  },
+  "training_configuration": {
+    "epochs": 8,
+    "batch_size": 128,
+    "optimizer": "AdamW",
+    "initial_learning_rate": 0.0002,
+    "minimum_learning_rate": 1e-05,
+    "weight_decay": 0.0001,
+    "precision": "BF16",
+    "balanced_task_sampling": true,
+    "gradient_clipping": 1.0
+  },
+  "selected_checkpoint": {
+    "epoch": 8,
+    "reason": "Epoch-7 full checkpoints were corrupted during Google Drive writes. Epoch-8 specialist head was recovered and verified from the live in-memory model."
+  },
+  "validation_results": {
+    "overall_accuracy": 0.751024487756122,
+    "macro_accuracy": 0.7735176468969363,
+    "presence_accuracy": 0.9085303186022611,
+    "comparison_accuracy": 0.9099502487562189,
+    "rural_urban_accuracy": 0.9,
+    "count_accuracy": 0.375590020229265,
+    "validation_samples": 10005,
+    "best_observed_overall_accuracy": 0.7537231384307846,
+    "best_observed_macro_accuracy": 0.7756275001335271
+  },
+  "limitations": [
+    "Trained specifically on RSVQA-LR and may not generalize to unrelated VQA datasets.",
+    "Count accuracy is substantially lower than the other task families.",
+    "Counts are learned benchmark labels and are not guaranteed physical object inventories.",
+    "The 201+ label represents an overflow class rather than an exact count.",
+    "The model is intended for optical or rendered RGB imagery, not raw SAR.",
+    "Confidence scores are softmax values and are not calibrated probabilities.",
+    "The model does not produce spatial grounding or segmentation.",
+    "The model should not replace geospatial measurement or human analysis."
+  ],
+  "deployment_dependencies": {
+    "generic_backbone": "OpenCLIP ViT-L-14 laion2b_s32b_b82k",
+    "vision_adapter": "SatQuery Vision Encoder v1 adapter",
+    "specialist_checkpoint": "rsvqa_specialist_v1_head.pt",
+    "task_vocabulary": "task_answer_vocab.json"
+  }
+}

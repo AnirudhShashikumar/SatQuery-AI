@@ -1,0 +1,89 @@
+{
+  "health_after": {
+    "color_corrector_available": true,
+    "device": "cpu",
+    "enabled": true,
+    "error": null,
+    "fallback_available": true,
+    "load_count": 0,
+    "reuse_count": 1,
+    "selected_model": "pix2pix",
+    "status": "ready"
+  },
+  "health_before": {
+    "color_corrector_available": true,
+    "device": "cpu",
+    "enabled": false,
+    "error": null,
+    "fallback_available": true,
+    "load_count": 0,
+    "reuse_count": 0,
+    "selected_model": "sarfusionformer",
+    "status": "disabled"
+  },
+  "inspection": {
+    "content_hash_prefix": "d572485f6dab",
+    "metadata": {
+      "auto_detected_modality": "sar_preview",
+      "auto_detection_confidence": "medium",
+      "auto_detection_reason": "One-channel display has SAR-like intensity statistics and a SAR metadata/filename hint; classified as SAR preview (intensity range p1-p99=244.0, coefficient of variation=0.299, local roughness=0.045).",
+      "band_count": 1,
+      "band_descriptions": [
+        "l"
+      ],
+      "band_statistics": [
+        {
+          "band": 1,
+          "description": "l",
+          "dtype": "uint8",
+          "inf_count": 0,
+          "maximum": 255.0,
+          "mean": 146.3242950439453,
+          "minimum": 0.0,
+          "nan_count": 0,
+          "nodata_count": 0,
+          "percentile_1": 11.0,
+          "percentile_5": 60.0,
+          "percentile_50": 147.0,
+          "percentile_95": 222.0,
+          "percentile_99": 255.0,
+          "standard_deviation": 43.75318082002702,
+          "valid_count": 65536
+        }
+      ],
+      "bounds": null,
+      "color_interpretation": [
+        "l"
+      ],
+      "crs": null,
+      "dtype": "uint8",
+      "effective_modality": "sar_preview",
+      "file_id": "b810fe4a-c78d-4955-a127-0bf058e97ed6",
+      "format": "png",
+      "height": 256,
+      "is_georeferenced": false,
+      "mime_type": "image/png",
+      "modality_limitations": [
+        "SAR-preview detection is based on display-image statistics and a secondary filename or metadata hint; it does not recover scientific SAR calibration."
+      ],
+      "nodata": null,
+      "original_name": "sar 2.png",
+      "preview_url": "/api/agent/previews/31630e4b18b24170afefc6b60f19ea4c.png",
+      "representation": "display_preview",
+      "safe_name": "sar_2.png",
+      "size_bytes": 47433,
+      "transform": null,
+      "user_confirmed_modality": null,
+      "warnings": [
+        "Display preview only \u2014 not a scientific product."
+      ],
+      "width": 256
+    },
+    "requires_modality_confirmation": false
+  },
+  "manual_modality_override": false,
+  "query": "Is there water?",
+  "sample": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/SAR images/sar 2.png",
+  "submitted_primary_image_modality": "auto",
+  "submitted_primary_modality": "optical"
+}

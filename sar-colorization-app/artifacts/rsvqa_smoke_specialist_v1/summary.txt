@@ -1,0 +1,37 @@
+RSVQA-LR Smoke Benchmark
+========================
+Completed: 50/50
+Overall accuracy: 80.00%
+Null answers: 0
+Endpoint errors: 0
+Average confidence: 0.827961
+Average latency: 164.0 ms
+Median latency: 203.0 ms
+P95 latency: 212.75 ms
+
+Accuracy by question type:
+  comp: 13/15 (86.67%)
+  count: 8/15 (53.33%)
+  presence: 14/15 (93.33%)
+  rural_urban: 5/5 (100.00%)
+
+Cache/reuse observations:
+  converted_png_cache_hits: 50
+  converted_png_cache_misses: 0
+  sve_model_load_count: 0
+  sve_model_reuse_count: 0
+  sve_image_cache_hits: 0
+  sve_image_cache_misses: 0
+  grounder_model_reuse_count: 0
+  response_cached_count: 0
+  grounding_request_count: 0
+Coldest Request: {"question_id": "30059", "image_id": "300", "question_type": "comp", "processing_time_ms": 231, "client_elapsed_ms": 240, "effective_latency_ms": 231, "model_used": "RSVQA Specialist v1"}
+Slowest Request: {"question_id": "30059", "image_id": "300", "question_type": "comp", "processing_time_ms": 231, "client_elapsed_ms": 240, "effective_latency_ms": 231, "model_used": "RSVQA Specialist v1"}
+
+Generated files:
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke_specialist_v1/predictions.csv
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke_specialist_v1/results.json
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke_specialist_v1/summary.txt
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke_specialist_v1/errors.json
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke_specialist_v1/confusion_matrix_overall.csv
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke_specialist_v1/confusion_matrix_by_type.csv

@@ -1,0 +1,248 @@
+{
+  "status": "success",
+  "answer": "The ChangerEx learned detector identified 0.5% changed pixels. The deterministic evidence engine identified 19.5%. Their masks overlap with an IoU of 0.01. The primary mask contains 8 connected region(s); the largest contains 2118 pixels. The cause and semantic type of the change are not inferred.",
+  "change_engine": {
+    "mode": "hybrid",
+    "primary_tool": "changerex_change_detector",
+    "supporting_tool": "deterministic_change_analyzer",
+    "fallback_used": false,
+    "fallback_reason": null
+  },
+  "learned_result": {
+    "status": "success",
+    "changed_percentage": 0.527064,
+    "changed_pixels": 4145,
+    "region_count": 8,
+    "largest_region_pixels": 2118,
+    "runtime_ms": 528,
+    "model_load_ms": 203,
+    "model": "ChangerEx IA-ResNetV1c-18 (LEVIR-CD)",
+    "architecture": "ChangerEx + IA-ResNetV1c-18 backbone",
+    "training_dataset": "LEVIR-CD",
+    "checkpoint": "ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+    "checkpoint_fingerprint": "da3f569306da",
+    "device": "mps",
+    "reused_model": false,
+    "limitations": [
+      "The output is a model prediction, not ground truth.",
+      "LEVIR-CD primarily represents building change and may not generalize to all land-cover changes.",
+      "Inputs must be geometrically co-registered; misregistration can appear as change.",
+      "ChangerEx was trained on LEVIR-CD building-change imagery. Generalization may be weaker for vegetation change, flooding, seasonal variation, unfamiliar sensors, SAR imagery or non-urban scenes."
+    ],
+    "warnings": []
+  },
+  "statistics": {
+    "analysis_width": 1024,
+    "analysis_height": 768,
+    "source_width": 2400,
+    "source_height": 1801,
+    "total_pixels": 786432,
+    "changed_pixels": 4145,
+    "percentage_changed": 0.527064,
+    "largest_connected_region": 2118,
+    "number_of_regions": 8,
+    "bounding_boxes": [
+      {
+        "left": 0,
+        "top": 33,
+        "right": 56,
+        "bottom": 90,
+        "area_pixels": 2118
+      },
+      {
+        "left": 48,
+        "top": 126,
+        "right": 90,
+        "bottom": 165,
+        "area_pixels": 1168
+      },
+      {
+        "left": 436,
+        "top": 465,
+        "right": 459,
+        "bottom": 498,
+        "area_pixels": 456
+      },
+      {
+        "left": 44,
+        "top": 0,
+        "right": 68,
+        "bottom": 17,
+        "area_pixels": 271
+      },
+      {
+        "left": 461,
+        "top": 521,
+        "right": 472,
+        "bottom": 535,
+        "area_pixels": 73
+      },
+      {
+        "left": 460,
+        "top": 505,
+        "right": 465,
+        "bottom": 516,
+        "area_pixels": 39
+      },
+      {
+        "left": 468,
+        "top": 501,
+        "right": 472,
+        "bottom": 507,
+        "area_pixels": 17
+      },
+      {
+        "left": 476,
+        "top": 537,
+        "right": 479,
+        "bottom": 538,
+        "area_pixels": 3
+      }
+    ],
+    "regions": [
+      {
+        "region_id": 1,
+        "area_pixels": 2118,
+        "percentage_of_image": 0.269318,
+        "bounding_box": {
+          "left": 0,
+          "top": 33,
+          "right": 56,
+          "bottom": 90,
+          "area_pixels": 2118
+        }
+      },
+      {
+        "region_id": 2,
+        "area_pixels": 1168,
+        "percentage_of_image": 0.148519,
+        "bounding_box": {
+          "left": 48,
+          "top": 126,
+          "right": 90,
+          "bottom": 165,
+          "area_pixels": 1168
+        }
+      },
+      {
+        "region_id": 3,
+        "area_pixels": 456,
+        "percentage_of_image": 0.057983,
+        "bounding_box": {
+          "left": 436,
+          "top": 465,
+          "right": 459,
+          "bottom": 498,
+          "area_pixels": 456
+        }
+      },
+      {
+        "region_id": 4,
+        "area_pixels": 271,
+        "percentage_of_image": 0.034459,
+        "bounding_box": {
+          "left": 44,
+          "top": 0,
+          "right": 68,
+          "bottom": 17,
+          "area_pixels": 271
+        }
+      },
+      {
+        "region_id": 5,
+        "area_pixels": 73,
+        "percentage_of_image": 0.009282,
+        "bounding_box": {
+          "left": 461,
+          "top": 521,
+          "right": 472,
+          "bottom": 535,
+          "area_pixels": 73
+        }
+      },
+      {
+        "region_id": 6,
+        "area_pixels": 39,
+        "percentage_of_image": 0.004959,
+        "bounding_box": {
+          "left": 460,
+          "top": 505,
+          "right": 465,
+          "bottom": 516,
+          "area_pixels": 39
+        }
+      },
+      {
+        "region_id": 7,
+        "area_pixels": 17,
+        "percentage_of_image": 0.002162,
+        "bounding_box": {
+          "left": 468,
+          "top": 501,
+          "right": 472,
+          "bottom": 507,
+          "area_pixels": 17
+        }
+      },
+      {
+        "region_id": 8,
+        "area_pixels": 3,
+        "percentage_of_image": 0.000381,
+        "bounding_box": {
+          "left": 476,
+          "top": 537,
+          "right": 479,
+          "bottom": 538,
+          "area_pixels": 3
+        }
+      }
+    ],
+    "normalized_threshold": 0.0
+  },
+  "mask_comparison": {
+    "intersection_pixels": 1156,
+    "union_pixels": 156459,
+    "iou": 0.007389,
+    "agreement_percentage": 80.252202,
+    "disagreement_percentage": 19.747798,
+    "changed_class_agreement": 27.889023,
+    "background_agreement": 80.529652,
+    "disclaimer": "Mask agreement is evidence consistency, not ground-truth accuracy."
+  },
+  "execution_trace_tools": [
+    "upload",
+    "metadata",
+    "pair_validation",
+    "deterministic_analysis",
+    "difference_computation",
+    "thresholding",
+    "morphology",
+    "connected_components",
+    "preview_generation",
+    "changerex_eligibility_check",
+    "changerex_model_load",
+    "changerex_inference",
+    "changerex_probability_extraction",
+    "changerex_thresholding",
+    "changerex_connected_components",
+    "changerex_overlay_generation",
+    "mask_comparison",
+    "evidence_fusion",
+    "controlled_answer_generation",
+    "response_generation"
+  ],
+  "saved_previews": {
+    "difference": "difference.png",
+    "mask": "mask.png",
+    "overlay": "overlay.png",
+    "ttp_raw_mask": "ttp_raw_mask.png",
+    "ttp_mask": "ttp_mask.png",
+    "ttp_overlay": "ttp_overlay.png",
+    "deterministic_mask": "deterministic_mask.png",
+    "deterministic_overlay": "deterministic_overlay.png",
+    "agreement": "agreement.png",
+    "disagreement": "disagreement.png",
+    "intersection": "intersection.png",
+    "union": "union.png"
+  }
+}

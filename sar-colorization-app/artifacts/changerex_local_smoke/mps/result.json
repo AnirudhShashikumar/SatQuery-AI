@@ -1,0 +1,208 @@
+{
+  "source_width": 2400,
+  "source_height": 1801,
+  "model_input_width": 1024,
+  "model_input_height": 768,
+  "selected_device": "mps",
+  "probability_shape": [
+    1801,
+    2400
+  ],
+  "probability_min": 1.288203026796496e-17,
+  "probability_max": 0.984778106212616,
+  "binary_mask_shape": [
+    1801,
+    2400
+  ],
+  "changed_pixel_count": 7075,
+  "changed_percentage": 0.16368221358504534,
+  "connected_component_count": 5,
+  "largest_component_size": 4212,
+  "component_bounding_boxes": [
+    [
+      24,
+      85,
+      101,
+      155
+    ],
+    [
+      1022,
+      1091,
+      1076,
+      1171
+    ],
+    [
+      1081,
+      1225,
+      1090,
+      1241
+    ],
+    [
+      1100,
+      1185,
+      1104,
+      1189
+    ],
+    [
+      0,
+      146,
+      5,
+      148
+    ]
+  ],
+  "preprocessing": {
+    "source_size": [
+      2400,
+      1801
+    ],
+    "resized_size": [
+      1024,
+      768
+    ],
+    "padded_size": [
+      1024,
+      768
+    ],
+    "scale": 0.4266666666666667,
+    "channel_order": "RGB",
+    "pair_order": "earlier RGB, then later RGB",
+    "input_range": "float32 source values in [0, 255] before normalization",
+    "mean": [
+      123.675,
+      116.28,
+      103.53
+    ],
+    "std": [
+      58.395,
+      57.12,
+      57.375
+    ],
+    "resize_interpolation": "bilinear, align_corners=False",
+    "pad": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "size_divisor": 32
+  },
+  "threshold": 0.5,
+  "checkpoint_provenance": {
+    "model_name": "ChangerEx IA-ResNetV1c-18 (LEVIR-CD)",
+    "config": "configs/changer/changer_ex_r18_512x512_40k_levircd.py",
+    "opencd_version": "v1.1.0",
+    "opencd_commit": "09c03eb1077f06191c5448ea1fcf2f2f88ec98c2",
+    "checkpoint_filename": "ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+    "checkpoint_sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+    "checkpoint_url": "https://drive.google.com/file/d/1SZ8DBgBryJ63X9AU0AQvaJ2ZH3oQHQHe/view",
+    "training_dataset": "LEVIR-CD",
+    "classes": [
+      "unchanged",
+      "changed"
+    ],
+    "verified_path": "/private/tmp/changerex-local-audit-20260831/ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+    "verified_sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+    "strict_missing_keys": [],
+    "strict_unexpected_keys": [],
+    "key_transformations": [],
+    "verification_report": {
+      "path": "/private/tmp/changerex-local-audit-20260831/ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+      "file_size": 136880383,
+      "sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+      "top_level_keys": [
+        "meta",
+        "optimizer",
+        "state_dict"
+      ],
+      "tensor_count": 173,
+      "parameter_count": 11390946,
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "key_transformations": [],
+      "checkpoint_metadata": {
+        "mmseg_version": "0.0.2+da8b536",
+        "config": "norm_cfg = dict(type='SyncBN', requires_grad=True)\nmodel = dict(\n    type='DIEncoderDecoder',\n    pretrained=None,\n    backbone=dict(\n        type='IA_ResNetV1c',\n        depth=18,\n        num_stages=4,\n        out_indices=(0, 1, 2, 3),\n        dilations=(1, 1, 1, 1),\n        strides=(1, 2, 2, 2),\n        norm_cfg=dict(type='SyncBN', requires_grad=True),\n        norm_eval=False,\n        style='pytorch',\n        contract_dilation=True,\n        interaction_cfg=(None, {\n            'type': 'SpatialExchange',\n            'p': 0.5\n        }, {\n            'type': 'ChannelExchange',\n            'p': 0.5\n        }, {\n            'type': 'ChannelExchange',\n            'p': 0.5\n        })),\n    decode_head=dict(\n        type='Changer',\n        in_channels=[64, 128, 256, 512],\n        in_index=[0, 1, 2, 3],\n        channels=128,\n        dropout_ratio=0.1,\n        num_classes=2,\n        norm_cfg=dict(type='SyncBN', requires_grad=True),\n        align_corners=False,\n        loss_decode=dict(\n            type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0),\n        sampler=dict(type='OHEMPixelSampler', thresh=0.7, min_kept=100000)),\n    train_cfg=dict(),\n    test_cfg=dict(mode='whole'))\ndataset_type = 'LEVIR_CD_Dataset'\ndata_root = '/home/dell/data/public/LEVIR-CD'\nimg_norm_cfg = dict(\n    mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)\ncrop_size = (512, 512)\ntrain_pipeline = [\n    dict(type='MultiImgLoadImageFromFile'),\n    dict(type='MultiImgLoadAnnotations'),\n    dict(type='MultiImgRandomRotate', prob=0.5, degree=180),\n    dict(type='MultiImgRandomCrop', crop_size=(512, 512)),\n    dict(type='MultiImgRandomFlip', prob=0.5, direction='horizontal'),\n    dict(type='MultiImgRandomFlip', prob=0.5, direction='vertical'),\n    dict(type='MultiImgExchangeTime', prob=0.5),\n    dict(\n        type='MultiImgPhotoMetricDistortion',\n        brightness_delta=10,\n        contrast_range=(0.8, 1.2),\n        saturation_range=(0.8, 1.2),\n        hue_delta=10),\n    \u2026",
+        "CLASSES": [
+          "unchanged",
+          "changed"
+        ],
+        "PALETTE": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            0,
+            0,
+            0
+          ]
+        ],
+        "env_info": "sys.platform: linux\nPython: 3.8.15 (default, Nov 24 2022, 15:19:38) [GCC 11.2.0]\nCUDA available: True\nGPU 0: NVIDIA RTX A6000\nCUDA_HOME: None\nGCC: n/a\nPyTorch: 1.12.1\nPyTorch compiling details: PyTorch built with:\n  - GCC 9.3\n  - C++ Version: 201402\n  - Intel(R) oneAPI Math Kernel Library Version 2021.4-Product Build 20210904 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v2.6.0 (Git Hash 52b5f107dd9cf10910aaa19cb47f3abf9b349815)\n  - OpenMP 201511 (a.k.a. OpenMP 4.5)\n  - LAPACK is enabled (usually provided by MKL)\n  - NNPACK is enabled\n  - CPU capability usage: AVX2\n  - CUDA Runtime 11.6\n  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=compute_37\n  - CuDNN 8.3.2  (built against CUDA 11.5)\n  - Magma 2.6.1\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.6, CUDNN_VERSION=8.3.2, CXX_COMPILER=/opt/rh/devtoolset-9/root/usr/bin/c++, CXX_FLAGS= -fabi-version=11 -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-unused-parameter -Wno-unused-function -Wno-unused-result -Wno-unused-local-typedefs -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Werror=cast-fu\u2026",
+        "seed": 30,
+        "exp_name": "changer_ex_r18_512x512_40k_levircd.py",
+        "hook_msgs": {
+          "last_ckpt": "/home/dell/exp/likyoo/open-cd/levircd_changer/changer_ex_r18_r1-4/iter_36000.pth",
+          "best_score": 0.9173999786376953,
+          "best_ckpt": "/home/dell/exp/likyoo/open-cd/levircd_changer/changer_ex_r18_r1-4/best_Fscore.changed_iter_36000.pth"
+        },
+        "epoch": 728,
+        "iter": 39999,
+        "mmcv_version": "1.6.2",
+        "time": "Fri Dec 23 16:51:51 2022"
+      }
+    }
+  },
+  "runtime": {
+    "load_seconds": 0.248962209,
+    "inference_seconds": 0.16513320799999986,
+    "preprocessing_seconds": 0.03945445900000033,
+    "model_seconds": 0.09515679099999996,
+    "postprocessing_seconds": 0.02941333299999993,
+    "peak_memory_mb": 1120.96875
+  },
+  "load_reuse_status": {
+    "was_reused": true,
+    "load_count": 1,
+    "reuse_count": 6,
+    "inference_count": 7,
+    "state": "ready"
+  },
+  "warnings": [],
+  "limitations": [
+    "The output is a model prediction, not ground truth.",
+    "LEVIR-CD primarily represents building change and may not generalize to all land-cover changes.",
+    "Inputs must be geometrically co-registered; misregistration can appear as change."
+  ],
+  "benchmark": {
+    "runs": 5,
+    "seconds": [
+      0.09881112499999989,
+      0.095201584,
+      0.09517008400000004,
+      0.09549200000000013,
+      0.09515679099999996
+    ],
+    "mean_seconds": 0.0959663168,
+    "median_seconds": 0.095201584,
+    "p95_seconds": 0.09814729999999994,
+    "repeat_max_abs_probability_difference": 0.0,
+    "deterministic_repeatability": true,
+    "first_total_seconds": 0.7624652080000001,
+    "first_model_seconds": 0.392881583,
+    "first_was_reused": false
+  },
+  "smoke_source": null,
+  "artifacts": {
+    "probability_map": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/probability_map.npy",
+    "probability_png": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/probability_map.png",
+    "binary_mask": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/binary_mask.png",
+    "display_mask": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/display_mask.png",
+    "overlay": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/overlay.png",
+    "regions": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/regions.json",
+    "result": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/result.json",
+    "checkpoint_verification": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/checkpoint_verification.json",
+    "environment": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/environment.json",
+    "benchmark_report": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/changerex_local_smoke/mps/benchmark_report.md"
+  }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="100%" height="100%" fill="white"/>
+<text x="120" y="50" font-family="sans-serif" font-size="28" fill="#172b4d">Average and P95 latency (ms)</text>
+<line x1="120" y1="90" x2="120" y2="550" stroke="#6b778c" stroke-width="2"/>
+<line x1="120" y1="550" x2="1140" y2="550" stroke="#6b778c" stroke-width="2"/>
+<rect x="173.6" y="207.6" width="147.9" height="342.4" rx="8" fill="#1677ff"/>
+<text x="173.6" y="195.6" font-family="sans-serif" font-size="18" fill="#172b4d">1169.1</text>
+<text x="173.6" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">Baseline avg</text>
+<rect x="428.6" y="189.4" width="147.9" height="360.6" rx="8" fill="#12b886"/>
+<text x="428.6" y="177.4" font-family="sans-serif" font-size="18" fill="#172b4d">1231.4</text>
+<text x="428.6" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">Specialist avg</text>
+<rect x="683.5" y="198.2" width="147.9" height="351.8" rx="8" fill="#f59f00"/>
+<text x="683.5" y="186.2" font-family="sans-serif" font-size="18" fill="#172b4d">1201.3</text>
+<text x="683.5" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">Baseline P95</text>
+<rect x="938.5" y="131.8" width="147.9" height="418.2" rx="8" fill="#e64980"/>
+<text x="938.5" y="119.8" font-family="sans-serif" font-size="18" fill="#172b4d">1428.1</text>
+<text x="938.5" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">Specialist P95</text>
+</svg>

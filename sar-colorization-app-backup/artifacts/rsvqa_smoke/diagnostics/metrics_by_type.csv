@@ -1,0 +1,5 @@
+question_type,samples,answered_count,null_count,coverage,coverage_percent,null_rate,null_rate_percent,correct_count,overall_accuracy,overall_accuracy_percent,answered_only_accuracy,answered_only_accuracy_percent,average_confidence,average_latency_ms,median_latency_ms,p95_latency_ms,majority_label,majority_baseline_accuracy,majority_baseline_accuracy_percent
+comp,15,9,6,0.6,60.0,0.4,40.0,6,0.4,40.0,0.6666666666666666,66.67,0.05,1902.267,1786.0,3087.0,no,0.7333333333333333,73.33
+count,15,13,2,0.8666666666666667,86.67,0.13333333333333333,13.33,6,0.4,40.0,0.46153846153846156,46.15,0.033333,1137.333,1317.0,1350.3,0,0.4,40.0
+presence,15,8,7,0.5333333333333333,53.33,0.4666666666666667,46.67,5,0.3333333333333333,33.33,0.625,62.5,0.3,385.733,463.0,479.0,yes,0.6,60.0
+rural_urban,5,5,0,1.0,100.0,0.0,0.0,2,0.4,40.0,0.4,40.0,0.45,327.4,457.0,546.8,urban,0.8,80.0

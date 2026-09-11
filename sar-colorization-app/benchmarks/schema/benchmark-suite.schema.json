@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://satquery.ai/schemas/benchmark-suite.schema.json",
+  "title": "SatQuery benchmark suite",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "suite_version", "name", "generated_at", "source_commit", "specialists", "benchmark_record_ids", "coverage", "known_gaps", "reproducibility_notes"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "suite_version": { "type": "string", "minLength": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "source_commit": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+    "specialists": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "benchmark_record_ids": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
+    "preferred_record_by_specialist": { "type": "object", "additionalProperties": { "type": "string", "minLength": 1 } },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verified_test", "verified_validation", "partial_validation", "smoke_only", "operational_only", "external_reported", "unavailable"],
+      "properties": {
+        "verified_test": { "type": "integer", "minimum": 0 },
+        "verified_validation": { "type": "integer", "minimum": 0 },
+        "partial_validation": { "type": "integer", "minimum": 0 },
+        "smoke_only": { "type": "integer", "minimum": 0 },
+        "operational_only": { "type": "integer", "minimum": 0 },
+        "external_reported": { "type": "integer", "minimum": 0 },
+        "unavailable": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "known_gaps": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "reproducibility_notes": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  }
+}

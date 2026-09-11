@@ -1,0 +1,67 @@
+{
+  "artifacts": {
+    "confusion_matrix": null,
+    "per_class_metrics": null,
+    "predictions": null,
+    "report": null,
+    "visual_examples": []
+  },
+  "benchmark_id": "captioning.unavailable.v1",
+  "breakdowns": [],
+  "display_name": "Remote-Sensing Captioner",
+  "evaluation": {
+    "dataset": null,
+    "environment": {
+      "device": null,
+      "hardware": null,
+      "input_size": null,
+      "os": null,
+      "python": null,
+      "torch": null
+    },
+    "protocol": "No valid quality benchmark artifact was found during the repository audit.",
+    "sample_count": null,
+    "split": null,
+    "status": "unavailable",
+    "timestamp": null
+  },
+  "limitations": [
+    "Operational integration does not establish benchmark quality."
+  ],
+  "metrics": [],
+  "model": {
+    "adaptation": null,
+    "architecture": "Vision encoder-decoder captioner",
+    "checkpoint": null,
+    "checkpoint_sha256": null,
+    "license": null,
+    "name": "Production remote-sensing captioner",
+    "source": null,
+    "training_dataset": null,
+    "version": "production"
+  },
+  "notes": [
+    "No BLEU, METEOR, ROUGE-L, CIDEr, or SPICE artifact was found.",
+    "Smoke tests, if present, are not promoted to accuracy measurements."
+  ],
+  "performance": {
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "model_load_ms": null,
+    "p95_latency_ms": null,
+    "peak_memory_mb": null,
+    "throughput_samples_per_second": null,
+    "warm_reuse": null
+  },
+  "provenance": {
+    "generated_by": "scripts/import_existing_benchmarks.py",
+    "result_origin": "unmeasured",
+    "source_artifacts": [
+      "docs/BENCHMARK_EVALUATION_MODULE_AUDIT.md"
+    ],
+    "verified": false
+  },
+  "schema_version": "1.0.0",
+  "specialist_id": "captioning",
+  "task": "Image captioning"
+}

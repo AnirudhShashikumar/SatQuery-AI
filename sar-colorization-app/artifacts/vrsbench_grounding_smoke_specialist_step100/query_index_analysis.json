@@ -1,0 +1,148 @@
+{
+  "box_size_pattern_distribution": {
+    "large": 16,
+    "medium": 27,
+    "small": 20,
+    "tiny": 11,
+    "very_large": 26
+  },
+  "collapse_detected": true,
+  "collapse_reasons": [
+    "one_query_index_above_25_percent",
+    "top_five_query_indices_above_60_percent"
+  ],
+  "dominant_box_size_pattern": "medium",
+  "dominant_box_size_pattern_rate": 0.27,
+  "most_frequent_query_indices": [
+    {
+      "count": 49,
+      "percentage": 0.49,
+      "query_index": 0
+    },
+    {
+      "count": 12,
+      "percentage": 0.12,
+      "query_index": 1
+    },
+    {
+      "count": 6,
+      "percentage": 0.06,
+      "query_index": 3
+    },
+    {
+      "count": 4,
+      "percentage": 0.04,
+      "query_index": 2
+    },
+    {
+      "count": 2,
+      "percentage": 0.02,
+      "query_index": 4
+    },
+    {
+      "count": 2,
+      "percentage": 0.02,
+      "query_index": 5
+    },
+    {
+      "count": 2,
+      "percentage": 0.02,
+      "query_index": 29
+    },
+    {
+      "count": 2,
+      "percentage": 0.02,
+      "query_index": 18
+    },
+    {
+      "count": 2,
+      "percentage": 0.02,
+      "query_index": 11
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 39
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 22
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 441
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 6
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 23
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 57
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 82
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 15
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 220
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 16
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 28
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 73
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 7
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 27
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 58
+    },
+    {
+      "count": 1,
+      "percentage": 0.01,
+      "query_index": 822
+    }
+  ],
+  "samples": 100,
+  "top_10_coverage": 0.82,
+  "top_1_coverage": 0.49,
+  "top_5_coverage": 0.73,
+  "unique_selected_query_indices": 28
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0.0",
+  "gallery_version": "1.0.0",
+  "generated_at": "2026-09-01T14:15:53Z",
+  "cases": [
+    {
+      "demo_id": "hanford-bitemporal-change",
+      "title": "Hanford brushfire change",
+      "workflow": "bi_temporal",
+      "category": "bi-temporal localized change",
+      "primary_image": "/demos/hanford-before.jpg",
+      "secondary_image": "/demos/hanford-after.jpg",
+      "modality": "Landsat 7 ETM+ optical pair",
+      "dates": ["2000-05-06", "2000-07-09"],
+      "question": "Where did visible change occur between these dates?",
+      "expected_response_type": "Conservative change summary with region statistics",
+      "expected_visual_output_type": "Learned mask and overlay",
+      "expected_result_classification": "curated_expected_behavior",
+      "expected_behavior": "Expected behavior: produce a model-generated change mask, changed-area statistics, and a cautious description of detected regions.",
+      "purpose": "Demonstrate the real bi-temporal workflow on an attributed public image pair.",
+      "difficulty": "moderate",
+      "limitations": [
+        "No pixel-level reference mask is supplied; model output is not ground truth.",
+        "The model was trained primarily on building change and may not generalize to brushfire effects.",
+        "Inputs must be co-registered."
+      ],
+      "source": "NASA Earth Observatory — High-Resolution View of Hanford, Washington",
+      "attribution": "Image courtesy Ron Beck, USGS EROS Data Center",
+      "license": "U.S. government NASA/USGS imagery; source record carries no contrary copyright notice",
+      "required_specialists": ["changerex", "deterministic_change_analyzer"],
+      "readiness": "guided_only",
+      "launch_path": "/assistant?mode=bi_temporal"
+    },
+    {
+      "demo_id": "vrsbench-large-yellow-vehicle",
+      "title": "Large yellow vehicle grounding",
+      "workflow": "grounding",
+      "category": "grounding",
+      "primary_image": "/demos/vrsbench-vehicle.png",
+      "secondary_image": null,
+      "modality": "Optical RGB",
+      "dates": [],
+      "question": "Locate the large yellow vehicle situated closest to the green area.",
+      "expected_response_type": "Grounded referring-expression response",
+      "expected_visual_output_type": "Model-produced bounding box overlay",
+      "expected_result_classification": "benchmark_ground_truth",
+      "expected_behavior": "Reference context: the benchmark annotation supplies one target box; live execution must still use the production grounding pipeline.",
+      "purpose": "Demonstrate relation-aware VRSBench grounding with a repository evaluation asset.",
+      "difficulty": "challenging",
+      "limitations": [
+        "The displayed reference context does not guarantee the live model will return the annotated box.",
+        "Grounding scores are not calibrated scientific confidence."
+      ],
+      "source": "VRSBench grounding evaluation asset P0003_0002",
+      "attribution": "VRSBench dataset; repository annotation vehicle_p0003_0002_q0",
+      "license": "VRSBench research-use dataset terms; retain source attribution",
+      "required_specialists": ["grounding"],
+      "readiness": "guided_only",
+      "launch_path": "/assistant?intent=grounding"
+    },
+    {
+      "demo_id": "vrsbench-harbor-boundary",
+      "title": "Harbor at an image boundary",
+      "workflow": "grounding",
+      "category": "coastal change",
+      "primary_image": "/demos/vrsbench-harbor.png",
+      "secondary_image": null,
+      "modality": "Optical RGB",
+      "dates": [],
+      "question": "Locate the harbor near the top-right corner extending into the water.",
+      "expected_response_type": "Grounded referring-expression response",
+      "expected_visual_output_type": "Model-produced bounding box overlay",
+      "expected_result_classification": "benchmark_ground_truth",
+      "expected_behavior": "Reference context: the target annotation is clipped at the image boundary; live output may be null if quality gates reject all boxes.",
+      "purpose": "Expose a difficult clipped-boundary grounding case rather than only presenting easy successes.",
+      "difficulty": "challenging",
+      "limitations": [
+        "The reference is an axis-aligned box derived from the official polygon and clipped to image bounds.",
+        "A null production result is preferable to an invented box when quality gates are not met."
+      ],
+      "source": "VRSBench grounding evaluation asset P0019_0002",
+      "attribution": "VRSBench dataset; repository annotation harbor_p0019_0002_q21",
+      "license": "VRSBench research-use dataset terms; retain source attribution",
+      "required_specialists": ["grounding"],
+      "readiness": "guided_only",
+      "launch_path": "/assistant?intent=grounding"
+    }
+  ]
+}

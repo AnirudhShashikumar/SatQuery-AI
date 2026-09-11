@@ -1,0 +1,70 @@
+{
+  "artifacts": {
+    "confusion_matrix": null,
+    "per_class_metrics": null,
+    "predictions": null,
+    "report": "artifacts/single_sar_translation_smoke/benchmark_report.md",
+    "visual_examples": [
+      "artifacts/single_sar_translation_smoke/generated_preview.png"
+    ]
+  },
+  "benchmark_id": "sar-translation.pix2pix.single-image-operational",
+  "breakdowns": [],
+  "display_name": "SAR Translation \u00b7 Pix2Pix",
+  "evaluation": {
+    "dataset": "Repository single-SAR smoke input",
+    "environment": {
+      "device": "local runtime",
+      "hardware": "Apple Silicon Mac",
+      "input_size": null,
+      "os": null,
+      "python": null,
+      "torch": null
+    },
+    "protocol": "Production single-image SAR workflow smoke with shared-model reuse. No paired reference metrics were computed.",
+    "sample_count": 3,
+    "split": "3 operational requests; no paired ground truth",
+    "status": "operational_only",
+    "timestamp": "2026-08-30T15:26:29Z"
+  },
+  "limitations": [
+    "The operational smoke has no paired optical ground truth, so PSNR, SSIM, LPIPS, L1, and FID are unavailable.",
+    "Generated optical-like imagery must not be treated as observation."
+  ],
+  "metrics": [],
+  "model": {
+    "adaptation": "Production SAR translation pipeline; Color Corrector is an optional pipeline component",
+    "architecture": "Conditional GAN generator",
+    "checkpoint": "pix2pix_generator.pth",
+    "checkpoint_sha256": null,
+    "license": null,
+    "name": "Pix2Pix",
+    "source": "Repository production model",
+    "training_dataset": null,
+    "version": "production checkpoint"
+  },
+  "notes": [
+    "Color Corrector is represented only as a pipeline component and has no standalone benchmark."
+  ],
+  "performance": {
+    "mean_latency_ms": 80,
+    "median_latency_ms": null,
+    "model_load_ms": null,
+    "p95_latency_ms": null,
+    "peak_memory_mb": 1004.52,
+    "throughput_samples_per_second": null,
+    "warm_reuse": true
+  },
+  "provenance": {
+    "generated_by": "scripts/import_existing_benchmarks.py",
+    "result_origin": "satquery_reproduced",
+    "source_artifacts": [
+      "artifacts/single_sar_translation_smoke/comparison.json",
+      "artifacts/single_sar_translation_smoke/benchmark_report.md"
+    ],
+    "verified": true
+  },
+  "schema_version": "1.0.0",
+  "specialist_id": "sar_translation_pix2pix",
+  "task": "SAR-to-optical-like translation"
+}

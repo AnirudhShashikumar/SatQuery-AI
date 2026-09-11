@@ -1,0 +1,11 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "provider": "python",
+  "steps": {
+    "install": {
+      "commands": [
+        "uv pip install --python python -r sar-colorization-app/requirements-railway.txt"
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "SatQuery Vision Encoder v1",
+  "version": "1.0.0",
+  "type": "remote-sensing-adapted vision-language encoder",
+  "backbone": "OpenCLIP ViT-L-14",
+  "pretrained_weights": "laion2b_s32b_b82k",
+  "embedding_dimension": 768,
+  "adaptation_dataset": "BigEarthNet.txt",
+  "image_source": "BigEarthNet v2 Lithuania Summer",
+  "training_pairs": 4008,
+  "validation_pairs": 2291,
+  "test_pairs": 2053,
+  "input": {
+    "mode": "RGB",
+    "sentinel_2_bands": [
+      "B04",
+      "B03",
+      "B02"
+    ],
+    "input_size": [
+      224,
+      224
+    ]
+  },
+  "supported_uses": [
+    "Earth-observation image embeddings",
+    "image-text similarity",
+    "caption reranking",
+    "scene-prior evidence",
+    "retrieval",
+    "agent routing support"
+  ],
+  "unsupported_claims": [
+    "pixel-level segmentation",
+    "object grounding",
+    "calibrated probability",
+    "semantic change detection"
+  ],
+  "limitations": [
+    "Training subset is geographically limited to Lithuania",
+    "Training subset contains summer imagery only",
+    "Version 1 supports RGB imagery only",
+    "Retrieval metrics remain low in absolute terms",
+    "Outputs must not be treated as ground truth"
+  ],
+  "validation_metrics": {
+    "loss": 4.120570659637451,
+    "image_to_text_r1": 0.005674378015100956,
+    "text_to_image_r1": 0.006110868416726589,
+    "image_to_text_r5": 0.022697512060403824,
+    "text_to_image_r5": 0.03491925075650215,
+    "image_to_text_r10": 0.050632912665605545,
+    "text_to_image_r10": 0.05805325135588646
+  },
+  "generic_openclip_baseline": {
+    "loss": 4.8016743659973145,
+    "image_to_text_r1": 0.0021824531722813845,
+    "text_to_image_r1": 0.0008729812107048929,
+    "image_to_text_r5": 0.010039283894002438,
+    "text_to_image_r5": 0.004364906344562769,
+    "image_to_text_r10": 0.021388040855526924,
+    "text_to_image_r10": 0.00654735928401351
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "agreement_state": "supported_by_native_sar_only",
+  "completed_requests": 3,
+  "failures": [],
+  "fallback_model_used": "Pix2Pix",
+  "fallback_total_runtime_ms": 79.99,
+  "fallback_used": true,
+  "model_load_count": 0,
+  "model_reuse_count": 2,
+  "native_runtime_ms": 19.11,
+  "optical_specialists_executed": [],
+  "peak_memory_mb": 1004.52,
+  "translation_enabled_total_runtime_ms": 87.26,
+  "translation_runtime_ms": 80,
+  "translator_model_used": "Pix2Pix"
+}

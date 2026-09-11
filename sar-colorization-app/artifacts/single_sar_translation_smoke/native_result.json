@@ -1,0 +1,337 @@
+{
+  "answer": "The SAR intensity representation is relatively smooth. Low-, mid-, and high-normalized-return pixels account for approximately 33.7%, 5.9%, and 60.3% of valid pixels. These are backscatter-pattern observations, not semantic land-cover labels.",
+  "cache": {
+    "cache_key_prefix": "ba62bc0b0e2a",
+    "cached": false,
+    "original_generation_timestamp": "2026-08-30T15:26:29.583185Z",
+    "retrieval_timestamp": "2026-08-30T15:26:29.583185Z",
+    "tool_version": "satquery-sar-routing-1.1"
+  },
+  "caption_details": null,
+  "change_analysis": null,
+  "change_engine": null,
+  "classified_query": {
+    "requested_output": "text",
+    "requires_localization": false,
+    "requires_measurement": false,
+    "requires_segmentation": false,
+    "target": null,
+    "task_type": "sar_scene_analysis"
+  },
+  "confidence": {
+    "level": "unavailable",
+    "reason": "A deterministic SAR summary was used; no trained classifier probability is available.",
+    "score": null
+  },
+  "cross_modal_analysis": null,
+  "evidence": [
+    {
+      "description": "The normalized values used for the reported distribution and texture statistics.",
+      "label": "Normalized SAR intensity preview",
+      "reference": "/api/agent/previews/dd44e31bb173420ba62abfa3554432bf.png",
+      "type": "normalized_sar_preview"
+    }
+  ],
+  "evidence_consistency": null,
+  "execution": {
+    "duration_ms": 4,
+    "input_mode": "single",
+    "permitted_parameters": {
+      "auto_detected_modality": "sar_vv_vh",
+      "effective_modality": "sar_vv_vh",
+      "has_primary_image": true,
+      "has_secondary_image": false,
+      "input_mode": "single",
+      "primary_band_count": 2,
+      "primary_date": null,
+      "primary_image_modality": "sar_vv_vh",
+      "primary_modality": "sar",
+      "primary_representation": "scientific_raster",
+      "query": "Describe the major radar-backscatter patterns.",
+      "representation": "scientific_raster",
+      "secondary_date": null,
+      "secondary_modality": null,
+      "user_confirmed_modality": "sar_vv_vh"
+    },
+    "selected_tools": [
+      "input_validator",
+      "sar_scene_analyzer"
+    ],
+    "selection_reason": "The effective modality is SAR and the query requests qualitative SAR intensity/quality analysis.",
+    "steps": [
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "upload_received"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "file_type_validation"
+      },
+      {
+        "duration_ms": 1,
+        "parameters": {},
+        "status": "success",
+        "tool": "metadata_extraction"
+      },
+      {
+        "duration_ms": 1,
+        "parameters": {},
+        "status": "success",
+        "tool": "preview_generation"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "representation": "scientific_raster"
+        },
+        "status": "success",
+        "tool": "representation_detection"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "auto_detected": "sar_vv_vh",
+          "confidence": "low",
+          "effective_modality": "sar_vv_vh"
+        },
+        "status": "success",
+        "tool": "modality_detection"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "confirmed_modality": "sar_vv_vh"
+        },
+        "status": "success",
+        "tool": "user_modality_override"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "query_routing"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "rejection_reasons": [],
+          "specialist": "sar_scene_analyzer"
+        },
+        "status": "success",
+        "tool": "compatibility_validation"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "specialist_selection"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "task": "sar_scene_analysis"
+        },
+        "status": "success",
+        "tool": "query_classification"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "log_transform": false,
+          "version": "sar-preprocess-1.0"
+        },
+        "status": "success",
+        "tool": "sar_preprocessing"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "texture_index": 0.0,
+          "trained_classifier": false
+        },
+        "status": "success",
+        "tool": "sar_scene_statistics"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "product_count": 1
+        },
+        "status": "success",
+        "tool": "evidence_generation"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "result_assembly"
+      }
+    ],
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "grounding_result": null,
+  "mask_comparison": null,
+  "model": null,
+  "pair_compatibility": null,
+  "primary_image_metadata": {
+    "auto_detected_modality": "sar_vv_vh",
+    "auto_detection_confidence": "low",
+    "auto_detection_reason": "SAR filename/metadata hints and two scientific bands suggest a dual-polarization raster.",
+    "band_count": 2,
+    "band_descriptions": [
+      null,
+      null
+    ],
+    "band_statistics": [
+      {
+        "band": 1,
+        "description": null,
+        "dtype": "float32",
+        "inf_count": 0,
+        "maximum": 0.7150326371192932,
+        "mean": 0.46822790319129126,
+        "minimum": 0.23267973959445953,
+        "nan_count": 0,
+        "nodata_count": 0,
+        "percentile_1": 0.23267973959445953,
+        "percentile_5": 0.23267973959445953,
+        "percentile_50": 0.5607843399047852,
+        "percentile_95": 0.7150326371192932,
+        "percentile_99": 0.7150326371192932,
+        "standard_deviation": 0.14898471336950425,
+        "valid_count": 16384
+      },
+      {
+        "band": 2,
+        "description": null,
+        "dtype": "float32",
+        "inf_count": 0,
+        "maximum": 0.6663267612457275,
+        "mean": 0.4639468641835265,
+        "minimum": 0.27079737186431885,
+        "nan_count": 0,
+        "nodata_count": 0,
+        "percentile_1": 0.27079737186431885,
+        "percentile_5": 0.27079737186431885,
+        "percentile_50": 0.5398431420326233,
+        "percentile_95": 0.6663267612457275,
+        "percentile_99": 0.6663267612457275,
+        "standard_deviation": 0.12216746765457527,
+        "valid_count": 16384
+      }
+    ],
+    "bounds": {
+      "bottom": 18.72,
+      "left": 70.0,
+      "right": 71.28,
+      "top": 20.0
+    },
+    "color_interpretation": [
+      "band_1",
+      "band_2"
+    ],
+    "crs": "EPSG:4326",
+    "dtype": "float32",
+    "effective_modality": "sar_vv_vh",
+    "file_id": "f2839969-7a07-42b8-8fde-f064f0b3c299",
+    "format": "geotiff",
+    "height": 128,
+    "is_georeferenced": true,
+    "mime_type": "image/tiff",
+    "modality_limitations": [
+      "SAR channel order could not be verified from band descriptions."
+    ],
+    "nodata": null,
+    "original_name": "cross-sar.tif",
+    "preview_url": "/api/agent/previews/423c534a57aa41c2b7a428531e73d6c5.png",
+    "representation": "scientific_raster",
+    "safe_name": "cross-sar.tif",
+    "size_bytes": 131546,
+    "transform": [
+      0.01,
+      0.0,
+      70.0,
+      0.0,
+      -0.01,
+      20.0
+    ],
+    "user_confirmed_modality": "sar_vv_vh",
+    "warnings": [
+      "Display preview only \u2014 not a scientific product.",
+      "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2."
+    ],
+    "width": 128
+  },
+  "request_id": "4c46a8b7-5021-448f-9661-13ac784c6ebe",
+  "result_status": "COMPLETED_WITH_LIMITATIONS",
+  "sar_scene_analysis": {
+    "evidence_products": [
+      {
+        "authoritative": true,
+        "description": "The normalized values used for the reported distribution and texture statistics.",
+        "generation_method": "finite non-NoData 1st/99th percentile per channel, then channel mean",
+        "height": 128,
+        "id": "916f115234c64ac38de8eb2537c4f6e9",
+        "label": "Normalized SAR intensity preview",
+        "reference": "/api/agent/previews/dd44e31bb173420ba62abfa3554432bf.png",
+        "source": "sar_scene_analyzer",
+        "type": "normalized_sar_preview",
+        "width": 128
+      }
+    ],
+    "execution_status": "completed_with_limitations",
+    "high_backscatter_percent": 60.3271,
+    "input_quality_score": 1.0,
+    "limitations": [
+      "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+      "No trained SAR scene classifier was used and no model confidence is available."
+    ],
+    "low_backscatter_percent": 33.7402,
+    "method": "deterministic_intensity_texture_summary",
+    "method_version": "deterministic-sar-scene-1.0",
+    "mid_backscatter_percent": 5.9326,
+    "normalized_mean": 0.488332,
+    "normalized_standard_deviation": 0.308871,
+    "preprocessing": {
+      "denoising": "3x3 median filter",
+      "input_value_domain": "unknown",
+      "invalid_pixel_count": 0,
+      "log_transform_applied": false,
+      "nodata_pixel_count": 0,
+      "normalization": "finite non-NoData 1st/99th percentile per channel, then channel mean",
+      "percentile_high": 0.6906796991825104,
+      "percentile_low": 0.2517385557293892,
+      "resized": false,
+      "version": "sar-preprocess-1.0"
+    },
+    "runtime_ms": 1,
+    "task": "sar_scene_analysis",
+    "texture_index": 0.0,
+    "valid_pixel_percent": 100.0,
+    "warnings": [
+      "Scene statistics are deterministic qualitative evidence, not a trained semantic classification."
+    ]
+  },
+  "sar_translated_optical_analysis": null,
+  "sar_water_analysis": null,
+  "secondary_image_metadata": null,
+  "status": "partial",
+  "sve_result": null,
+  "task": "sar_scene_analysis",
+  "ttp_result": null,
+  "vqa_details": null,
+  "warnings": [
+    "Display preview only \u2014 not a scientific product.",
+    "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2.",
+    "Scene statistics are deterministic qualitative evidence, not a trained semantic classification.",
+    "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+    "No trained SAR scene classifier was used and no model confidence is available."
+  ]
+}

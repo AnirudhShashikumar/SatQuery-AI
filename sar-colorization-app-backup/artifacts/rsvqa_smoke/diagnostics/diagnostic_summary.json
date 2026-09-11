@@ -1,0 +1,1299 @@
+{
+  "analysis": "RSVQA-LR SatQuery smoke diagnostic",
+  "generated_at": "2026-08-27T22:44:24+0530",
+  "production_behavior_changed": false,
+  "verification": {
+    "all_passed": true,
+    "checks": [
+      {
+        "name": "total_samples",
+        "expected": 50,
+        "actual": 50,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "completed_count",
+        "expected": 50,
+        "actual": 50,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "correct_count",
+        "expected": 19,
+        "actual": 19,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "overall_accuracy",
+        "expected": 0.38,
+        "actual": 0.38,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "null_answer_count",
+        "expected": 15,
+        "actual": 15,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "endpoint_error_count",
+        "expected": 0,
+        "actual": 0,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "average_latency_ms",
+        "expected": 1060.34,
+        "actual": 1060.34,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "median_latency_ms",
+        "expected": 949.5,
+        "actual": 949.5,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "p95_latency_ms",
+        "expected": 2233.75,
+        "actual": 2233.75,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "slowest_latency_ms",
+        "expected": 4851.0,
+        "actual": 4851.0,
+        "passed": true,
+        "source": "predictions.csv"
+      },
+      {
+        "name": "results.json:total_samples",
+        "expected": 50,
+        "actual": 50,
+        "passed": true,
+        "source": "results.json"
+      },
+      {
+        "name": "results.json:completed_count",
+        "expected": 50,
+        "actual": 50,
+        "passed": true,
+        "source": "results.json"
+      },
+      {
+        "name": "results.json:correct_count",
+        "expected": 19,
+        "actual": 19,
+        "passed": true,
+        "source": "results.json"
+      },
+      {
+        "name": "results.json:overall_accuracy",
+        "expected": 0.38,
+        "actual": 0.38,
+        "passed": true,
+        "source": "results.json"
+      },
+      {
+        "name": "results.json:null_answer_count",
+        "expected": 15,
+        "actual": 15,
+        "passed": true,
+        "source": "results.json"
+      },
+      {
+        "name": "results.json:endpoint_error_count",
+        "expected": 0,
+        "actual": 0,
+        "passed": true,
+        "source": "results.json"
+      },
+      {
+        "name": "confusion_matrix_overall:total",
+        "expected": 50,
+        "actual": 50,
+        "passed": true,
+        "source": "confusion_matrix_overall.csv"
+      },
+      {
+        "name": "confusion_matrix_by_type:total",
+        "expected": 50,
+        "actual": 50,
+        "passed": true,
+        "source": "confusion_matrix_by_type.csv"
+      }
+    ],
+    "recomputed": {
+      "total_samples": 50,
+      "completed_count": 50,
+      "correct_count": 19,
+      "overall_accuracy": 0.38,
+      "null_answer_count": 15,
+      "endpoint_error_count": 0,
+      "average_latency_ms": 1060.34,
+      "median_latency_ms": 949.5,
+      "p95_latency_ms": 2233.75,
+      "slowest_latency_ms": 4851.0
+    }
+  },
+  "metrics": {
+    "samples": 50,
+    "answered_count": 35,
+    "null_count": 15,
+    "coverage": 0.7,
+    "coverage_percent": 70.0,
+    "null_rate": 0.3,
+    "null_rate_percent": 30.0,
+    "correct_count": 19,
+    "overall_accuracy": 0.38,
+    "overall_accuracy_percent": 38.0,
+    "answered_only_accuracy": 0.5428571428571428,
+    "answered_only_accuracy_percent": 54.29,
+    "average_confidence": 0.16,
+    "latency_samples": 50,
+    "average_latency_ms": 1060.34,
+    "median_latency_ms": 949.5,
+    "p95_latency_ms": 2233.75,
+    "minimum_latency_ms": 75.0,
+    "maximum_latency_ms": 4851.0,
+    "majority_baseline": {
+      "label": "no",
+      "count": 17,
+      "accuracy": 0.34,
+      "accuracy_percent": 34.0
+    },
+    "by_type": {
+      "comp": {
+        "samples": 15,
+        "answered_count": 9,
+        "null_count": 6,
+        "coverage": 0.6,
+        "coverage_percent": 60.0,
+        "null_rate": 0.4,
+        "null_rate_percent": 40.0,
+        "correct_count": 6,
+        "overall_accuracy": 0.4,
+        "overall_accuracy_percent": 40.0,
+        "answered_only_accuracy": 0.6666666666666666,
+        "answered_only_accuracy_percent": 66.67,
+        "average_confidence": 0.05,
+        "latency_samples": 15,
+        "average_latency_ms": 1902.267,
+        "median_latency_ms": 1786.0,
+        "p95_latency_ms": 3087.0,
+        "minimum_latency_ms": 923.0,
+        "maximum_latency_ms": 4851.0,
+        "majority_baseline": {
+          "label": "no",
+          "count": 11,
+          "accuracy": 0.7333333333333333,
+          "accuracy_percent": 73.33
+        }
+      },
+      "count": {
+        "samples": 15,
+        "answered_count": 13,
+        "null_count": 2,
+        "coverage": 0.8666666666666667,
+        "coverage_percent": 86.67,
+        "null_rate": 0.13333333333333333,
+        "null_rate_percent": 13.33,
+        "correct_count": 6,
+        "overall_accuracy": 0.4,
+        "overall_accuracy_percent": 40.0,
+        "answered_only_accuracy": 0.46153846153846156,
+        "answered_only_accuracy_percent": 46.15,
+        "average_confidence": 0.033333,
+        "latency_samples": 15,
+        "average_latency_ms": 1137.333,
+        "median_latency_ms": 1317.0,
+        "p95_latency_ms": 1350.3,
+        "minimum_latency_ms": 464.0,
+        "maximum_latency_ms": 1351.0,
+        "majority_baseline": {
+          "label": "0",
+          "count": 6,
+          "accuracy": 0.4,
+          "accuracy_percent": 40.0
+        }
+      },
+      "presence": {
+        "samples": 15,
+        "answered_count": 8,
+        "null_count": 7,
+        "coverage": 0.5333333333333333,
+        "coverage_percent": 53.33,
+        "null_rate": 0.4666666666666667,
+        "null_rate_percent": 46.67,
+        "correct_count": 5,
+        "overall_accuracy": 0.3333333333333333,
+        "overall_accuracy_percent": 33.33,
+        "answered_only_accuracy": 0.625,
+        "answered_only_accuracy_percent": 62.5,
+        "average_confidence": 0.3,
+        "latency_samples": 15,
+        "average_latency_ms": 385.733,
+        "median_latency_ms": 463.0,
+        "p95_latency_ms": 479.0,
+        "minimum_latency_ms": 79.0,
+        "maximum_latency_ms": 486.0,
+        "majority_baseline": {
+          "label": "yes",
+          "count": 9,
+          "accuracy": 0.6,
+          "accuracy_percent": 60.0
+        }
+      },
+      "rural_urban": {
+        "samples": 5,
+        "answered_count": 5,
+        "null_count": 0,
+        "coverage": 1.0,
+        "coverage_percent": 100.0,
+        "null_rate": 0.0,
+        "null_rate_percent": 0.0,
+        "correct_count": 2,
+        "overall_accuracy": 0.4,
+        "overall_accuracy_percent": 40.0,
+        "answered_only_accuracy": 0.4,
+        "answered_only_accuracy_percent": 40.0,
+        "average_confidence": 0.45,
+        "latency_samples": 5,
+        "average_latency_ms": 327.4,
+        "median_latency_ms": 457.0,
+        "p95_latency_ms": 546.8,
+        "minimum_latency_ms": 75.0,
+        "maximum_latency_ms": 569.0,
+        "majority_baseline": {
+          "label": "urban",
+          "count": 4,
+          "accuracy": 0.8,
+          "accuracy_percent": 80.0
+        }
+      }
+    },
+    "confidence_by_outcome": {
+      "correct": {
+        "samples": 19,
+        "average_confidence": 0.105263
+      },
+      "wrong": {
+        "samples": 16,
+        "average_confidence": 0.140625
+      },
+      "null": {
+        "samples": 15,
+        "average_confidence": 0.25
+      }
+    },
+    "latency_by_outcome": {
+      "correct": {
+        "samples": 19,
+        "latency_samples": 19,
+        "average_latency_ms": 1141.684,
+        "median_latency_ms": 1313.0,
+        "p95_latency_ms": 2211.0,
+        "minimum_latency_ms": 75.0,
+        "maximum_latency_ms": 2220.0
+      },
+      "wrong": {
+        "samples": 16,
+        "latency_samples": 16,
+        "average_latency_ms": 1275.438,
+        "median_latency_ms": 1144.0,
+        "p95_latency_ms": 2961.0,
+        "minimum_latency_ms": 78.0,
+        "maximum_latency_ms": 4851.0
+      },
+      "null": {
+        "samples": 15,
+        "latency_samples": 15,
+        "average_latency_ms": 727.867,
+        "median_latency_ms": 474.0,
+        "p95_latency_ms": 1340.3,
+        "minimum_latency_ms": 80.0,
+        "maximum_latency_ms": 1341.0
+      }
+    },
+    "latency_by_task": {
+      "comparison_vqa": {
+        "samples": 15,
+        "latency_samples": 15,
+        "average_latency_ms": 1902.267,
+        "median_latency_ms": 1786.0,
+        "p95_latency_ms": 3087.0,
+        "minimum_latency_ms": 923.0,
+        "maximum_latency_ms": 4851.0
+      },
+      "count_vqa": {
+        "samples": 15,
+        "latency_samples": 15,
+        "average_latency_ms": 1137.333,
+        "median_latency_ms": 1317.0,
+        "p95_latency_ms": 1350.3,
+        "minimum_latency_ms": 464.0,
+        "maximum_latency_ms": 1351.0
+      },
+      "presence_vqa": {
+        "samples": 11,
+        "latency_samples": 11,
+        "average_latency_ms": 363.727,
+        "median_latency_ms": 465.0,
+        "p95_latency_ms": 481.0,
+        "minimum_latency_ms": 79.0,
+        "maximum_latency_ms": 486.0
+      },
+      "rural_urban_classification": {
+        "samples": 5,
+        "latency_samples": 5,
+        "average_latency_ms": 327.4,
+        "median_latency_ms": 457.0,
+        "p95_latency_ms": 546.8,
+        "minimum_latency_ms": 75.0,
+        "maximum_latency_ms": 569.0
+      },
+      "unsupported": {
+        "samples": 2,
+        "latency_samples": 2,
+        "average_latency_ms": 425.0,
+        "median_latency_ms": 425.0,
+        "p95_latency_ms": 436.7,
+        "minimum_latency_ms": 412.0,
+        "maximum_latency_ms": 438.0
+      },
+      "vqa": {
+        "samples": 2,
+        "latency_samples": 2,
+        "average_latency_ms": 467.5,
+        "median_latency_ms": 467.5,
+        "p95_latency_ms": 473.35,
+        "minimum_latency_ms": 461.0,
+        "maximum_latency_ms": 474.0
+      }
+    }
+  },
+  "failure_taxonomy_counts": {
+    "grounding returned zero regions": 10,
+    "comparison operand unavailable": 6,
+    "unsupported target or vocabulary": 5,
+    "model prediction error": 6,
+    "routing failure": 4
+  },
+  "failure_taxonomy_domain": [
+    "routing failure",
+    "unsupported target or vocabulary",
+    "insufficient scene evidence",
+    "SVE disagreement or weak evidence",
+    "caption evidence mismatch",
+    "grounding unavailable",
+    "grounding returned zero regions",
+    "grounding overcount",
+    "grounding undercount",
+    "comparison operand unavailable",
+    "comparison logic failure",
+    "answer normalization failure",
+    "model prediction error",
+    "unknown"
+  ],
+  "metrics_by_wording": [
+    {
+      "question_type": "comp",
+      "wording_pattern": "equal/same",
+      "samples": 3,
+      "answered_count": 1,
+      "null_count": 2,
+      "coverage": 0.3333333333333333,
+      "coverage_percent": 33.33,
+      "null_rate": 0.6666666666666666,
+      "null_rate_percent": 66.67,
+      "correct_count": 0,
+      "overall_accuracy": 0.0,
+      "overall_accuracy_percent": 0.0,
+      "answered_only_accuracy": 0.0,
+      "answered_only_accuracy_percent": 0.0,
+      "average_confidence": 0.083333,
+      "latency_samples": 3,
+      "average_latency_ms": 2236.667,
+      "median_latency_ms": 936.0,
+      "p95_latency_ms": 4459.5,
+      "minimum_latency_ms": 923.0,
+      "maximum_latency_ms": 4851.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 3,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      }
+    },
+    {
+      "question_type": "comp",
+      "wording_pattern": "less/fewer",
+      "samples": 6,
+      "answered_count": 3,
+      "null_count": 3,
+      "coverage": 0.5,
+      "coverage_percent": 50.0,
+      "null_rate": 0.5,
+      "null_rate_percent": 50.0,
+      "correct_count": 2,
+      "overall_accuracy": 0.3333333333333333,
+      "overall_accuracy_percent": 33.33,
+      "answered_only_accuracy": 0.6666666666666666,
+      "answered_only_accuracy_percent": 66.67,
+      "average_confidence": 0.041667,
+      "latency_samples": 6,
+      "average_latency_ms": 1784.167,
+      "median_latency_ms": 1745.0,
+      "p95_latency_ms": 2300.75,
+      "minimum_latency_ms": 1334.0,
+      "maximum_latency_ms": 2331.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 4,
+        "accuracy": 0.6666666666666666,
+        "accuracy_percent": 66.67
+      }
+    },
+    {
+      "question_type": "comp",
+      "wording_pattern": "more/greater",
+      "samples": 6,
+      "answered_count": 5,
+      "null_count": 1,
+      "coverage": 0.8333333333333334,
+      "coverage_percent": 83.33,
+      "null_rate": 0.16666666666666666,
+      "null_rate_percent": 16.67,
+      "correct_count": 4,
+      "overall_accuracy": 0.6666666666666666,
+      "overall_accuracy_percent": 66.67,
+      "answered_only_accuracy": 0.8,
+      "answered_only_accuracy_percent": 80.0,
+      "average_confidence": 0.041667,
+      "latency_samples": 6,
+      "average_latency_ms": 1853.167,
+      "median_latency_ms": 1966.5,
+      "p95_latency_ms": 2238.75,
+      "minimum_latency_ms": 1314.0,
+      "maximum_latency_ms": 2245.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 4,
+        "accuracy": 0.6666666666666666,
+        "accuracy_percent": 66.67
+      }
+    },
+    {
+      "question_type": "count",
+      "wording_pattern": "amount of",
+      "samples": 1,
+      "answered_count": 1,
+      "null_count": 0,
+      "coverage": 1.0,
+      "coverage_percent": 100.0,
+      "null_rate": 0.0,
+      "null_rate_percent": 0.0,
+      "correct_count": 0,
+      "overall_accuracy": 0.0,
+      "overall_accuracy_percent": 0.0,
+      "answered_only_accuracy": 0.0,
+      "answered_only_accuracy_percent": 0.0,
+      "average_confidence": 0.0,
+      "latency_samples": 1,
+      "average_latency_ms": 971.0,
+      "median_latency_ms": 971.0,
+      "p95_latency_ms": 971.0,
+      "minimum_latency_ms": 971.0,
+      "maximum_latency_ms": 971.0,
+      "majority_baseline": {
+        "label": "4",
+        "count": 1,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      }
+    },
+    {
+      "question_type": "count",
+      "wording_pattern": "how many",
+      "samples": 6,
+      "answered_count": 4,
+      "null_count": 2,
+      "coverage": 0.6666666666666666,
+      "coverage_percent": 66.67,
+      "null_rate": 0.3333333333333333,
+      "null_rate_percent": 33.33,
+      "correct_count": 3,
+      "overall_accuracy": 0.5,
+      "overall_accuracy_percent": 50.0,
+      "answered_only_accuracy": 0.75,
+      "answered_only_accuracy_percent": 75.0,
+      "average_confidence": 0.083333,
+      "latency_samples": 6,
+      "average_latency_ms": 977.667,
+      "median_latency_ms": 1130.5,
+      "p95_latency_ms": 1341.5,
+      "minimum_latency_ms": 464.0,
+      "maximum_latency_ms": 1351.0,
+      "majority_baseline": {
+        "label": "0",
+        "count": 3,
+        "accuracy": 0.5,
+        "accuracy_percent": 50.0
+      }
+    },
+    {
+      "question_type": "count",
+      "wording_pattern": "number of",
+      "samples": 7,
+      "answered_count": 7,
+      "null_count": 0,
+      "coverage": 1.0,
+      "coverage_percent": 100.0,
+      "null_rate": 0.0,
+      "null_rate_percent": 0.0,
+      "correct_count": 2,
+      "overall_accuracy": 0.2857142857142857,
+      "overall_accuracy_percent": 28.57,
+      "answered_only_accuracy": 0.2857142857142857,
+      "answered_only_accuracy_percent": 28.57,
+      "average_confidence": 0.0,
+      "latency_samples": 7,
+      "average_latency_ms": 1267.571,
+      "median_latency_ms": 1327.0,
+      "p95_latency_ms": 1332.7,
+      "minimum_latency_ms": 913.0,
+      "maximum_latency_ms": 1333.0,
+      "majority_baseline": {
+        "label": "0",
+        "count": 2,
+        "accuracy": 0.2857142857142857,
+        "accuracy_percent": 28.57
+      }
+    },
+    {
+      "question_type": "count",
+      "wording_pattern": "relational count",
+      "samples": 1,
+      "answered_count": 1,
+      "null_count": 0,
+      "coverage": 1.0,
+      "coverage_percent": 100.0,
+      "null_rate": 0.0,
+      "null_rate_percent": 0.0,
+      "correct_count": 1,
+      "overall_accuracy": 1.0,
+      "overall_accuracy_percent": 100.0,
+      "answered_only_accuracy": 1.0,
+      "answered_only_accuracy_percent": 100.0,
+      "average_confidence": 0.0,
+      "latency_samples": 1,
+      "average_latency_ms": 1350.0,
+      "median_latency_ms": 1350.0,
+      "p95_latency_ms": 1350.0,
+      "minimum_latency_ms": 1350.0,
+      "maximum_latency_ms": 1350.0,
+      "majority_baseline": {
+        "label": "0",
+        "count": 1,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      }
+    },
+    {
+      "question_type": "presence",
+      "wording_pattern": "is there",
+      "samples": 11,
+      "answered_count": 8,
+      "null_count": 3,
+      "coverage": 0.7272727272727273,
+      "coverage_percent": 72.73,
+      "null_rate": 0.2727272727272727,
+      "null_rate_percent": 27.27,
+      "correct_count": 5,
+      "overall_accuracy": 0.45454545454545453,
+      "overall_accuracy_percent": 45.45,
+      "answered_only_accuracy": 0.625,
+      "answered_only_accuracy_percent": 62.5,
+      "average_confidence": 0.318182,
+      "latency_samples": 11,
+      "average_latency_ms": 363.727,
+      "median_latency_ms": 465.0,
+      "p95_latency_ms": 481.0,
+      "minimum_latency_ms": 79.0,
+      "maximum_latency_ms": 486.0,
+      "majority_baseline": {
+        "label": "yes",
+        "count": 7,
+        "accuracy": 0.6363636363636364,
+        "accuracy_percent": 63.64
+      }
+    },
+    {
+      "question_type": "presence",
+      "wording_pattern": "visible/can you see",
+      "samples": 4,
+      "answered_count": 0,
+      "null_count": 4,
+      "coverage": 0.0,
+      "coverage_percent": 0.0,
+      "null_rate": 1.0,
+      "null_rate_percent": 100.0,
+      "correct_count": 0,
+      "overall_accuracy": 0.0,
+      "overall_accuracy_percent": 0.0,
+      "answered_only_accuracy": null,
+      "answered_only_accuracy_percent": null,
+      "average_confidence": 0.25,
+      "latency_samples": 4,
+      "average_latency_ms": 446.25,
+      "median_latency_ms": 449.5,
+      "p95_latency_ms": 472.05,
+      "minimum_latency_ms": 412.0,
+      "maximum_latency_ms": 474.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 2,
+        "accuracy": 0.5,
+        "accuracy_percent": 50.0
+      }
+    },
+    {
+      "question_type": "rural_urban",
+      "wording_pattern": "rural-or-urban",
+      "samples": 5,
+      "answered_count": 5,
+      "null_count": 0,
+      "coverage": 1.0,
+      "coverage_percent": 100.0,
+      "null_rate": 0.0,
+      "null_rate_percent": 0.0,
+      "correct_count": 2,
+      "overall_accuracy": 0.4,
+      "overall_accuracy_percent": 40.0,
+      "answered_only_accuracy": 0.4,
+      "answered_only_accuracy_percent": 40.0,
+      "average_confidence": 0.45,
+      "latency_samples": 5,
+      "average_latency_ms": 327.4,
+      "median_latency_ms": 457.0,
+      "p95_latency_ms": 546.8,
+      "minimum_latency_ms": 75.0,
+      "maximum_latency_ms": 569.0,
+      "majority_baseline": {
+        "label": "urban",
+        "count": 4,
+        "accuracy": 0.8,
+        "accuracy_percent": 80.0
+      }
+    }
+  ],
+  "metrics_by_target": [
+    {
+      "target": "buildings",
+      "target_details": [
+        "buildings"
+      ],
+      "samples": 8,
+      "answered_count": 6,
+      "null_count": 2,
+      "coverage": 0.75,
+      "coverage_percent": 75.0,
+      "null_rate": 0.25,
+      "null_rate_percent": 25.0,
+      "correct_count": 5,
+      "overall_accuracy": 0.625,
+      "overall_accuracy_percent": 62.5,
+      "answered_only_accuracy": 0.8333333333333334,
+      "answered_only_accuracy_percent": 83.33,
+      "average_confidence": 0.0625,
+      "latency_samples": 8,
+      "average_latency_ms": 1346.125,
+      "median_latency_ms": 1374.0,
+      "p95_latency_ms": 2187.95,
+      "minimum_latency_ms": 469.0,
+      "maximum_latency_ms": 2210.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 6,
+        "accuracy": 0.75,
+        "accuracy_percent": 75.0
+      }
+    },
+    {
+      "target": "commercial buildings",
+      "target_details": [
+        "commercial buildings"
+      ],
+      "samples": 11,
+      "answered_count": 9,
+      "null_count": 2,
+      "coverage": 0.8181818181818182,
+      "coverage_percent": 81.82,
+      "null_rate": 0.18181818181818182,
+      "null_rate_percent": 18.18,
+      "correct_count": 4,
+      "overall_accuracy": 0.36363636363636365,
+      "overall_accuracy_percent": 36.36,
+      "answered_only_accuracy": 0.4444444444444444,
+      "answered_only_accuracy_percent": 44.44,
+      "average_confidence": 0.090909,
+      "latency_samples": 11,
+      "average_latency_ms": 1586.545,
+      "median_latency_ms": 1327.0,
+      "p95_latency_ms": 3548.0,
+      "minimum_latency_ms": 79.0,
+      "maximum_latency_ms": 4851.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 4,
+        "accuracy": 0.36363636363636365,
+        "accuracy_percent": 36.36
+      }
+    },
+    {
+      "target": "forest",
+      "target_details": [
+        "forest"
+      ],
+      "samples": 4,
+      "answered_count": 0,
+      "null_count": 4,
+      "coverage": 0.0,
+      "coverage_percent": 0.0,
+      "null_rate": 1.0,
+      "null_rate_percent": 100.0,
+      "correct_count": 0,
+      "overall_accuracy": 0.0,
+      "overall_accuracy_percent": 0.0,
+      "answered_only_accuracy": null,
+      "answered_only_accuracy_percent": null,
+      "average_confidence": 0.1875,
+      "latency_samples": 4,
+      "average_latency_ms": 915.75,
+      "median_latency_ms": 929.5,
+      "p95_latency_ms": 1279.4,
+      "minimum_latency_ms": 464.0,
+      "maximum_latency_ms": 1340.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 3,
+        "accuracy": 0.75,
+        "accuracy_percent": 75.0
+      }
+    },
+    {
+      "target": "grass",
+      "target_details": [
+        "grass"
+      ],
+      "samples": 6,
+      "answered_count": 3,
+      "null_count": 3,
+      "coverage": 0.5,
+      "coverage_percent": 50.0,
+      "null_rate": 0.5,
+      "null_rate_percent": 50.0,
+      "correct_count": 3,
+      "overall_accuracy": 0.5,
+      "overall_accuracy_percent": 50.0,
+      "answered_only_accuracy": 1.0,
+      "answered_only_accuracy_percent": 100.0,
+      "average_confidence": 0.208333,
+      "latency_samples": 6,
+      "average_latency_ms": 692.5,
+      "median_latency_ms": 476.5,
+      "p95_latency_ms": 1334.25,
+      "minimum_latency_ms": 84.0,
+      "maximum_latency_ms": 1341.0,
+      "majority_baseline": {
+        "label": "yes",
+        "count": 5,
+        "accuracy": 0.8333333333333334,
+        "accuracy_percent": 83.33
+      }
+    },
+    {
+      "target": "heath",
+      "target_details": [
+        "heath"
+      ],
+      "samples": 1,
+      "answered_count": 0,
+      "null_count": 1,
+      "coverage": 0.0,
+      "coverage_percent": 0.0,
+      "null_rate": 1.0,
+      "null_rate_percent": 100.0,
+      "correct_count": 0,
+      "overall_accuracy": 0.0,
+      "overall_accuracy_percent": 0.0,
+      "answered_only_accuracy": null,
+      "answered_only_accuracy_percent": null,
+      "average_confidence": 0.5,
+      "latency_samples": 1,
+      "average_latency_ms": 459.0,
+      "median_latency_ms": 459.0,
+      "p95_latency_ms": 459.0,
+      "minimum_latency_ms": 459.0,
+      "maximum_latency_ms": 459.0,
+      "majority_baseline": {
+        "label": "yes",
+        "count": 1,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      }
+    },
+    {
+      "target": "other",
+      "target_details": [
+        "industrial",
+        "scrub",
+        "wetland"
+      ],
+      "samples": 4,
+      "answered_count": 0,
+      "null_count": 4,
+      "coverage": 0.0,
+      "coverage_percent": 0.0,
+      "null_rate": 1.0,
+      "null_rate_percent": 100.0,
+      "correct_count": 0,
+      "overall_accuracy": 0.0,
+      "overall_accuracy_percent": 0.0,
+      "answered_only_accuracy": null,
+      "answered_only_accuracy_percent": null,
+      "average_confidence": 0.25,
+      "latency_samples": 4,
+      "average_latency_ms": 579.25,
+      "median_latency_ms": 451.5,
+      "p95_latency_ms": 1203.65,
+      "minimum_latency_ms": 80.0,
+      "maximum_latency_ms": 1334.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 3,
+        "accuracy": 0.75,
+        "accuracy_percent": 75.0
+      }
+    },
+    {
+      "target": "residential buildings",
+      "target_details": [
+        "residential buildings"
+      ],
+      "samples": 3,
+      "answered_count": 2,
+      "null_count": 1,
+      "coverage": 0.6666666666666666,
+      "coverage_percent": 66.67,
+      "null_rate": 0.3333333333333333,
+      "null_rate_percent": 33.33,
+      "correct_count": 0,
+      "overall_accuracy": 0.0,
+      "overall_accuracy_percent": 0.0,
+      "answered_only_accuracy": 0.0,
+      "answered_only_accuracy_percent": 0.0,
+      "average_confidence": 0.0,
+      "latency_samples": 3,
+      "average_latency_ms": 1328.333,
+      "median_latency_ms": 1327.0,
+      "p95_latency_ms": 1333.3,
+      "minimum_latency_ms": 1324.0,
+      "maximum_latency_ms": 1334.0,
+      "majority_baseline": {
+        "label": "27",
+        "count": 1,
+        "accuracy": 0.3333333333333333,
+        "accuracy_percent": 33.33
+      }
+    },
+    {
+      "target": "roads",
+      "target_details": [
+        "roads"
+      ],
+      "samples": 16,
+      "answered_count": 13,
+      "null_count": 3,
+      "coverage": 0.8125,
+      "coverage_percent": 81.25,
+      "null_rate": 0.1875,
+      "null_rate_percent": 18.75,
+      "correct_count": 8,
+      "overall_accuracy": 0.5,
+      "overall_accuracy_percent": 50.0,
+      "answered_only_accuracy": 0.6153846153846154,
+      "answered_only_accuracy_percent": 61.54,
+      "average_confidence": 0.0625,
+      "latency_samples": 16,
+      "average_latency_ms": 1536.062,
+      "median_latency_ms": 1332.5,
+      "p95_latency_ms": 2961.0,
+      "minimum_latency_ms": 412.0,
+      "maximum_latency_ms": 4851.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 8,
+        "accuracy": 0.5,
+        "accuracy_percent": 50.0
+      }
+    },
+    {
+      "target": "rural/urban scene",
+      "target_details": [
+        "rural/urban scene"
+      ],
+      "samples": 5,
+      "answered_count": 5,
+      "null_count": 0,
+      "coverage": 1.0,
+      "coverage_percent": 100.0,
+      "null_rate": 0.0,
+      "null_rate_percent": 0.0,
+      "correct_count": 2,
+      "overall_accuracy": 0.4,
+      "overall_accuracy_percent": 40.0,
+      "answered_only_accuracy": 0.4,
+      "answered_only_accuracy_percent": 40.0,
+      "average_confidence": 0.45,
+      "latency_samples": 5,
+      "average_latency_ms": 327.4,
+      "median_latency_ms": 457.0,
+      "p95_latency_ms": 546.8,
+      "minimum_latency_ms": 75.0,
+      "maximum_latency_ms": 569.0,
+      "majority_baseline": {
+        "label": "urban",
+        "count": 4,
+        "accuracy": 0.8,
+        "accuracy_percent": 80.0
+      }
+    },
+    {
+      "target": "water",
+      "target_details": [
+        "water"
+      ],
+      "samples": 8,
+      "answered_count": 7,
+      "null_count": 1,
+      "coverage": 0.875,
+      "coverage_percent": 87.5,
+      "null_rate": 0.125,
+      "null_rate_percent": 12.5,
+      "correct_count": 4,
+      "overall_accuracy": 0.5,
+      "overall_accuracy_percent": 50.0,
+      "answered_only_accuracy": 0.5714285714285714,
+      "answered_only_accuracy_percent": 57.14,
+      "average_confidence": 0.0625,
+      "latency_samples": 8,
+      "average_latency_ms": 1735.875,
+      "median_latency_ms": 2148.0,
+      "p95_latency_ms": 2300.9,
+      "minimum_latency_ms": 474.0,
+      "maximum_latency_ms": 2331.0,
+      "majority_baseline": {
+        "label": "no",
+        "count": 3,
+        "accuracy": 0.375,
+        "accuracy_percent": 37.5
+      }
+    }
+  ],
+  "answer_distributions": {
+    "comp": {
+      "sample_count": 15,
+      "ground_truth_distribution": {
+        "no": 11,
+        "yes": 4
+      },
+      "predicted_distribution": {
+        "no": 8,
+        "yes": 1
+      },
+      "null_count": 6,
+      "null_ground_truth_distribution": {
+        "no": 4,
+        "yes": 2
+      },
+      "most_frequent_prediction": {
+        "answer": "no",
+        "count": 8
+      },
+      "majority_class_baseline": {
+        "label": "no",
+        "count": 11,
+        "accuracy": 0.7333333333333333,
+        "accuracy_percent": 73.33
+      },
+      "observed_accuracy": 0.4,
+      "exceeds_majority_baseline": false
+    },
+    "count": {
+      "sample_count": 15,
+      "ground_truth_distribution": {
+        "0": 6,
+        "10": 1,
+        "2": 1,
+        "20": 1,
+        "246": 1,
+        "27": 1,
+        "33": 1,
+        "3428": 1,
+        "4": 1,
+        "8": 1
+      },
+      "predicted_distribution": {
+        "0": 13
+      },
+      "null_count": 2,
+      "null_ground_truth_distribution": {
+        "20": 1,
+        "246": 1
+      },
+      "most_frequent_prediction": {
+        "answer": "0",
+        "count": 13
+      },
+      "majority_class_baseline": {
+        "label": "0",
+        "count": 6,
+        "accuracy": 0.4,
+        "accuracy_percent": 40.0
+      },
+      "observed_accuracy": 0.4,
+      "exceeds_majority_baseline": false
+    },
+    "presence": {
+      "sample_count": 15,
+      "ground_truth_distribution": {
+        "no": 6,
+        "yes": 9
+      },
+      "predicted_distribution": {
+        "yes": 8
+      },
+      "null_count": 7,
+      "null_ground_truth_distribution": {
+        "no": 3,
+        "yes": 4
+      },
+      "most_frequent_prediction": {
+        "answer": "yes",
+        "count": 8
+      },
+      "majority_class_baseline": {
+        "label": "yes",
+        "count": 9,
+        "accuracy": 0.6,
+        "accuracy_percent": 60.0
+      },
+      "observed_accuracy": 0.3333333333333333,
+      "exceeds_majority_baseline": false
+    },
+    "rural_urban": {
+      "sample_count": 5,
+      "ground_truth_distribution": {
+        "rural": 1,
+        "urban": 4
+      },
+      "predicted_distribution": {
+        "rural": 4,
+        "urban": 1
+      },
+      "null_count": 0,
+      "null_ground_truth_distribution": {},
+      "most_frequent_prediction": {
+        "answer": "rural",
+        "count": 4
+      },
+      "majority_class_baseline": {
+        "label": "urban",
+        "count": 4,
+        "accuracy": 0.8,
+        "accuracy_percent": 80.0
+      },
+      "observed_accuracy": 0.4,
+      "exceeds_majority_baseline": false
+    }
+  },
+  "count_answer_buckets": {
+    "ground truth 0": {
+      "samples": 6,
+      "answered_count": 6,
+      "null_count": 0,
+      "coverage": 1.0,
+      "coverage_percent": 100.0,
+      "null_rate": 0.0,
+      "null_rate_percent": 0.0,
+      "correct_count": 6,
+      "overall_accuracy": 1.0,
+      "overall_accuracy_percent": 100.0,
+      "answered_only_accuracy": 1.0,
+      "answered_only_accuracy_percent": 100.0,
+      "average_confidence": 0.0,
+      "latency_samples": 6,
+      "average_latency_ms": 1259.667,
+      "median_latency_ms": 1323.0,
+      "p95_latency_ms": 1350.75,
+      "minimum_latency_ms": 913.0,
+      "maximum_latency_ms": 1351.0,
+      "majority_baseline": {
+        "label": "0",
+        "count": 6,
+        "accuracy": 1.0,
+        "accuracy_percent": 100.0
+      }
+    },
+    "ground truth 1": {
+      "samples": 0,
+      "answered_count": 0,
+      "null_count": 0,
+      "coverage": null,
+      "coverage_percent": null,
+      "null_rate": null,
+      "null_rate_percent": null,
+      "correct_count": 0,
+      "overall_accuracy": null,
+      "overall_accuracy_percent": null,
+      "answered_only_accuracy": null,
+      "answered_only_accuracy_percent": null,
+      "average_confidence": null,
+      "latency_samples": 0,
+      "average_latency_ms": null,
+      "median_latency_ms": null,
+      "p95_latency_ms": null,
+      "minimum_latency_ms": null,
+      "maximum_latency_ms": null,
+      "majority_baseline": {
+        "label": null,
+        "count": 0,
+        "accuracy": null,
+        "accuracy_percent": null
+      }
+    },
+    "ground truth 2+": {
+      "samples": 9,
+      "answered_count": 7,
+      "null_count": 2,
+      "coverage": 0.7777777777777778,
+      "coverage_percent": 77.78,
+      "null_rate": 0.2222222222222222,
+      "null_rate_percent": 22.22,
+      "correct_count": 0,
+      "overall_accuracy": 0.0,
+      "overall_accuracy_percent": 0.0,
+      "answered_only_accuracy": 0.0,
+      "answered_only_accuracy_percent": 0.0,
+      "average_confidence": 0.055556,
+      "latency_samples": 9,
+      "average_latency_ms": 1055.778,
+      "median_latency_ms": 1317.0,
+      "p95_latency_ms": 1330.0,
+      "minimum_latency_ms": 464.0,
+      "maximum_latency_ms": 1332.0,
+      "majority_baseline": {
+        "label": "10",
+        "count": 1,
+        "accuracy": 0.1111111111111111,
+        "accuracy_percent": 11.11
+      }
+    },
+    "zero_prediction_dominance": {
+      "answered_count_samples": 13,
+      "zero_predictions": 13,
+      "zero_prediction_rate": 1.0,
+      "zero_prediction_rate_percent": 100.0,
+      "accuracy_exceeds_majority_baseline": false
+    }
+  },
+  "repair_priorities": [
+    {
+      "issue": "Expand controlled target/evidence availability for missing operands and vocabulary",
+      "section": "evidence-availability fixes",
+      "affected_samples": 11,
+      "expected_recoverability": 0.75,
+      "recommendation": "Add auditable support for currently unresolved target terms and require both comparison operands; do not use benchmark labels or metadata at inference time.",
+      "impact_score": 8.25,
+      "rank": 1
+    },
+    {
+      "issue": "Treat zero accepted grounding regions as uncertain evidence, not an automatically reliable zero count",
+      "section": "evidence-availability fixes",
+      "affected_samples": 10,
+      "expected_recoverability": 0.6,
+      "recommendation": "Calibrate zero-region behavior and distinguish no detection from confirmed absence before deriving counts or comparisons.",
+      "impact_score": 6.0,
+      "rank": 2
+    },
+    {
+      "issue": "Cover benchmark presence constructions that fell through to generic or unsupported routing",
+      "section": "routing/normalization fixes",
+      "affected_samples": 4,
+      "expected_recoverability": 0.9,
+      "recommendation": "Add text-only routing tests for observed 'Is a … present' forms while retaining centralized answer normalization.",
+      "impact_score": 3.6,
+      "rank": 3
+    },
+    {
+      "issue": "Improve rural/urban and presence discrimination after routing succeeds",
+      "section": "model-quality limitations",
+      "affected_samples": 6,
+      "expected_recoverability": 0.4,
+      "recommendation": "Evaluate calibrated or retrained scene/presence evidence on a held-out set; the smoke result does not justify claiming improvement.",
+      "impact_score": 2.4,
+      "rank": 4
+    },
+    {
+      "issue": "Resolve the mismatch between dense RSVQA count labels and accepted-region box counts",
+      "section": "benchmark-specific risks",
+      "affected_samples": 9,
+      "expected_recoverability": 0.15,
+      "recommendation": "Determine whether a scientifically valid counting model can represent dense road/building/area counts before a full run; never hard-code answers.",
+      "impact_score": 1.35,
+      "rank": 5
+    },
+    {
+      "issue": "Investigate unclassified failures only after richer evidence is persisted",
+      "section": "benchmark-specific risks",
+      "affected_samples": 0,
+      "expected_recoverability": 0.25,
+      "recommendation": "Persist safe operand/count evidence in future benchmark runs; do not infer causes from absent fields.",
+      "impact_score": 0.0,
+      "rank": 6
+    }
+  ],
+  "full_run_projection": {
+    "projection_only": true,
+    "projected_question_count": 10004,
+    "assumption": "Smoke-run accuracy, null rate, and sequential per-request latency remain unchanged.",
+    "expected_correct_answers": 3801.52,
+    "expected_correct_answers_rounded": 3802,
+    "expected_null_answers": 3001.2,
+    "expected_null_answers_rounded": 3001,
+    "mean_latency_runtime": {
+      "seconds": 10607.641,
+      "hours": 2.947
+    },
+    "p95_latency_runtime": {
+      "seconds": 22346.435,
+      "hours": 6.207
+    },
+    "caution": "The p95-based duration is a rate scenario, not a measured end-to-end runtime percentile."
+  },
+  "recommended_decision": {
+    "choice": "B",
+    "label": "fix routing/evidence first",
+    "reason": "Recoverable routing, vocabulary, and comparison-operand gaps contribute materially to 30% null coverage loss."
+  }
+}

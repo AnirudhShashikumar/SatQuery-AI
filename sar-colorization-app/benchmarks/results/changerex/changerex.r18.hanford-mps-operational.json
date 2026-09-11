@@ -1,0 +1,85 @@
+{
+  "artifacts": {
+    "confusion_matrix": null,
+    "per_class_metrics": null,
+    "predictions": null,
+    "report": "artifacts/changerex_local_smoke/mps/benchmark_report.md",
+    "visual_examples": [
+      "artifacts/changerex_local_smoke/mps/overlay.png",
+      "artifacts/changerex_local_smoke/mps/probability_map.png"
+    ]
+  },
+  "benchmark_id": "changerex.r18.hanford-mps-operational",
+  "breakdowns": [],
+  "display_name": "ChangerEx",
+  "evaluation": {
+    "dataset": "NASA/USGS Hanford image pair",
+    "environment": {
+      "device": "MPS float32",
+      "hardware": "Apple Silicon Mac",
+      "input_size": "1024\u00d7768 resized/padded pair",
+      "os": "macOS 26.6.2",
+      "python": "3.9.6 (default, May 22 2026, 11:13:45) ",
+      "torch": "2.8.0"
+    },
+    "protocol": "Five warm repeated inferences plus CPU/MPS parity. No accuracy metric is computed because no reference mask exists.",
+    "sample_count": 1,
+    "split": "single operational smoke pair; no ground-truth mask",
+    "status": "operational_only",
+    "timestamp": "2026-09-01T07:44:33Z"
+  },
+  "limitations": [
+    "The output is a model prediction, not ground truth.",
+    "LEVIR-CD primarily represents building change and may not generalize to all land-cover changes.",
+    "Inputs must be geometrically co-registered; misregistration can appear as change.",
+    "This smoke pair has no pixel-level ground truth and cannot establish precision, recall, F1, IoU, or accuracy."
+  ],
+  "metrics": [
+    {
+      "description": "Agreement across repeated probability-map inference; operational, not accuracy.",
+      "higher_is_better": true,
+      "id": "deterministic_repeatability",
+      "label": "Repeatability",
+      "primary": true,
+      "unit": "ratio",
+      "value": 1.0
+    }
+  ],
+  "model": {
+    "adaptation": "Exact pure-PyTorch extraction; no SatQuery retraining",
+    "architecture": "ChangerEx + IA-ResNetV1c-18",
+    "checkpoint": "ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+    "checkpoint_sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+    "license": "Open-CD and checkpoint source terms",
+    "name": "ChangerEx IA-ResNetV1c-18 (LEVIR-CD)",
+    "source": "https://drive.google.com/file/d/1SZ8DBgBryJ63X9AU0AQvaJ2ZH3oQHQHe/view",
+    "training_dataset": "LEVIR-CD",
+    "version": "Open-CD v1.1.0 extraction"
+  },
+  "notes": [
+    "MPS/CPU parity passed; parity is implementation evidence, not task-quality evidence."
+  ],
+  "performance": {
+    "mean_latency_ms": 95.9663168,
+    "median_latency_ms": 95.20158400000001,
+    "model_load_ms": 248.962209,
+    "p95_latency_ms": 98.14729999999994,
+    "peak_memory_mb": 1120.96875,
+    "throughput_samples_per_second": null,
+    "warm_reuse": true
+  },
+  "provenance": {
+    "generated_by": "scripts/import_existing_benchmarks.py",
+    "result_origin": "satquery_reproduced",
+    "source_artifacts": [
+      "artifacts/changerex_local_smoke/mps/result.json",
+      "artifacts/changerex_local_smoke/mps/environment.json",
+      "artifacts/changerex_local_smoke/mps_vs_cpu_parity.json",
+      "artifacts/changerex_local_smoke/source_manifest.json"
+    ],
+    "verified": true
+  },
+  "schema_version": "1.0.0",
+  "specialist_id": "changerex",
+  "task": "Bi-temporal change detection"
+}

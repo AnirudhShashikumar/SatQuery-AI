@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="100%" height="100%" fill="white"/>
+<text x="120" y="50" font-family="sans-serif" font-size="28" fill="#172b4d">Exact-match accuracy by task</text>
+<line x1="120" y1="90" x2="120" y2="550" stroke="#6b778c" stroke-width="2"/>
+<line x1="120" y1="550" x2="1140" y2="550" stroke="#6b778c" stroke-width="2"/>
+<rect x="173.6" y="129.5" width="147.9" height="420.5" rx="8" fill="#1677ff"/>
+<text x="173.6" y="117.5" font-family="sans-serif" font-size="18" fill="#172b4d">91.4%</text>
+<text x="173.6" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">presence</text>
+<rect x="428.6" y="143.0" width="147.9" height="407.0" rx="8" fill="#12b886"/>
+<text x="428.6" y="131.0" font-family="sans-serif" font-size="18" fill="#172b4d">88.5%</text>
+<text x="428.6" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">comp</text>
+<rect x="683.5" y="428.9" width="147.9" height="121.1" rx="8" fill="#f59f00"/>
+<text x="683.5" y="416.9" font-family="sans-serif" font-size="18" fill="#172b4d">26.3%</text>
+<text x="683.5" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">count</text>
+<rect x="938.5" y="136.0" width="147.9" height="414.0" rx="8" fill="#e64980"/>
+<text x="938.5" y="124.0" font-family="sans-serif" font-size="18" fill="#172b4d">90.0%</text>
+<text x="938.5" y="585" font-family="sans-serif" font-size="17" fill="#172b4d">rural_urban</text>
+</svg>

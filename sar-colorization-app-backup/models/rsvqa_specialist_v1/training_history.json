@@ -1,0 +1,234 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.9040762519409726,
+    "train_task_loss": {
+      "presence": 0.24200891785040266,
+      "comp": 0.4735380026451427,
+      "rural_urban": 0.16482951582911565,
+      "count": 2.735928573597731
+    },
+    "validation": {
+      "overall_accuracy": 0.7096451774112944,
+      "macro_accuracy": 0.7416685793081097,
+      "per_task_accuracy": {
+        "presence": 0.9184652278177458,
+        "comp": 0.7945273631840796,
+        "rural_urban": 0.87,
+        "count": 0.38368172623061364
+      },
+      "per_task_loss": {
+        "presence": 0.19103567339479924,
+        "comp": 0.3943806283175945,
+        "rural_urban": 0.6170307386592657,
+        "count": 2.76060329079628
+      },
+      "samples": 10005
+    },
+    "seconds": 907.784505367279,
+    "learning_rate": 0.00019276855558857255
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.7770693339490784,
+    "train_task_loss": {
+      "presence": 0.2065310961081411,
+      "comp": 0.37312249642623885,
+      "rural_urban": 0.0422607656452785,
+      "count": 2.4863629821162894
+    },
+    "validation": {
+      "overall_accuracy": 0.7293353323338331,
+      "macro_accuracy": 0.7537389551988147,
+      "per_task_accuracy": {
+        "presence": 0.9174374785885577,
+        "comp": 0.8455223880597015,
+        "rural_urban": 0.87,
+        "count": 0.38199595414699933
+      },
+      "per_task_loss": {
+        "presence": 0.19188057761639357,
+        "comp": 0.315645045414567,
+        "rural_urban": 0.7340985408641129,
+        "count": 2.7683646082878113
+      },
+      "samples": 10005
+    },
+    "seconds": 836.6654961109161,
+    "learning_rate": 0.0001721751442127221
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.7081310226346555,
+    "train_task_loss": {
+      "presence": 0.18294498176882731,
+      "comp": 0.31299563397297125,
+      "rural_urban": 0.010043482891413756,
+      "count": 2.326539993286133
+    },
+    "validation": {
+      "overall_accuracy": 0.7386306846576711,
+      "macro_accuracy": 0.7660547278145375,
+      "per_task_accuracy": {
+        "presence": 0.9099006509078451,
+        "comp": 0.8763681592039801,
+        "rural_urban": 0.9,
+        "count": 0.377950101146325
+      },
+      "per_task_loss": {
+        "presence": 0.21662022899836303,
+        "comp": 0.2589996611699462,
+        "rural_urban": 0.5397858969932037,
+        "count": 2.7714633464813234
+      },
+      "samples": 10005
+    },
+    "seconds": 912.1458468437195,
+    "learning_rate": 0.0001413549260746838
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.665155304624997,
+    "train_task_loss": {
+      "presence": 0.16808538061152034,
+      "comp": 0.28150772880054425,
+      "rural_urban": 0.0024487690138741253,
+      "count": 2.208579342370599
+    },
+    "validation": {
+      "overall_accuracy": 0.7475262368815592,
+      "macro_accuracy": 0.7726662331272507,
+      "per_task_accuracy": {
+        "presence": 0.9194929770469339,
+        "comp": 0.8868159203980099,
+        "rural_urban": 0.9,
+        "count": 0.38435603506405935
+      },
+      "per_task_loss": {
+        "presence": 0.19547599479556083,
+        "comp": 0.24273387556895615,
+        "rural_urban": 0.4020405195311608,
+        "count": 2.750892424583435
+      },
+      "samples": 10005
+    },
+    "seconds": 915.7053153514862,
+    "learning_rate": 0.00010500000000000098
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.6276509310441796,
+    "train_task_loss": {
+      "presence": 0.1404477608842271,
+      "comp": 0.2525271267298884,
+      "rural_urban": 0.0010683072635888197,
+      "count": 2.116560530342512
+    },
+    "validation": {
+      "overall_accuracy": 0.7488255872063968,
+      "macro_accuracy": 0.7700509280682458,
+      "per_task_accuracy": {
+        "presence": 0.9160671462829736,
+        "comp": 0.9012437810945274,
+        "rural_urban": 0.89,
+        "count": 0.3728927848954821
+      },
+      "per_task_loss": {
+        "presence": 0.2274293196387589,
+        "comp": 0.2305498892441392,
+        "rural_urban": 0.5528060982225597,
+        "count": 2.7818245232105254
+      },
+      "samples": 10005
+    },
+    "seconds": 917.0492331981659,
+    "learning_rate": 6.864507392531715e-05
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.5894078906350488,
+    "train_task_loss": {
+      "presence": 0.1340527039258772,
+      "comp": 0.220110914392826,
+      "rural_urban": 0.00035132088400360373,
+      "count": 2.003116623400575
+    },
+    "validation": {
+      "overall_accuracy": 0.7477261369315342,
+      "macro_accuracy": 0.7688062167403873,
+      "per_task_accuracy": {
+        "presence": 0.9140116478245974,
+        "comp": 0.9047263681592039,
+        "rural_urban": 0.89,
+        "count": 0.3664868509777478
+      },
+      "per_task_loss": {
+        "presence": 0.2209703566506505,
+        "comp": 0.22379308473318815,
+        "rural_urban": 0.590618708482875,
+        "count": 2.8006011068820955
+      },
+      "samples": 10005
+    },
+    "seconds": 910.4166288375854,
+    "learning_rate": 3.782485578727853e-05
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.5566184824745127,
+    "train_task_loss": {
+      "presence": 0.11622604055192647,
+      "comp": 0.2070962954687592,
+      "rural_urban": 0.0002745905598248298,
+      "count": 1.9028770104884034
+    },
+    "validation": {
+      "overall_accuracy": 0.7537231384307846,
+      "macro_accuracy": 0.7756275001335271,
+      "per_task_accuracy": {
+        "presence": 0.9112709832134293,
+        "comp": 0.9119402985074627,
+        "rural_urban": 0.9,
+        "count": 0.3792987188132165
+      },
+      "per_task_loss": {
+        "presence": 0.23160626096650958,
+        "comp": 0.21087181204929947,
+        "rural_urban": 0.6776243234865211,
+        "count": 2.810155588388443
+      },
+      "samples": 10005
+    },
+    "seconds": 861.3801686763763,
+    "learning_rate": 1.7231444411428036e-05
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.5352830394802478,
+    "train_task_loss": {
+      "presence": 0.11673450028894665,
+      "comp": 0.19678494090035192,
+      "rural_urban": 0.00029948013635095464,
+      "count": 1.827313233141931
+    },
+    "validation": {
+      "overall_accuracy": 0.751024487756122,
+      "macro_accuracy": 0.7735176468969363,
+      "per_task_accuracy": {
+        "presence": 0.9085303186022611,
+        "comp": 0.9099502487562189,
+        "rural_urban": 0.9,
+        "count": 0.375590020229265
+      },
+      "per_task_loss": {
+        "presence": 0.23717375751584768,
+        "comp": 0.2084472465328872,
+        "rural_urban": 0.7192498920481574,
+        "count": 2.813879978656769
+      },
+      "samples": 10005
+    },
+    "seconds": 920.020387172699,
+    "learning_rate": 1e-05
+  }
+]

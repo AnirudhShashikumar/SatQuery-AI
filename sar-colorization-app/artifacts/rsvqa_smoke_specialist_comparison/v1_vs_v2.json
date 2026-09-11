@@ -1,0 +1,188 @@
+{
+  "count_prediction_distribution": {
+    "v1": {
+      "0": 13,
+      "null": 2
+    },
+    "v2": {
+      "0": 7,
+      "201+": 2,
+      "3": 1,
+      "4": 1,
+      "40": 1,
+      "53": 1,
+      "8": 1,
+      "9": 1
+    }
+  },
+  "coverage_change": 0.30000000000000004,
+  "fixed_questions": 21,
+  "generated_at": "2026-08-29T14:30:08.990616+00:00",
+  "majority_baselines": {
+    "comp": {
+      "accuracy": 0.7333333333333333,
+      "label": "no",
+      "v1_exceeds": false,
+      "v2_exceeds": true
+    },
+    "count": {
+      "accuracy": 0.4,
+      "label": "0",
+      "v1_exceeds": false,
+      "v2_exceeds": true
+    },
+    "presence": {
+      "accuracy": 0.6,
+      "label": "yes",
+      "v1_exceeds": false,
+      "v2_exceeds": true
+    },
+    "rural_urban": {
+      "accuracy": 0.8,
+      "label": "urban",
+      "v1_exceeds": false,
+      "v2_exceeds": true
+    }
+  },
+  "null_answer_change": -15,
+  "overall_accuracy_change": 0.42000000000000004,
+  "per_type": {
+    "comp": {
+      "accuracy_change": 0.4666666666666667,
+      "coverage_change": 0.4,
+      "v1": {
+        "accuracy": 0.4,
+        "answered": 9,
+        "average_latency_ms": 1902.2666666666667,
+        "correct": 6,
+        "coverage": 0.6,
+        "endpoint_errors": 0,
+        "median_latency_ms": 1786.0,
+        "null_answers": 6,
+        "p95_latency_ms": 3086.9999999999973,
+        "samples": 15
+      },
+      "v2": {
+        "accuracy": 0.8666666666666667,
+        "answered": 15,
+        "average_latency_ms": 171.8,
+        "correct": 13,
+        "coverage": 1.0,
+        "endpoint_errors": 0,
+        "median_latency_ms": 203.0,
+        "null_answers": 0,
+        "p95_latency_ms": 228.2,
+        "samples": 15
+      }
+    },
+    "count": {
+      "accuracy_change": 0.1333333333333333,
+      "coverage_change": 0.1333333333333333,
+      "v1": {
+        "accuracy": 0.4,
+        "answered": 13,
+        "average_latency_ms": 1137.3333333333333,
+        "correct": 6,
+        "coverage": 0.8666666666666667,
+        "endpoint_errors": 0,
+        "median_latency_ms": 1317.0,
+        "null_answers": 2,
+        "p95_latency_ms": 1350.3,
+        "samples": 15
+      },
+      "v2": {
+        "accuracy": 0.5333333333333333,
+        "answered": 15,
+        "average_latency_ms": 167.73333333333332,
+        "correct": 8,
+        "coverage": 1.0,
+        "endpoint_errors": 0,
+        "median_latency_ms": 203.0,
+        "null_answers": 0,
+        "p95_latency_ms": 208.7,
+        "samples": 15
+      }
+    },
+    "presence": {
+      "accuracy_change": 0.6000000000000001,
+      "coverage_change": 0.4666666666666667,
+      "v1": {
+        "accuracy": 0.3333333333333333,
+        "answered": 8,
+        "average_latency_ms": 385.73333333333335,
+        "correct": 5,
+        "coverage": 0.5333333333333333,
+        "endpoint_errors": 0,
+        "median_latency_ms": 463.0,
+        "null_answers": 7,
+        "p95_latency_ms": 479.0,
+        "samples": 15
+      },
+      "v2": {
+        "accuracy": 0.9333333333333333,
+        "answered": 15,
+        "average_latency_ms": 169.06666666666666,
+        "correct": 14,
+        "coverage": 1.0,
+        "endpoint_errors": 0,
+        "median_latency_ms": 203.0,
+        "null_answers": 0,
+        "p95_latency_ms": 207.9,
+        "samples": 15
+      }
+    },
+    "rural_urban": {
+      "accuracy_change": 0.6,
+      "coverage_change": 0.0,
+      "v1": {
+        "accuracy": 0.4,
+        "answered": 5,
+        "average_latency_ms": 327.4,
+        "correct": 2,
+        "coverage": 1.0,
+        "endpoint_errors": 0,
+        "median_latency_ms": 457.0,
+        "null_answers": 0,
+        "p95_latency_ms": 546.8,
+        "samples": 5
+      },
+      "v2": {
+        "accuracy": 1.0,
+        "answered": 5,
+        "average_latency_ms": 114.2,
+        "correct": 5,
+        "coverage": 1.0,
+        "endpoint_errors": 0,
+        "median_latency_ms": 178.0,
+        "null_answers": 0,
+        "p95_latency_ms": 197.8,
+        "samples": 5
+      }
+    }
+  },
+  "regressions": 0,
+  "v1": {
+    "accuracy": 0.38,
+    "answered": 35,
+    "average_latency_ms": 1060.34,
+    "correct": 19,
+    "coverage": 0.7,
+    "endpoint_errors": 0,
+    "median_latency_ms": 949.5,
+    "null_answers": 15,
+    "p95_latency_ms": 2233.75,
+    "samples": 50
+  },
+  "v2": {
+    "accuracy": 0.8,
+    "answered": 50,
+    "average_latency_ms": 164.0,
+    "correct": 40,
+    "coverage": 1.0,
+    "endpoint_errors": 0,
+    "median_latency_ms": 203.0,
+    "null_answers": 0,
+    "p95_latency_ms": 212.75,
+    "samples": 50
+  }
+}

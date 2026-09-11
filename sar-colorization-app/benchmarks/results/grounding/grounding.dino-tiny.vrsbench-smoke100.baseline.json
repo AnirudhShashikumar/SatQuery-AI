@@ -1,0 +1,98 @@
+{
+  "artifacts": {
+    "confusion_matrix": null,
+    "per_class_metrics": "artifacts/vrsbench_grounding_smoke_baseline/metrics_by_class.csv",
+    "predictions": "artifacts/vrsbench_grounding_smoke_baseline/predictions.csv",
+    "report": "artifacts/vrsbench_grounding_smoke_baseline/benchmark_report.md",
+    "visual_examples": [
+      "artifacts/vrsbench_grounding_smoke_baseline/report_assets/iou_distribution.png"
+    ]
+  },
+  "benchmark_id": "grounding.dino-tiny.vrsbench-smoke100.baseline",
+  "breakdowns": [],
+  "display_name": "Grounding DINO + Grounding Specialist",
+  "evaluation": {
+    "dataset": "VRSBench",
+    "environment": {
+      "device": "CPU",
+      "hardware": "Local Apple Silicon Mac",
+      "input_size": "Grounding DINO processor input",
+      "os": null,
+      "python": null,
+      "torch": null
+    },
+    "protocol": "Best-IoU benchmark matching on a curated 100-record smoke subset using unchanged production thresholds.",
+    "sample_count": 100,
+    "split": "prepared Grounding Smoke-100 subset",
+    "status": "smoke_only",
+    "timestamp": "2026-08-29T17:06:22.205614+00:00"
+  },
+  "limitations": [
+    "This 100-record smoke subset proves operational behavior and supports diagnosis, but is not the full validation split."
+  ],
+  "metrics": [
+    {
+      "description": "Smoke-subset mean IoU with null predictions counted as zero.",
+      "higher_is_better": true,
+      "id": "mean_iou",
+      "label": "Mean IoU",
+      "primary": true,
+      "unit": "ratio",
+      "value": 0.12828522562101688
+    },
+    {
+      "description": "Smoke-subset accuracy; not a full benchmark claim.",
+      "higher_is_better": true,
+      "id": "accuracy_at_050",
+      "label": "Accuracy @ IoU 0.50",
+      "primary": true,
+      "unit": "ratio",
+      "value": 0.13
+    },
+    {
+      "description": "Share with no accepted production prediction.",
+      "higher_is_better": false,
+      "id": "null_rate",
+      "label": "Null-prediction rate",
+      "primary": false,
+      "unit": "ratio",
+      "value": 0.64
+    }
+  ],
+  "model": {
+    "adaptation": null,
+    "architecture": "Grounding DINO Tiny",
+    "checkpoint": "IDEA-Research/grounding-dino-tiny",
+    "checkpoint_sha256": null,
+    "license": "Apache-2.0 base model; specialist bundle repository terms",
+    "name": "IDEA-Research/grounding-dino-tiny",
+    "source": "IDEA-Research/grounding-dino-tiny + repository specialist bundle",
+    "training_dataset": null,
+    "version": "production baseline"
+  },
+  "notes": [
+    "Production thresholds were unchanged.",
+    "Best-IoU matching is for analysis and is not production selection."
+  ],
+  "performance": {
+    "mean_latency_ms": 1169.14752,
+    "median_latency_ms": 1167.6375,
+    "model_load_ms": null,
+    "p95_latency_ms": 1201.261,
+    "peak_memory_mb": null,
+    "throughput_samples_per_second": 0.8540001366400218,
+    "warm_reuse": true
+  },
+  "provenance": {
+    "generated_by": "scripts/import_existing_benchmarks.py",
+    "result_origin": "satquery_reproduced",
+    "source_artifacts": [
+      "artifacts/vrsbench_grounding_smoke_baseline/results.json",
+      "artifacts/vrsbench_grounding_smoke_baseline/run_state.json"
+    ],
+    "verified": true
+  },
+  "schema_version": "1.0.0",
+  "specialist_id": "grounding",
+  "task": "Referring-expression grounding"
+}

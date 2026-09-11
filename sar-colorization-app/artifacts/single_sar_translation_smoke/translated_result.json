@@ -1,0 +1,489 @@
+{
+  "answer": "Direct SAR analysis indicates 100.0% valid pixels, 33.7% low normalized return, and a texture index of 0.00.",
+  "cache": {
+    "cache_key_prefix": "46ee065185b1",
+    "cached": false,
+    "original_generation_timestamp": "2026-08-30T15:26:29.673337Z",
+    "retrieval_timestamp": "2026-08-30T15:26:29.673337Z",
+    "tool_version": "satquery-sar-routing-1.1"
+  },
+  "caption_details": null,
+  "change_analysis": null,
+  "change_engine": null,
+  "classified_query": {
+    "requested_output": "text",
+    "requires_localization": false,
+    "requires_measurement": false,
+    "requires_segmentation": false,
+    "target": null,
+    "task_type": "sar_scene_analysis"
+  },
+  "confidence": {
+    "level": "low",
+    "reason": "Deterministic evidence-agreement score; it is not a calibrated model probability.",
+    "score": 0.4
+  },
+  "cross_modal_analysis": null,
+  "evidence": [
+    {
+      "description": "The normalized values used for the reported distribution and texture statistics.",
+      "label": "Normalized SAR intensity preview",
+      "reference": "/api/agent/previews/22ce72ad850548f38acf8a047d4f80b8.png",
+      "type": "normalized_sar_preview"
+    },
+    {
+      "description": "This optical-like image is generated from SAR by a learned translation model. It is not an observed optical image and may contain hallucinated, omitted, or spatially distorted features.",
+      "label": "Generated optical-like supporting evidence",
+      "reference": "/api/agent/previews/ca40747f9b724e1482d250c09dc3d4d0.png",
+      "type": "generated_optical_like_representation"
+    }
+  ],
+  "evidence_consistency": null,
+  "execution": {
+    "duration_ms": 85,
+    "input_mode": "single",
+    "permitted_parameters": {
+      "auto_detected_modality": "sar_vv_vh",
+      "effective_modality": "sar_vv_vh",
+      "has_primary_image": true,
+      "has_secondary_image": false,
+      "input_mode": "single",
+      "primary_band_count": 2,
+      "primary_date": null,
+      "primary_image_modality": "sar_vv_vh",
+      "primary_modality": "sar",
+      "primary_representation": "scientific_raster",
+      "query": "Describe the major radar-backscatter patterns.",
+      "representation": "scientific_raster",
+      "secondary_date": null,
+      "secondary_modality": null,
+      "user_confirmed_modality": "sar_vv_vh"
+    },
+    "selected_tools": [
+      "input_validator",
+      "sar_scene_analyzer"
+    ],
+    "selection_reason": "The effective modality is SAR and the query requests qualitative SAR intensity/quality analysis.",
+    "steps": [
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "upload_received"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "file_type_validation"
+      },
+      {
+        "duration_ms": 1,
+        "parameters": {},
+        "status": "success",
+        "tool": "metadata_extraction"
+      },
+      {
+        "duration_ms": 1,
+        "parameters": {},
+        "status": "success",
+        "tool": "preview_generation"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "representation": "scientific_raster"
+        },
+        "status": "success",
+        "tool": "representation_detection"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "auto_detected": "sar_vv_vh",
+          "confidence": "low",
+          "effective_modality": "sar_vv_vh"
+        },
+        "status": "success",
+        "tool": "modality_detection"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "confirmed_modality": "sar_vv_vh"
+        },
+        "status": "success",
+        "tool": "user_modality_override"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "query_routing"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "rejection_reasons": [],
+          "specialist": "sar_scene_analyzer"
+        },
+        "status": "success",
+        "tool": "compatibility_validation"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "specialist_selection"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "task": "sar_scene_analysis"
+        },
+        "status": "success",
+        "tool": "query_classification"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "log_transform": false,
+          "version": "sar-preprocess-1.0"
+        },
+        "status": "success",
+        "tool": "sar_preprocessing"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "texture_index": 0.0,
+          "trained_classifier": false
+        },
+        "status": "success",
+        "tool": "sar_scene_statistics"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "product_count": 1
+        },
+        "status": "success",
+        "tool": "evidence_generation"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {},
+        "status": "success",
+        "tool": "result_assembly"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "band_count": 2,
+          "eligible": true,
+          "finite_value_ratio": 1.0,
+          "reason": null,
+          "requested_model": "pix2pix",
+          "selected_model": "pix2pix"
+        },
+        "status": "success",
+        "tool": "sar_translation_eligibility"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "color_correction_used": false,
+          "fallback_used": false,
+          "model": "Pix2Pix"
+        },
+        "status": "success",
+        "tool": "sar_translation_model_load"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "color_correction_used": false,
+          "fallback_used": false,
+          "model": "Pix2Pix"
+        },
+        "status": "success",
+        "tool": "sar_translation_preprocessing"
+      },
+      {
+        "duration_ms": 67,
+        "parameters": {
+          "color_correction_used": false,
+          "fallback_used": false,
+          "model": "Pix2Pix"
+        },
+        "status": "success",
+        "tool": "sar_translation_inference"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "color_correction_used": false,
+          "fallback_used": false,
+          "model": "Pix2Pix"
+        },
+        "status": "success",
+        "tool": "sar_translation_color_correction"
+      },
+      {
+        "duration_ms": 10,
+        "parameters": {
+          "color_correction_used": false,
+          "fallback_used": false,
+          "model": "Pix2Pix"
+        },
+        "status": "success",
+        "tool": "sar_translation_artifact_generation"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "error_code": "CAPTIONER_UNAVAILABLE"
+        },
+        "status": "failed",
+        "tool": "translated_optical_captioning"
+      },
+      {
+        "duration_ms": 0,
+        "parameters": {
+          "agreement": "supported_by_native_sar_only",
+          "calibrated": false
+        },
+        "status": "success",
+        "tool": "sar_optical_evidence_fusion"
+      }
+    ],
+    "validation": {
+      "errors": [],
+      "valid": true
+    }
+  },
+  "grounding_result": null,
+  "mask_comparison": null,
+  "model": null,
+  "pair_compatibility": null,
+  "primary_image_metadata": {
+    "auto_detected_modality": "sar_vv_vh",
+    "auto_detection_confidence": "low",
+    "auto_detection_reason": "SAR filename/metadata hints and two scientific bands suggest a dual-polarization raster.",
+    "band_count": 2,
+    "band_descriptions": [
+      null,
+      null
+    ],
+    "band_statistics": [
+      {
+        "band": 1,
+        "description": null,
+        "dtype": "float32",
+        "inf_count": 0,
+        "maximum": 0.7150326371192932,
+        "mean": 0.46822790319129126,
+        "minimum": 0.23267973959445953,
+        "nan_count": 0,
+        "nodata_count": 0,
+        "percentile_1": 0.23267973959445953,
+        "percentile_5": 0.23267973959445953,
+        "percentile_50": 0.5607843399047852,
+        "percentile_95": 0.7150326371192932,
+        "percentile_99": 0.7150326371192932,
+        "standard_deviation": 0.14898471336950425,
+        "valid_count": 16384
+      },
+      {
+        "band": 2,
+        "description": null,
+        "dtype": "float32",
+        "inf_count": 0,
+        "maximum": 0.6663267612457275,
+        "mean": 0.4639468641835265,
+        "minimum": 0.27079737186431885,
+        "nan_count": 0,
+        "nodata_count": 0,
+        "percentile_1": 0.27079737186431885,
+        "percentile_5": 0.27079737186431885,
+        "percentile_50": 0.5398431420326233,
+        "percentile_95": 0.6663267612457275,
+        "percentile_99": 0.6663267612457275,
+        "standard_deviation": 0.12216746765457527,
+        "valid_count": 16384
+      }
+    ],
+    "bounds": {
+      "bottom": 18.72,
+      "left": 70.0,
+      "right": 71.28,
+      "top": 20.0
+    },
+    "color_interpretation": [
+      "band_1",
+      "band_2"
+    ],
+    "crs": "EPSG:4326",
+    "dtype": "float32",
+    "effective_modality": "sar_vv_vh",
+    "file_id": "ea469760-21a5-4ebd-92a8-b970e1f434d8",
+    "format": "geotiff",
+    "height": 128,
+    "is_georeferenced": true,
+    "mime_type": "image/tiff",
+    "modality_limitations": [
+      "SAR channel order could not be verified from band descriptions."
+    ],
+    "nodata": null,
+    "original_name": "cross-sar.tif",
+    "preview_url": "/api/agent/previews/ff4678d111de48efb03af07a8c43de95.png",
+    "representation": "scientific_raster",
+    "safe_name": "cross-sar.tif",
+    "size_bytes": 131546,
+    "transform": [
+      0.01,
+      0.0,
+      70.0,
+      0.0,
+      -0.01,
+      20.0
+    ],
+    "user_confirmed_modality": "sar_vv_vh",
+    "warnings": [
+      "Display preview only \u2014 not a scientific product.",
+      "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2."
+    ],
+    "width": 128
+  },
+  "request_id": "f91c9295-c139-4892-bf62-08e2201748d9",
+  "result_status": "COMPLETED_WITH_LIMITATIONS",
+  "sar_scene_analysis": {
+    "evidence_products": [
+      {
+        "authoritative": true,
+        "description": "The normalized values used for the reported distribution and texture statistics.",
+        "generation_method": "finite non-NoData 1st/99th percentile per channel, then channel mean",
+        "height": 128,
+        "id": "e59f28a36e514b3d9c3eb9c6d011394a",
+        "label": "Normalized SAR intensity preview",
+        "reference": "/api/agent/previews/22ce72ad850548f38acf8a047d4f80b8.png",
+        "source": "sar_scene_analyzer",
+        "type": "normalized_sar_preview",
+        "width": 128
+      }
+    ],
+    "execution_status": "completed_with_limitations",
+    "high_backscatter_percent": 60.3271,
+    "input_quality_score": 1.0,
+    "limitations": [
+      "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+      "No trained SAR scene classifier was used and no model confidence is available."
+    ],
+    "low_backscatter_percent": 33.7402,
+    "method": "deterministic_intensity_texture_summary",
+    "method_version": "deterministic-sar-scene-1.0",
+    "mid_backscatter_percent": 5.9326,
+    "normalized_mean": 0.488332,
+    "normalized_standard_deviation": 0.308871,
+    "preprocessing": {
+      "denoising": "3x3 median filter",
+      "input_value_domain": "unknown",
+      "invalid_pixel_count": 0,
+      "log_transform_applied": false,
+      "nodata_pixel_count": 0,
+      "normalization": "finite non-NoData 1st/99th percentile per channel, then channel mean",
+      "percentile_high": 0.6906796991825104,
+      "percentile_low": 0.2517385557293892,
+      "resized": false,
+      "version": "sar-preprocess-1.0"
+    },
+    "runtime_ms": 1,
+    "task": "sar_scene_analysis",
+    "texture_index": 0.0,
+    "valid_pixel_percent": 100.0,
+    "warnings": [
+      "Scene statistics are deterministic qualitative evidence, not a trained semantic classification."
+    ]
+  },
+  "sar_translated_optical_analysis": {
+    "agreement": "supported_by_native_sar_only",
+    "color_corrected": false,
+    "color_corrected_preview_url": null,
+    "confidence": {
+      "level": "low",
+      "reason": "Deterministic evidence-agreement score; it is not a calibrated model probability.",
+      "score": 0.4
+    },
+    "content_hash": "5e97aaedaae867745bd79ba0b29de1ddc88085a0fdd361c046eaa049f10e334a",
+    "device": "cpu",
+    "direct_answer": "Direct SAR analysis indicates 100.0% valid pixels, 33.7% low normalized return, and a texture index of 0.00.",
+    "disclosure": "This optical-like image is generated from SAR by a learned translation model. It is not an observed optical image and may contain hallucinated, omitted, or spatially distorted features.",
+    "enabled": true,
+    "fallback_reason": null,
+    "fallback_used": false,
+    "generated_height": 256,
+    "generated_preview_url": "/api/agent/previews/ca40747f9b724e1482d250c09dc3d4d0.png",
+    "generated_width": 256,
+    "grounding_disclosure": null,
+    "input_channel_interpretation": "Existing ingestion display converted to RGB; a one-band display is explicitly replicated to RGB and a two-band input uses the documented ingestion false-color rendering.",
+    "limitations": [
+      "This optical-like image is generated from SAR by a learned translation model. It is not an observed optical image and may contain hallucinated, omitted, or spatially distorted features.",
+      "Native intensity and texture evidence does not establish arbitrary semantic object identity.",
+      "Agreement is a deterministic evidence-consistency state, not ground-truth accuracy."
+    ],
+    "model": "Pix2Pix",
+    "native_sar_findings": [
+      "Direct SAR analysis indicates 100.0% valid pixels, 33.7% low normalized return, and a texture index of 0.00."
+    ],
+    "normalized_sar_preview_url": "/api/agent/previews/4d14836b6b414c0e8319a305f56fcb19.png",
+    "optical_caption": null,
+    "optical_grounding": null,
+    "optical_scene_priors": [],
+    "optical_specialists_executed": [],
+    "optical_vqa": null,
+    "output_value_range": [
+      0.00020998716354370117,
+      1.0
+    ],
+    "preprocessing_method": "ingestion SAR display converted to RGB; bicubic 256x256; [0,1] to [-1,1]",
+    "provenance": {
+      "checkpoint": "pix2pix_gen_180.pth",
+      "disclosure": "This optical-like image is generated from SAR by a learned translation model. It is not an observed optical image and may contain hallucinated, omitted, or spatially distorted features.",
+      "generated_representation": true,
+      "model": "Pix2Pix",
+      "model_reused": true
+    },
+    "rsvqa_disclosure": null,
+    "runtime_breakdown_ms": {
+      "sar_translation_artifact_generation": 10,
+      "sar_translation_color_correction": 0,
+      "sar_translation_eligibility": 0,
+      "sar_translation_inference": 67,
+      "sar_translation_model_load": 0,
+      "sar_translation_preprocessing": 0,
+      "translated_optical_captioning": 0
+    },
+    "runtime_ms": 80,
+    "status": "completed_with_limitations",
+    "translated_findings": [],
+    "warnings": [
+      "The remote-sensing captioner is not configured in this local environment."
+    ]
+  },
+  "sar_water_analysis": null,
+  "secondary_image_metadata": null,
+  "status": "partial",
+  "sve_result": null,
+  "task": "sar_scene_analysis",
+  "ttp_result": null,
+  "vqa_details": null,
+  "warnings": [
+    "Display preview only \u2014 not a scientific product.",
+    "Two-band false-color preview: R=band 1, G=band 2, B=average of bands 1 and 2.",
+    "Scene statistics are deterministic qualitative evidence, not a trained semantic classification.",
+    "Intensity and texture statistics do not establish semantic land-cover classes or object identity.",
+    "No trained SAR scene classifier was used and no model confidence is available.",
+    "The remote-sensing captioner is not configured in this local environment.",
+    "This optical-like image is generated from SAR by a learned translation model. It is not an observed optical image and may contain hallucinated, omitted, or spatially distorted features."
+  ]
+}

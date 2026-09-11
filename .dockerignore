@@ -1,0 +1,17 @@
+.git
+.env
+.env.*
+**/.DS_Store
+**/__pycache__
+**/.pytest_cache
+**/.mypy_cache
+**/.ruff_cache
+**/.venv
+**/venv
+**/node_modules
+models/
+output/
+*.pth
+*.pt
+*.onnx
+*.ckpt

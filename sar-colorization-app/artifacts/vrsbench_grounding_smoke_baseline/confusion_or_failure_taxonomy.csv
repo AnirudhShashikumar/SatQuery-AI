@@ -1,0 +1,101 @@
+smoke_id,object_class,failure_category,best_iou,prediction_label,prediction_score,bbox_was_clipped,is_unique,predicted_box_count
+0,airplane,null_prediction,0.0,,,False,False,0
+1,airport,class_confusion,0.0023000000000000004,green fields,0.57361,True,True,1
+2,baseball-diamond,null_prediction,0.0,,,True,True,0
+3,basketball-court,class_confusion,0.2553,the nearby building,0.470409,False,True,1
+4,bridge,null_prediction,0.0,,,False,True,0
+5,chimney,null_prediction,0.0,,,True,True,0
+6,container-crane,null_prediction,0.0,,,False,False,0
+7,dam,null_prediction,0.0,,,True,True,0
+8,expressway-service-area,null_prediction,0.0,,,True,True,0
+9,expressway-toll-station,null_prediction,0.0,,,False,True,0
+10,golffield,boundary_clipping_case,0.426,the golf field,0.521873,True,True,2
+11,ground-track-field,null_prediction,0.0,,,False,True,0
+12,harbor,null_prediction,0.0,,,True,False,0
+13,helicopter,success,0.5941317310205211,the helicopter,0.591344,False,True,1
+14,helipad,null_prediction,0.0,,,False,True,0
+15,overpass,null_prediction,0.0,,,False,False,0
+16,roundabout,null_prediction,0.0,,,False,True,0
+17,ship,null_prediction,0.0,,,False,False,0
+18,soccer-ball-field,success,0.7798180128846796,the soccer ball field,0.510186,False,True,1
+19,stadium,success,0.9316005789406304,the stadium,0.499163,True,True,1
+20,storage-tank,null_prediction,0.0,,,True,True,0
+21,swimming-pool,success,0.889628959276018,the swimming pool,0.608387,False,True,1
+22,tennis-court,null_prediction,0.0,,,False,False,0
+23,trainstation,null_prediction,0.0,,,True,True,0
+24,vehicle,null_prediction,0.0,,,True,False,0
+25,windmill,oversized_box,0.288620514548927,the small windmill,0.555045,False,True,1
+26,airplane,null_prediction,0.0,,,True,True,0
+27,airport,null_prediction,0.0,,,True,True,0
+28,baseball-diamond,null_prediction,0.0,,,False,True,0
+29,basketball-court,success,0.8280574220314276,the red - lined basketball court,0.717198,True,True,1
+30,bridge,boundary_clipping_case,0.4043487179487179,the bridge,0.652203,True,False,1
+31,chimney,null_prediction,0.0,,,True,True,0
+32,container-crane,null_prediction,0.0,,,False,False,0
+33,dam,null_prediction,0.0,,,True,True,0
+34,expressway-service-area,success,0.5450687459389213,the service area,0.470757,False,False,1
+35,expressway-toll-station,success,0.7806330119115141,the small toll station,0.487185,False,True,1
+36,golffield,null_prediction,0.0,,,True,True,0
+37,ground-track-field,boundary_clipping_case,0.0036000000000000042,the ground track field,0.577221,True,True,1
+38,harbor,null_prediction,0.0,,,False,False,0
+39,helicopter,null_prediction,0.0,,,False,False,0
+40,overpass,null_prediction,0.0,,,True,True,0
+41,roundabout,null_prediction,0.0,,,False,True,0
+42,ship,null_prediction,0.0,,,False,False,0
+43,soccer-ball-field,oversized_box,0.0003,the soccer - ball field,0.491943,False,True,1
+44,stadium,success,0.9184969696969699,the stadium,0.480213,False,True,1
+45,storage-tank,null_prediction,0.0,,,False,False,0
+46,swimming-pool,oversized_box,0.0,a swimming pool,0.684764,False,False,1
+47,tennis-court,null_prediction,0.0,,,False,False,0
+48,trainstation,null_prediction,0.0,,,True,True,0
+49,vehicle,null_prediction,0.0,,,False,True,0
+50,windmill,oversized_box,0.0,the windmill,0.513123,False,False,1
+51,airplane,null_prediction,0.0,,,False,False,0
+52,airport,oversized_box,0.40020000000000006,the airport,0.545742,False,True,1
+53,baseball-diamond,class_confusion,0.0016000000000000018,the baseball field,0.685326,False,False,1
+54,basketball-court,success,0.7110037735849057,the basketball court,0.461512,True,True,1
+55,bridge,null_prediction,0.0,,,False,False,0
+56,chimney,null_prediction,0.0,,,True,False,0
+57,container-crane,null_prediction,0.0,,,False,False,0
+58,dam,null_prediction,0.0,,,False,True,0
+59,expressway-service-area,null_prediction,0.0,,,True,True,0
+60,expressway-toll-station,null_prediction,0.0,,,False,True,0
+61,golffield,null_prediction,0.0,,,False,True,0
+62,ground-track-field,null_prediction,0.0,,,False,True,0
+63,harbor,class_confusion,0.1299736622549331,ships,0.538537,False,False,6
+64,helicopter,success,0.5365161483701762,the helicopter,0.479436,False,False,1
+65,overpass,oversized_box,0.48008930232558134,the overpass,0.459698,False,True,1
+66,roundabout,oversized_box,0.0005999999999999984,the roundabout,0.451985,False,True,1
+67,ship,null_prediction,0.0,,,False,False,0
+68,soccer-ball-field,null_prediction,0.0,,,False,True,0
+69,stadium,class_confusion,0.35046516580784576,a green playing field,0.585632,True,True,1
+70,storage-tank,success,0.5496567741935484,the storage tank,0.476644,True,True,1
+71,swimming-pool,null_prediction,0.0,,,False,True,0
+72,tennis-court,null_prediction,0.0,,,False,False,0
+73,trainstation,null_prediction,0.0,,,True,True,0
+74,vehicle,null_prediction,0.0,,,False,False,0
+75,windmill,oversized_box,0.2845392408335758,the windmill,0.616027,False,True,1
+76,airplane,null_prediction,0.0,,,False,False,0
+77,airport,null_prediction,0.0,,,True,True,0
+78,baseball-diamond,oversized_box,0.10715500327011117,the baseball diamond,0.467531,False,False,1
+79,basketball-court,oversized_box,0.0,the basketball court,0.50829,False,True,1
+80,bridge,null_prediction,0.0,,,False,False,0
+81,chimney,success,0.6316722891566265,the chimney,0.536477,True,True,1
+82,container-crane,null_prediction,0.0,,,True,True,0
+83,dam,null_prediction,0.0,,,True,True,0
+84,expressway-service-area,null_prediction,0.0,,,True,True,0
+85,expressway-toll-station,null_prediction,0.0,,,True,True,0
+86,golffield,null_prediction,0.0,,,True,True,0
+87,ground-track-field,oversized_box,0.0034999999999999927,the ground track field,0.498108,False,True,1
+88,harbor,oversized_box,0.008499999999999985,the harbor,0.458812,False,True,1
+89,helicopter,success,0.5888230008984726,the small helicopter,0.746804,False,True,1
+90,overpass,null_prediction,0.0,,,True,True,0
+91,roundabout,null_prediction,0.0,,,False,True,0
+92,ship,boundary_clipping_case,0.3616058218761289,the large ship,0.872264,True,False,1
+93,soccer-ball-field,null_prediction,0.0,,,True,True,0
+94,stadium,null_prediction,0.0,,,False,True,0
+95,storage-tank,null_prediction,0.0,,,True,False,0
+96,swimming-pool,class_confusion,0.034717715331455117,green foliage,0.603229,False,False,1
+97,tennis-court,boundary_clipping_case,0.0,the largest tennis court,0.46318,True,False,1
+98,trainstation,null_prediction,0.0,,,True,True,0
+99,vehicle,null_prediction,0.0,,,False,False,0

@@ -1,0 +1,357 @@
+{
+  "request_id": "06d99310-1783-4c6b-8041-fccabbf04ca2",
+  "task": "cross_modal_analysis",
+  "answer": "The file placed in the Optical observation slot appears to be sar imagery. Replace it or explicitly swap observations. The file placed in the Sar observation slot appears to be optical imagery. Replace it or explicitly swap observations.",
+  "confidence": {
+    "level": "unavailable",
+    "score": null,
+    "reason": "Input or pair validation failed; no specialist tool was executed."
+  },
+  "evidence": [],
+  "execution": {
+    "input_mode": "cross_modal",
+    "selected_tools": [
+      "input_validator",
+      "cross_modal_optical_sar_analyzer"
+    ],
+    "steps": [
+      {
+        "tool": "upload_received",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {}
+      },
+      {
+        "tool": "file_type_validation",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {}
+      },
+      {
+        "tool": "metadata_extraction",
+        "status": "success",
+        "duration_ms": 8,
+        "parameters": {}
+      },
+      {
+        "tool": "preview_generation",
+        "status": "success",
+        "duration_ms": 20,
+        "parameters": {}
+      },
+      {
+        "tool": "representation_detection",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "representation": "display_preview"
+        }
+      },
+      {
+        "tool": "modality_detection",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {
+          "auto_detected": "sar_preview",
+          "confidence": "medium",
+          "effective_modality": "sar_preview",
+          "reason": "One-channel display has SAR-like intensity statistics and a SAR metadata/filename hint; classified as SAR preview (intensity range p1-p99=161.0, coefficient of variation=0.193, local roughness=0.062)."
+        }
+      },
+      {
+        "tool": "user_modality_override",
+        "status": "skipped",
+        "duration_ms": 0,
+        "parameters": {
+          "confirmed_modality": null
+        }
+      },
+      {
+        "tool": "pair_compatibility_check",
+        "status": "failed",
+        "duration_ms": 0,
+        "parameters": {}
+      },
+      {
+        "tool": "query_routing",
+        "status": "success",
+        "duration_ms": 0,
+        "parameters": {}
+      },
+      {
+        "tool": "specialist_selection",
+        "status": "skipped",
+        "duration_ms": 0,
+        "parameters": {}
+      },
+      {
+        "tool": "cross_modal_optical_sar_analyzer",
+        "status": "skipped",
+        "duration_ms": 0,
+        "parameters": {}
+      }
+    ],
+    "duration_ms": 30,
+    "permitted_parameters": {
+      "query": "Where do both modalities agree?",
+      "input_mode": "cross_modal",
+      "primary_modality": "optical",
+      "secondary_modality": "sar",
+      "has_primary_image": true,
+      "has_secondary_image": true,
+      "primary_image_modality": "sar_preview",
+      "primary_representation": "display_preview",
+      "primary_band_count": 1,
+      "primary_date": null,
+      "secondary_date": null,
+      "representation": "display_preview",
+      "auto_detected_modality": "sar_preview",
+      "user_confirmed_modality": null,
+      "effective_modality": "sar_preview"
+    },
+    "validation": {
+      "valid": false,
+      "errors": [
+        "The file placed in the Optical observation slot appears to be sar imagery. Replace it or explicitly swap observations.",
+        "The file placed in the Sar observation slot appears to be optical imagery. Replace it or explicitly swap observations."
+      ]
+    },
+    "selection_reason": "The selected Optical + SAR workflow requests source-aware joint or complementary evidence."
+  },
+  "warnings": [
+    "The file placed in the Optical observation slot appears to be sar imagery. Replace it or explicitly swap observations.",
+    "The file placed in the Sar observation slot appears to be optical imagery. Replace it or explicitly swap observations.",
+    "Display preview only \u2014 not a scientific product."
+  ],
+  "status": "failed",
+  "result_status": "INVALID_INPUT",
+  "primary_image_metadata": {
+    "observation_role": "optical",
+    "file_id": "bcfefa5f-9779-440b-95fb-b4b960d74fc9",
+    "original_name": "sar 1.png",
+    "safe_name": "sar_1.png",
+    "format": "png",
+    "mime_type": "image/png",
+    "size_bytes": 46519,
+    "width": 256,
+    "height": 256,
+    "band_count": 1,
+    "dtype": "uint8",
+    "crs": null,
+    "transform": null,
+    "bounds": null,
+    "nodata": null,
+    "is_georeferenced": false,
+    "preview_url": "/api/agent/previews/8cd6bad323f943b381ea80e976842a45.png",
+    "color_interpretation": [
+      "l"
+    ],
+    "band_descriptions": [
+      "l"
+    ],
+    "input_band_count": 1,
+    "available_band_names": [
+      "l"
+    ],
+    "selected_visual_bands": [
+      "l"
+    ],
+    "band_selection_reason": "single scientific band rendered as grayscale",
+    "band_statistics": [
+      {
+        "band": 1,
+        "description": "l",
+        "dtype": "uint8",
+        "minimum": 17.0,
+        "maximum": 255.0,
+        "mean": 146.5965118408203,
+        "standard_deviation": 28.304392498044034,
+        "percentile_1": 85.0,
+        "percentile_5": 106.0,
+        "percentile_50": 145.0,
+        "percentile_95": 197.0,
+        "percentile_99": 246.0,
+        "nan_count": 0,
+        "inf_count": 0,
+        "nodata_count": 0,
+        "valid_count": 65536
+      }
+    ],
+    "representation": "display_preview",
+    "auto_detected_modality": "sar_preview",
+    "auto_detection_confidence": "medium",
+    "auto_detection_reason": "One-channel display has SAR-like intensity statistics and a SAR metadata/filename hint; classified as SAR preview (intensity range p1-p99=161.0, coefficient of variation=0.193, local roughness=0.062).",
+    "user_confirmed_modality": null,
+    "effective_modality": "sar_preview",
+    "modality_limitations": [
+      "SAR-preview detection is based on display-image statistics and a secondary filename or metadata hint; it does not recover scientific SAR calibration."
+    ],
+    "warnings": [
+      "Display preview only \u2014 not a scientific product."
+    ]
+  },
+  "secondary_image_metadata": {
+    "observation_role": "sar",
+    "file_id": "c73e3c1a-4ffb-4525-b58b-ef6718096f7d",
+    "original_name": "optical 1.png",
+    "safe_name": "optical_1.png",
+    "format": "png",
+    "mime_type": "image/png",
+    "size_bytes": 146114,
+    "width": 256,
+    "height": 256,
+    "band_count": 3,
+    "dtype": "uint8",
+    "crs": null,
+    "transform": null,
+    "bounds": null,
+    "nodata": null,
+    "is_georeferenced": false,
+    "preview_url": "/api/agent/previews/48da0fadf50645ebaecc80f54d0e0e20.png",
+    "color_interpretation": [
+      "r",
+      "g",
+      "b"
+    ],
+    "band_descriptions": [
+      "r",
+      "g",
+      "b"
+    ],
+    "input_band_count": 3,
+    "available_band_names": [
+      "r",
+      "g",
+      "b"
+    ],
+    "selected_visual_bands": [
+      "r",
+      "g",
+      "b"
+    ],
+    "band_selection_reason": "color interpretation explicitly identifies red, green, and blue",
+    "band_statistics": [
+      {
+        "band": 1,
+        "description": "r",
+        "dtype": "uint8",
+        "minimum": 5.0,
+        "maximum": 255.0,
+        "mean": 74.71990966796875,
+        "standard_deviation": 52.85153747774393,
+        "percentile_1": 12.0,
+        "percentile_5": 16.0,
+        "percentile_50": 62.0,
+        "percentile_95": 174.0,
+        "percentile_99": 255.0,
+        "nan_count": 0,
+        "inf_count": 0,
+        "nodata_count": 0,
+        "valid_count": 65536
+      },
+      {
+        "band": 2,
+        "description": "g",
+        "dtype": "uint8",
+        "minimum": 18.0,
+        "maximum": 255.0,
+        "mean": 83.24612426757812,
+        "standard_deviation": 43.73202930576602,
+        "percentile_1": 30.0,
+        "percentile_5": 34.0,
+        "percentile_50": 75.0,
+        "percentile_95": 162.25,
+        "percentile_99": 255.0,
+        "nan_count": 0,
+        "inf_count": 0,
+        "nodata_count": 0,
+        "valid_count": 65536
+      },
+      {
+        "band": 3,
+        "description": "b",
+        "dtype": "uint8",
+        "minimum": 5.0,
+        "maximum": 255.0,
+        "mean": 65.61445617675781,
+        "standard_deviation": 47.243929593400466,
+        "percentile_1": 16.0,
+        "percentile_5": 19.0,
+        "percentile_50": 53.0,
+        "percentile_95": 154.0,
+        "percentile_99": 255.0,
+        "nan_count": 0,
+        "inf_count": 0,
+        "nodata_count": 0,
+        "valid_count": 65536
+      }
+    ],
+    "representation": "display_preview",
+    "auto_detected_modality": "optical_rgb",
+    "auto_detection_confidence": "high",
+    "auto_detection_reason": "The display image contains explicit RGB channels with normal chromatic variation.",
+    "user_confirmed_modality": null,
+    "effective_modality": "optical_rgb",
+    "modality_limitations": [],
+    "warnings": [
+      "Display preview only \u2014 not a scientific product."
+    ]
+  },
+  "pair_compatibility": {
+    "role_validation_status": "mismatch",
+    "optical_slot_detected_modality": "sar_preview",
+    "sar_slot_detected_modality": "optical_rgb",
+    "role_match": false,
+    "pair_valid": false,
+    "compatible": false,
+    "alignment_level": "incompatible",
+    "same_dimensions": true,
+    "same_crs": null,
+    "same_transform": null,
+    "bounds_overlap": null,
+    "overlap_ratio": null,
+    "resampling_required": false,
+    "scientific_classification": "UNVERIFIABLE",
+    "primary_resolution": null,
+    "secondary_resolution": null,
+    "same_resolution": null,
+    "same_orientation": null,
+    "nodata_compatible": null,
+    "recommended_action": "Correct the workflow modality/date validation errors before comparing the pair.",
+    "warnings": [],
+    "errors": [
+      "The file placed in the Optical observation slot appears to be sar imagery. Replace it or explicitly swap observations.",
+      "The file placed in the Sar observation slot appears to be optical imagery. Replace it or explicitly swap observations."
+    ]
+  },
+  "model": null,
+  "caption_details": null,
+  "grounding_result": null,
+  "cross_modal_analysis": null,
+  "change_analysis": null,
+  "vqa_details": null,
+  "sar_water_analysis": null,
+  "sar_scene_analysis": null,
+  "classified_query": {
+    "task_type": "cross_modal_analysis",
+    "target": null,
+    "requested_output": "localization",
+    "requires_localization": true,
+    "requires_segmentation": false,
+    "requires_measurement": false
+  },
+  "cache": {
+    "cached": false,
+    "original_generation_timestamp": "2026-09-05T12:58:29.555554Z",
+    "retrieval_timestamp": "2026-09-05T12:58:29.555554Z",
+    "tool_version": "satquery-sar-routing-1.1",
+    "cache_key_prefix": "d191a7f8ab93"
+  },
+  "change_engine": null,
+  "ttp_result": null,
+  "mask_comparison": null,
+  "evidence_consistency": null,
+  "sve_result": null,
+  "sar_translated_optical_analysis": null,
+  "semantic_change_summary": null
+}

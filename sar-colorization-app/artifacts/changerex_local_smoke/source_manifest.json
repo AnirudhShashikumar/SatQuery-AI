@@ -1,0 +1,16 @@
+{
+  "pair_name": "Hanford, Washington brushfire — Landsat 7 ETM+",
+  "earlier_date": "2000-05-06",
+  "later_date": "2000-07-09",
+  "source_page": "https://science.nasa.gov/earth/earth-observatory/high-resolution-view-of-hanford-washington-833/",
+  "earlier_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/0/833/landsat_hanford_before_lrg.jpg",
+  "later_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/0/833/landsat_hanford_after_lrg.jpg",
+  "credit": "Image courtesy Ron Beck, USGS EROS Data Center",
+  "use_basis": "U.S. government NASA/USGS imagery; no contrary copyright notice appears on the source record",
+  "earlier_sha256": "be8c5f5e5800826e4795d5ec2a5c083478d79ee90ff1571b8a507684355d0a43",
+  "later_sha256": "b3b4821264ab99504fa19cb1ea3ebe77bb302f0ee845cbccfcb8271a9e1e0c4c",
+  "width": 2400,
+  "height": 1801,
+  "accuracy_ground_truth": false,
+  "disclosure": "This pair is used only for operational inference smoke testing. It has no supplied pixel-level ground-truth mask and is not used to claim accuracy."
+}

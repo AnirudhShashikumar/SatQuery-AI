@@ -1,0 +1,16 @@
+{
+  "manifest_sha256": "bf2c4e8154db156cb6530811dc1a46e0d4b3976420ea9b62ffa732cf2a7654d0",
+  "records": 10004,
+  "source_sha256": {
+    "LR_split_test_answers.json": "422f926999a99bbae4e590c055949b42192497a2aa93b0a0d4452972f827ddfd",
+    "LR_split_test_images.json": "bfc6362bbc727b51465091e84ee9299f62990b7c7986aa02d40b4c763fb0c562",
+    "LR_split_test_questions.json": "70ce4be36c0b162c58453c7c7f3de2d2cf42dbd3915ac82f527a9a8361ec134f"
+  },
+  "task_counts": {
+    "comp": 4002,
+    "count": 2947,
+    "presence": 2955,
+    "rural_urban": 100
+  },
+  "unique_images": 100
+}

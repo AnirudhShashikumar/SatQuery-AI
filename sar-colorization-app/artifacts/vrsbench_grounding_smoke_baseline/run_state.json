@@ -1,0 +1,72 @@
+{
+  "benchmark_runtime_seconds": 117.096,
+  "box_threshold": 0.35,
+  "command": "venv/bin/python scripts/run_vrsbench_grounding_smoke.py --manifest /Users/anirudhshashikumar/Desktop/VRSBench/grounding_smoke100/vrsbench_grounding_smoke100.jsonl --image-root /Users/anirudhshashikumar/Desktop/VRSBench/grounding_smoke100/images --endpoint in-process://satquery/rs_grounder --output-dir '/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/vrsbench_grounding_smoke_baseline' --timeout 120",
+  "completed_at": "2026-08-29T17:06:22.205614+00:00",
+  "completed_samples": 100,
+  "endpoint": "in-process://satquery/rs_grounder",
+  "expected_samples": 100,
+  "image_root": "/Users/anirudhshashikumar/Desktop/VRSBench/grounding_smoke100/images",
+  "manifest": "/Users/anirudhshashikumar/Desktop/VRSBench/grounding_smoke100/vrsbench_grounding_smoke100.jsonl",
+  "model_load_count": 1,
+  "model_reuse_count": 104,
+  "null_predictions": 64,
+  "preflight": {
+    "model_load_count": 1,
+    "normalized_accepted_box_count": 2,
+    "normalized_coordinate_check": true,
+    "resume_check": true,
+    "synthetic_iou": 0.14285714285714285,
+    "warmups": [
+      {
+        "accepted_boxes": 0,
+        "coordinates_normalized": true,
+        "latency_ms": 1202.417,
+        "model_reused": true,
+        "object_class": "airplane",
+        "smoke_id": "0"
+      },
+      {
+        "accepted_boxes": 1,
+        "coordinates_normalized": true,
+        "latency_ms": 1158.878,
+        "model_reused": true,
+        "object_class": "airport",
+        "smoke_id": "1"
+      },
+      {
+        "accepted_boxes": 0,
+        "coordinates_normalized": true,
+        "latency_ms": 1141.769,
+        "model_reused": true,
+        "object_class": "baseball-diamond",
+        "smoke_id": "2"
+      },
+      {
+        "accepted_boxes": 1,
+        "coordinates_normalized": true,
+        "latency_ms": 1151.633,
+        "model_reused": true,
+        "object_class": "basketball-court",
+        "smoke_id": "3"
+      }
+    ]
+  },
+  "processed_samples": 100,
+  "resume": false,
+  "started_at": "2026-08-29T17:03:36.386275+00:00",
+  "status": "complete",
+  "text_threshold": 0.25,
+  "updated_at": "2026-08-29T17:05:33.461771+00:00",
+  "validation_gates": {
+    "class_count": 26,
+    "clipped_samples": 40,
+    "duplicate_smoke_ids": 0,
+    "expected_samples": true,
+    "missing_smoke_ids": 0,
+    "model_loaded_once": true,
+    "normalized_boxes": true,
+    "processed_samples": true,
+    "production_inference_modified": false
+  }
+}

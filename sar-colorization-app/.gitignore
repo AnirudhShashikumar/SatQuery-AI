@@ -1,0 +1,14 @@
+.DS_Store
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+grounding_eval/
+artifacts/grounding_eval/
+frontend/.satquery-build-id
+frontend/.satquery-git-sha
+
+# Verified production Grounding Specialist v1.1 export (not a generated checkpoint).
+!models/grounding_specialist_v1_1/grounding_specialist_v1_1_head.pt
+echo "*.safetensors" >> .gitignore
+echo "models/" >> .gitignore

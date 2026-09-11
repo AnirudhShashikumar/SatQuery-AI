@@ -1,0 +1,37 @@
+RSVQA-LR Smoke Benchmark
+========================
+Completed: 50/50
+Overall accuracy: 38.00%
+Null answers: 15
+Endpoint errors: 0
+Average confidence: 0.16
+Average latency: 1060.34 ms
+Median latency: 949.5 ms
+P95 latency: 2233.75 ms
+
+Accuracy by question type:
+  comp: 6/15 (40.00%)
+  count: 6/15 (40.00%)
+  presence: 5/15 (33.33%)
+  rural_urban: 2/5 (40.00%)
+
+Cache/reuse observations:
+  converted_png_cache_hits: 11
+  converted_png_cache_misses: 39
+  sve_model_load_count: 0
+  sve_model_reuse_count: 134
+  sve_image_cache_hits: 95
+  sve_image_cache_misses: 39
+  grounder_model_reuse_count: 35
+  response_cached_count: 0
+  grounding_request_count: 28
+Coldest Request: {"question_id": "30059", "image_id": "300", "question_type": "comp", "processing_time_ms": 4851, "client_elapsed_ms": 4858, "effective_latency_ms": 4851, "model_used": "satquery_vision_encoder_v1 + rs_captioner + rs_vqa + rs_grounder"}
+Slowest Request: {"question_id": "30059", "image_id": "300", "question_type": "comp", "processing_time_ms": 4851, "client_elapsed_ms": 4858, "effective_latency_ms": 4851, "model_used": "satquery_vision_encoder_v1 + rs_captioner + rs_vqa + rs_grounder"}
+
+Generated files:
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke/predictions.csv
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke/results.json
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke/summary.txt
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke/errors.json
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke/confusion_matrix_overall.csv
+  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_smoke/confusion_matrix_by_type.csv

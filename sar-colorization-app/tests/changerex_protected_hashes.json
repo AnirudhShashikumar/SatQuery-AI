@@ -1,0 +1,10 @@
+{
+  "files": {
+    "backend.py": "3d9811a27a0219c20dbb1c25bdcdda87a3807f6626454853d78bc3d4d37f697c",
+    "satquery_agent/router.py": "71df47af89a78557fa4f8df39a5dcfeed09239a5b7356c59176675bdfb6f6fa2",
+    "satquery_agent/models.py": "7d951b7ff7c0c780ea8e503687ba95fddc3708f3890e017bf21b1fb1566a40d8",
+    "satquery_agent/specialists/ttp_change.py": "71e317fbd9a5a8d6361a64d4ae72dac3eebebf08e110bda3a78206a361bea1d1"
+  },
+  "frontend_digest": "9573511d9b2bf59841ab83041f3ebcf9ad5d255c6b7ff2b4b321028a29bf1685",
+  "ttp_service_digest": "acb67ca4b33ae4710e4ba82acbbb010b2aaf0e673be69786a03a90b67f199065"
+}

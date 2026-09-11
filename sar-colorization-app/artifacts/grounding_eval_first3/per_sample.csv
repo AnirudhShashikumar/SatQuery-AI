@@ -1,0 +1,4 @@
+sample_id,target,annotation_source,target_present,reference_box_count,candidate_count,accepted_count,rejected_count,no_model_candidate,correct_rejection,missed_target,inference_error_code
+vehicle_p0003_0002_q0,vehicle,VRSBench,True,1,2,0,2,False,False,True,
+vehicle_p0003_0004_q4,vehicle,VRSBench,True,1,2,0,2,False,False,True,
+harbor_p0019_0002_q21,harbor,VRSBench,True,1,2,1,1,False,False,True,

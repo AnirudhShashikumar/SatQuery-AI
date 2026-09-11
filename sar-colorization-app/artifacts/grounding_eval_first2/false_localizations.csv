@@ -1,0 +1,1 @@
+sample_id,target,candidate_index,prediction_label,alignment_score,box_source_xyxy,box_area_ratio,accepted,rejection_reasons,best_iou,matched_reference_index,matched_reference_box,center_point_inclusion,full_frame_prediction,outcome

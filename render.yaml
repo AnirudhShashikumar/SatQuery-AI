@@ -1,0 +1,33 @@
+services:
+  - type: web
+    name: geovision-api
+    runtime: python
+    plan: standard
+    buildCommand: python -m pip install --upgrade pip && python -m pip install -r sar-colorization-app/requirements-backend.txt && python scripts/download_checkpoints.py
+    startCommand: uvicorn backend:app --app-dir sar-colorization-app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: HF_MODEL_REPO
+        sync: false
+      - key: HF_TOKEN
+        sync: false
+      - key: PIX2PIX_CHECKPOINT
+        value: pix2pix_gen_180.pth
+      - key: SARFUSIONFORMER_CHECKPOINT
+        value: models/checkpoints/sarfusionformer_256_decoder_best.pt
+      - key: COLOR_CORRECTOR_CHECKPOINT
+        value: models/checkpoints/color_corrector_256_best.pt
+      - key: PIX2PIX_REMOTE_FILENAME
+        value: pix2pix_gen_180.pth
+      - key: SARFUSIONFORMER_REMOTE_FILENAME
+        value: sarfusionformer_256_decoder_best.pt
+      - key: COLOR_CORRECTOR_REMOTE_FILENAME
+        value: color_corrector_256_best.pt
+      - key: CORS_ORIGINS
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://satquery.ai/schemas/benchmark-result.schema.json",
+  "title": "SatQuery benchmark result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "benchmark_id", "specialist_id", "display_name", "task", "model", "evaluation", "metrics", "performance", "artifacts", "limitations", "notes", "provenance"],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "benchmark_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+    "specialist_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+    "display_name": { "type": "string", "minLength": 1 },
+    "task": { "type": "string", "minLength": 1 },
+    "model": { "$ref": "#/$defs/model" },
+    "evaluation": { "$ref": "#/$defs/evaluation" },
+    "metrics": { "type": "array", "items": { "$ref": "#/$defs/metric" } },
+    "performance": { "$ref": "#/$defs/performance" },
+    "breakdowns": { "type": "array", "items": { "$ref": "#/$defs/breakdown" }, "default": [] },
+    "artifacts": { "$ref": "#/$defs/artifacts" },
+    "limitations": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "notes": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "nullableNumber": { "type": ["number", "null"] },
+    "nullableString": { "type": ["string", "null"] },
+    "status": { "enum": ["verified_test", "verified_validation", "partial_validation", "smoke_only", "operational_only", "external_reported", "unavailable", "not_applicable"] },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "architecture", "checkpoint", "checkpoint_sha256", "training_dataset", "adaptation", "license", "source"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "minLength": 1 },
+        "architecture": { "type": "string", "minLength": 1 },
+        "checkpoint": { "$ref": "#/$defs/nullableString" },
+        "checkpoint_sha256": { "anyOf": [{ "type": "string", "pattern": "^[a-f0-9]{64}$" }, { "type": "null" }] },
+        "training_dataset": { "$ref": "#/$defs/nullableString" },
+        "adaptation": { "$ref": "#/$defs/nullableString" },
+        "license": { "$ref": "#/$defs/nullableString" },
+        "source": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["device", "hardware", "os", "python", "torch", "input_size"],
+      "properties": {
+        "device": { "$ref": "#/$defs/nullableString" },
+        "hardware": { "$ref": "#/$defs/nullableString" },
+        "os": { "$ref": "#/$defs/nullableString" },
+        "python": { "$ref": "#/$defs/nullableString" },
+        "torch": { "$ref": "#/$defs/nullableString" },
+        "input_size": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "dataset", "split", "sample_count", "protocol", "timestamp", "environment"],
+      "properties": {
+        "status": { "$ref": "#/$defs/status" },
+        "dataset": { "$ref": "#/$defs/nullableString" },
+        "split": { "$ref": "#/$defs/nullableString" },
+        "sample_count": { "type": ["integer", "null"], "minimum": 0 },
+        "protocol": { "type": "string", "minLength": 1 },
+        "timestamp": { "anyOf": [{ "type": "string", "format": "date-time" }, { "type": "null" }] },
+        "environment": { "$ref": "#/$defs/environment" }
+      }
+    },
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "value", "unit", "higher_is_better", "description", "primary"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+        "label": { "type": "string", "minLength": 1 },
+        "value": { "$ref": "#/$defs/nullableNumber" },
+        "unit": { "enum": ["ratio", "percentage", "milliseconds", "seconds", "megabytes", "count", "samples_per_second", "db", "score"] },
+        "higher_is_better": { "type": ["boolean", "null"] },
+        "description": { "type": "string", "minLength": 1 },
+        "primary": { "type": "boolean" }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mean_latency_ms", "median_latency_ms", "p95_latency_ms", "throughput_samples_per_second", "peak_memory_mb", "model_load_ms", "warm_reuse"],
+      "properties": {
+        "mean_latency_ms": { "$ref": "#/$defs/nullableNumber" },
+        "median_latency_ms": { "$ref": "#/$defs/nullableNumber" },
+        "p95_latency_ms": { "$ref": "#/$defs/nullableNumber" },
+        "throughput_samples_per_second": { "$ref": "#/$defs/nullableNumber" },
+        "peak_memory_mb": { "$ref": "#/$defs/nullableNumber" },
+        "model_load_ms": { "$ref": "#/$defs/nullableNumber" },
+        "warm_reuse": { "type": ["boolean", "null"] }
+      }
+    },
+    "breakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dimension", "label", "sample_count", "metrics"],
+      "properties": {
+        "dimension": { "type": "string", "minLength": 1 },
+        "label": { "type": "string", "minLength": 1 },
+        "sample_count": { "type": ["integer", "null"], "minimum": 0 },
+        "metrics": { "type": "array", "items": { "$ref": "#/$defs/metric" }, "minItems": 1 }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["report", "predictions", "per_class_metrics", "confusion_matrix", "visual_examples"],
+      "properties": {
+        "report": { "$ref": "#/$defs/nullableString" },
+        "predictions": { "$ref": "#/$defs/nullableString" },
+        "per_class_metrics": { "$ref": "#/$defs/nullableString" },
+        "confusion_matrix": { "$ref": "#/$defs/nullableString" },
+        "visual_examples": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generated_by", "source_artifacts", "verified", "result_origin"],
+      "properties": {
+        "generated_by": { "type": "string", "minLength": 1 },
+        "source_artifacts": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 },
+        "verified": { "type": "boolean" },
+        "result_origin": { "enum": ["satquery_reproduced", "external_reported", "unmeasured"] }
+      }
+    }
+  }
+}

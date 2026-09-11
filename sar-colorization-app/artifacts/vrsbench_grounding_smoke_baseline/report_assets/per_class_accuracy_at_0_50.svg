@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1108">
+<rect width="100%" height="100%" fill="white"/>
+<text x="310" y="45" font-family="sans-serif" font-size="25" fill="#172b4d">Per-class accuracy@0.50</text>
+<text x="10" y="103" font-family="sans-serif" font-size="17" fill="#172b4d">helicopter</text>
+<rect x="310" y="83" width="757.50" height="26" rx="5" fill="#1677ff"/>
+<text x="1075.50" y="103" font-family="sans-serif" font-size="17" fill="#172b4d">75.0%</text>
+<text x="10" y="141" font-family="sans-serif" font-size="17" fill="#172b4d">basketball-court</text>
+<rect x="310" y="121" width="505.00" height="26" rx="5" fill="#1677ff"/>
+<text x="823.00" y="141" font-family="sans-serif" font-size="17" fill="#172b4d">50.0%</text>
+<text x="10" y="179" font-family="sans-serif" font-size="17" fill="#172b4d">stadium</text>
+<rect x="310" y="159" width="505.00" height="26" rx="5" fill="#1677ff"/>
+<text x="823.00" y="179" font-family="sans-serif" font-size="17" fill="#172b4d">50.0%</text>
+<text x="10" y="217" font-family="sans-serif" font-size="17" fill="#172b4d">chimney</text>
+<rect x="310" y="197" width="252.50" height="26" rx="5" fill="#1677ff"/>
+<text x="570.50" y="217" font-family="sans-serif" font-size="17" fill="#172b4d">25.0%</text>
+<text x="10" y="255" font-family="sans-serif" font-size="17" fill="#172b4d">expressway-service-area</text>
+<rect x="310" y="235" width="252.50" height="26" rx="5" fill="#1677ff"/>
+<text x="570.50" y="255" font-family="sans-serif" font-size="17" fill="#172b4d">25.0%</text>
+<text x="10" y="293" font-family="sans-serif" font-size="17" fill="#172b4d">expressway-toll-station</text>
+<rect x="310" y="273" width="252.50" height="26" rx="5" fill="#1677ff"/>
+<text x="570.50" y="293" font-family="sans-serif" font-size="17" fill="#172b4d">25.0%</text>
+<text x="10" y="331" font-family="sans-serif" font-size="17" fill="#172b4d">soccer-ball-field</text>
+<rect x="310" y="311" width="252.50" height="26" rx="5" fill="#1677ff"/>
+<text x="570.50" y="331" font-family="sans-serif" font-size="17" fill="#172b4d">25.0%</text>
+<text x="10" y="369" font-family="sans-serif" font-size="17" fill="#172b4d">storage-tank</text>
+<rect x="310" y="349" width="252.50" height="26" rx="5" fill="#1677ff"/>
+<text x="570.50" y="369" font-family="sans-serif" font-size="17" fill="#172b4d">25.0%</text>
+<text x="10" y="407" font-family="sans-serif" font-size="17" fill="#172b4d">swimming-pool</text>
+<rect x="310" y="387" width="252.50" height="26" rx="5" fill="#1677ff"/>
+<text x="570.50" y="407" font-family="sans-serif" font-size="17" fill="#172b4d">25.0%</text>
+<text x="10" y="445" font-family="sans-serif" font-size="17" fill="#172b4d">airplane</text>
+<rect x="310" y="425" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="445" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="483" font-family="sans-serif" font-size="17" fill="#172b4d">airport</text>
+<rect x="310" y="463" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="483" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="521" font-family="sans-serif" font-size="17" fill="#172b4d">baseball-diamond</text>
+<rect x="310" y="501" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="521" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="559" font-family="sans-serif" font-size="17" fill="#172b4d">bridge</text>
+<rect x="310" y="539" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="559" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="597" font-family="sans-serif" font-size="17" fill="#172b4d">container-crane</text>
+<rect x="310" y="577" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="597" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="635" font-family="sans-serif" font-size="17" fill="#172b4d">dam</text>
+<rect x="310" y="615" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="635" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="673" font-family="sans-serif" font-size="17" fill="#172b4d">golffield</text>
+<rect x="310" y="653" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="673" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="711" font-family="sans-serif" font-size="17" fill="#172b4d">ground-track-field</text>
+<rect x="310" y="691" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="711" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="749" font-family="sans-serif" font-size="17" fill="#172b4d">harbor</text>
+<rect x="310" y="729" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="749" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="787" font-family="sans-serif" font-size="17" fill="#172b4d">helipad</text>
+<rect x="310" y="767" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="787" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="825" font-family="sans-serif" font-size="17" fill="#172b4d">overpass</text>
+<rect x="310" y="805" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="825" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="863" font-family="sans-serif" font-size="17" fill="#172b4d">roundabout</text>
+<rect x="310" y="843" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="863" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="901" font-family="sans-serif" font-size="17" fill="#172b4d">ship</text>
+<rect x="310" y="881" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="901" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="939" font-family="sans-serif" font-size="17" fill="#172b4d">tennis-court</text>
+<rect x="310" y="919" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="939" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="977" font-family="sans-serif" font-size="17" fill="#172b4d">trainstation</text>
+<rect x="310" y="957" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="977" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="1015" font-family="sans-serif" font-size="17" fill="#172b4d">vehicle</text>
+<rect x="310" y="995" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="1015" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+<text x="10" y="1053" font-family="sans-serif" font-size="17" fill="#172b4d">windmill</text>
+<rect x="310" y="1033" width="0.00" height="26" rx="5" fill="#1677ff"/>
+<text x="318.00" y="1053" font-family="sans-serif" font-size="17" fill="#172b4d">0.0%</text>
+</svg>

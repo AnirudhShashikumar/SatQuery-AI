@@ -1,0 +1,7 @@
+[build]
+builder = "railpack"
+buildCommand = "which python && python --version && uv --version && python -c \"import huggingface_hub, torch; assert torch.version.cuda is None; print(huggingface_hub.__version__); print(torch.__version__)\""
+
+[deploy]
+startCommand = "python scripts/download_checkpoints.py && exec uvicorn backend:app --app-dir sar-colorization-app --host 0.0.0.0 --port $PORT"
+healthcheckPath = "/health"

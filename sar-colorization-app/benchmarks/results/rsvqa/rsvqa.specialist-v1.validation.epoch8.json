@@ -1,0 +1,158 @@
+{
+  "artifacts": {
+    "confusion_matrix": null,
+    "per_class_metrics": "models/rsvqa_specialist_v1/validation_metrics.json",
+    "predictions": "models/rsvqa_specialist_v1/validation_predictions.csv",
+    "report": "models/rsvqa_specialist_v1/model_card.json",
+    "visual_examples": []
+  },
+  "benchmark_id": "rsvqa.specialist-v1.validation.epoch8",
+  "breakdowns": [
+    {
+      "dimension": "question_family",
+      "label": "presence",
+      "metrics": [
+        {
+          "description": "Validation accuracy for this task family.",
+          "higher_is_better": true,
+          "id": "accuracy",
+          "label": "Accuracy",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.9085303186022611
+        }
+      ],
+      "sample_count": null
+    },
+    {
+      "dimension": "question_family",
+      "label": "comp",
+      "metrics": [
+        {
+          "description": "Validation accuracy for this task family.",
+          "higher_is_better": true,
+          "id": "accuracy",
+          "label": "Accuracy",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.9099502487562189
+        }
+      ],
+      "sample_count": null
+    },
+    {
+      "dimension": "question_family",
+      "label": "rural_urban",
+      "metrics": [
+        {
+          "description": "Validation accuracy for this task family.",
+          "higher_is_better": true,
+          "id": "accuracy",
+          "label": "Accuracy",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.9
+        }
+      ],
+      "sample_count": null
+    },
+    {
+      "dimension": "question_family",
+      "label": "count",
+      "metrics": [
+        {
+          "description": "Validation accuracy for this task family.",
+          "higher_is_better": true,
+          "id": "accuracy",
+          "label": "Accuracy",
+          "primary": true,
+          "unit": "ratio",
+          "value": 0.375590020229265
+        }
+      ],
+      "sample_count": null
+    }
+  ],
+  "display_name": "RSVQA Specialist",
+  "evaluation": {
+    "dataset": "RSVQA-LR",
+    "environment": {
+      "device": "training validation device (not captured)",
+      "hardware": null,
+      "input_size": "224\u00d7224 RGB",
+      "os": null,
+      "python": null,
+      "torch": null
+    },
+    "protocol": "Saved epoch-8 validation metrics from specialist training; not a test-set result.",
+    "sample_count": 10005,
+    "split": "official validation",
+    "status": "verified_validation",
+    "timestamp": "2026-08-29T08:38:04Z"
+  },
+  "limitations": [
+    "Trained specifically on RSVQA-LR and may not generalize to unrelated VQA datasets.",
+    "Count accuracy is substantially lower than the other task families.",
+    "Counts are learned benchmark labels and are not guaranteed physical object inventories.",
+    "The 201+ label represents an overflow class rather than an exact count.",
+    "The model is intended for optical or rendered RGB imagery, not raw SAR.",
+    "Confidence scores are softmax values and are not calibrated probabilities.",
+    "The model does not produce spatial grounding or segmentation.",
+    "The model should not replace geospatial measurement or human analysis."
+  ],
+  "metrics": [
+    {
+      "description": "Validation accuracy at the selected epoch-8 checkpoint.",
+      "higher_is_better": true,
+      "id": "overall_accuracy",
+      "label": "Overall accuracy",
+      "primary": true,
+      "unit": "ratio",
+      "value": 0.751024487756122
+    },
+    {
+      "description": "Unweighted validation task-family mean.",
+      "higher_is_better": true,
+      "id": "macro_task_accuracy",
+      "label": "Macro task accuracy",
+      "primary": false,
+      "unit": "ratio",
+      "value": 0.7735176468969363
+    }
+  ],
+  "model": {
+    "adaptation": "Presence, comparison, count, and rural/urban task heads",
+    "architecture": "Frozen OpenCLIP ViT-L-14 + SatQuery Vision Encoder v1 adapter + four task heads",
+    "checkpoint": "rsvqa_specialist_v1_head.pt",
+    "checkpoint_sha256": "71c0ab56ee650813bd495e8a3bc777353b6907a097af860e417f60523efe56ad",
+    "license": null,
+    "name": "SatQuery RSVQA Specialist v1",
+    "source": "Repository model bundle",
+    "training_dataset": "RSVQA-LR official training split",
+    "version": "1.0.0"
+  },
+  "notes": [
+    "Validation result retained as historical context; the official test result is preferred."
+  ],
+  "performance": {
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "model_load_ms": null,
+    "p95_latency_ms": null,
+    "peak_memory_mb": 5279.3134765625,
+    "throughput_samples_per_second": null,
+    "warm_reuse": null
+  },
+  "provenance": {
+    "generated_by": "scripts/import_existing_benchmarks.py",
+    "result_origin": "satquery_reproduced",
+    "source_artifacts": [
+      "models/rsvqa_specialist_v1/validation_metrics.json",
+      "models/rsvqa_specialist_v1/model_card.json"
+    ],
+    "verified": true
+  },
+  "schema_version": "1.0.0",
+  "specialist_id": "rsvqa",
+  "task": "Remote-sensing visual question answering"
+}

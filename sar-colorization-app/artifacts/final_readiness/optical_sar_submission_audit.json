@@ -1,0 +1,136 @@
+{
+  "status": "passed",
+  "checks": {
+    "required_docs": {
+      "README.md": true,
+      "docs/SIH_FINAL_ENGINEERING_AUDIT.md": true,
+      "docs/PROBLEM_STATEMENT_26167_COMPLIANCE.md": true,
+      "docs/OPTICAL_SAR_EVALUATION_PROTOCOL.md": true,
+      "docs/MODEL_DATASET_PROVENANCE.md": true,
+      "docs/CARTOSAT_RISAT_READINESS.md": true,
+      "docs/OFFLINE_DEMO_CHECKLIST.md": true,
+      "docs/SIH_FINAL_SUBMISSION_AUDIT.md": true
+    },
+    "private_absolute_paths": [],
+    "apparent_secrets": [],
+    "large_accidental_files": [],
+    "readme_reproducibility_markers": {
+      "Python 3.11": true,
+      "npm": true,
+      "verify_models.py": true,
+      "smoke_all_workflows.py": true,
+      "MODEL_DATASET_PROVENANCE.md": true
+    },
+    "provenance_document_present": true,
+    "models": {
+      "status": "ready",
+      "required_ok": true,
+      "models": [
+        {
+          "name": "SVE adapter",
+          "path": "models/satquery_vision_encoder_v1/satquery_vision_encoder_v1_adapter.pt",
+          "required": true,
+          "present": true,
+          "expected_sha256": "a99c0bf0fb44044988ef1698483888c8a2e3a047d2d2d56478837575cf7626ea",
+          "actual_sha256": "a99c0bf0fb44044988ef1698483888c8a2e3a047d2d2d56478837575cf7626ea",
+          "verified": true
+        },
+        {
+          "name": "RSVQA specialist",
+          "path": "models/rsvqa_specialist_v1/rsvqa_specialist_v1_head.pt",
+          "required": true,
+          "present": true,
+          "expected_sha256": "71c0ab56ee650813bd495e8a3bc777353b6907a097af860e417f60523efe56ad",
+          "actual_sha256": "71c0ab56ee650813bd495e8a3bc777353b6907a097af860e417f60523efe56ad",
+          "verified": true
+        },
+        {
+          "name": "Grounding specialist",
+          "path": "models/grounding_specialist_v1_1/grounding_specialist_v1_1_head.pt",
+          "required": true,
+          "present": true,
+          "expected_sha256": "5e8db30becadb1d063fc0154614ee2a2a4b7a2c2923db3fce4ff036c65007342",
+          "actual_sha256": "5e8db30becadb1d063fc0154614ee2a2a4b7a2c2923db3fce4ff036c65007342",
+          "verified": true
+        },
+        {
+          "name": "ChangerEx",
+          "path": "models/changerex/ChangerEx_r18-512x512_40k_levircd_20221223_120511.pth",
+          "required": true,
+          "present": true,
+          "expected_sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+          "actual_sha256": "da3f569306dadd1fac5b64abc2a3d484571cd0ecf6410e1f152275cfe49a3618",
+          "verified": true
+        },
+        {
+          "name": "SARFusionFormer",
+          "path": "../models/checkpoints/sarfusionformer_256_decoder_best.pt",
+          "required": false,
+          "present": true,
+          "expected_sha256": null,
+          "actual_sha256": null,
+          "verified": true
+        },
+        {
+          "name": "Color corrector",
+          "path": "../models/checkpoints/color_corrector_256_best.pt",
+          "required": false,
+          "present": true,
+          "expected_sha256": null,
+          "actual_sha256": null,
+          "verified": true
+        }
+      ]
+    }
+  },
+  "commands": [
+    {
+      "command": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/bin/python scripts/validate_benchmark_results.py",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": "Validated 9 benchmark records and the demo gallery\n"
+    },
+    {
+      "command": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/bin/python -m pytest tests/test_benchmark_schema.py tests/compliance -q",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": "................                                                         [100%]\n=============================== warnings summary ===============================\nvenv/lib/python3.9/site-packages/urllib3/__init__.py:35\n  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n16 passed, 1 warning in 1.24s\n"
+    },
+    {
+      "command": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/bin/python -m pytest -q",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": "authoritative_model_result\nsar-colorization-app/tests/test_comparison.py::ComparisonTests::test_sarfusionformer_reference_optical_gets_generated_rgb_semantic_support\nsar-colorization-app/tests/test_comparison.py::ComparisonTests::test_sarfusionformer_reference_optical_gets_generated_rgb_semantic_support\nsar-colorization-app/tests/test_comparison.py::ComparisonTests::test_sarfusionformer_reference_optical_gets_generated_rgb_semantic_support\nsar-colorization-app/tests/test_comparison.py::ComparisonTests::test_sarfusionformer_reference_optical_gets_generated_rgb_semantic_support\n  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/backend.py:411: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)\n    return Image.fromarray(encoded, mode=\"RGB\")\n\nsar-colorization-app/tests/test_rsvqa_specialist.py::test_prediction_decodes_confidence_and_exported_vocabulary[Is there a river?-presence-2]\nsar-colorization-app/tests/test_rsvqa_specialist.py::test_prediction_decodes_confidence_and_exported_vocabulary[Are there fewer buildings than roads?-comp-2]\nsar-colorization-app/tests/test_rsvqa_specialist.py::test_prediction_decodes_confidence_and_exported_vocabulary[Is it a rural or an urban area?-rural_urban-2]\nsar-colorization-app/tests/test_rsvqa_specialist.py::test_prediction_decodes_confidence_and_exported_vocabulary[How many roads are there?-count-202]\nsar-colorization-app/tests/test_rsvqa_specialist.py::test_image_analysis_endpoint_reports_neural_model_used\nsar-colorization-app/tests/test_rsvqa_specialist.py::test_specialist_failure_uses_existing_heuristic_endpoint_path\n  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/tests/test_rsvqa_specialist.py:61: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)\n    return Image.fromarray(array.astype(np.uint8), mode=\"RGB\")\n\nsar-colorization-app/tests/test_run_rsvqa_smoke.py::test_tiff_to_png_conversion_is_cached\n  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/lib/python3.9/site-packages/rasterio/__init__.py:356: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.\n    dataset = DatasetReader(path, driver=driver, sharing=sharing, **kwargs)\n\nsar-colorization-app/tests/test_satquery_ingestion.py::SatQueryIngestionTests::test_sar_description_uses_sar_scene_analyzer\nsar-colorization-app/tests/test_satquery_ingestion.py::SatQueryIngestionTests::test_unresolved_geotiff_tags_are_not_fabricated\nsar-colorization-app/tests/test_satquery_ingestion.py::SatQueryIngestionTests::test_valid_optical_sar_pair\nsar-colorization-app/tests/test_satquery_ingestion.py::SatQueryIngestionTests::test_valid_single_band_tiff\nsar-colorization-app/tests/test_satquery_ingestion.py::SatQueryIngestionTests::test_valid_three_band_tiff\nsar-colorization-app/tests/test_satquery_ingestion.py::SatQueryIngestionTests::test_valid_two_band_sar_tiff\n  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/lib/python3.9/site-packages/rasterio/io.py:140: NotGeoreferencedWarning: Dataset has no geotransform, gcps, or rpcs. The identity matrix will be returned.\n    rd = DatasetReader(mempath, driver=driver, sharing=sharing, **kwargs)\n\nsar-colorization-app/tests/test_ttp_production_integration.py::test_real_ttp_contract_is_primary_traceable_and_reportable\nsar-colorization-app/tests/test_ttp_production_integration.py::test_real_ttp_contract_is_primary_traceable_and_reportable\n  /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/tests/test_ttp_production_integration.py:20: DeprecationWarning: 'mode' parameter is deprecated and will be removed in Pillow 13 (2026-10-15)\n    Image.fromarray(values.astype(np.uint8), mode=\"RGB\").save(output, \"PNG\")\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n598 passed, 5 skipped, 27 warnings in 15.70s\n"
+    },
+    {
+      "command": "npm test",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": "\n> sar-optical-web@1.0.0 test\n> vitest run --environment jsdom\n\n\n RUN  v4.1.10 /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/frontend\n\n\n Test Files  33 passed (33)\n      Tests  199 passed (199)\n   Start at  18:32:19\n   Duration  2.80s (transform 1.71s, setup 0ms, import 3.70s, tests 3.20s, environment 14.28s)\n\n(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:\n  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `\"type\": \"module\"` in the closest package.json\nSet `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.\n"
+    },
+    {
+      "command": "npx tsc --noEmit --incremental false",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": ""
+    },
+    {
+      "command": "npm run lint",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": "dth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/frontend/components/presentation-change-scene.tsx\n  229:53   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n  280:286  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/frontend/components/presentation-cross-modal-scene.tsx\n  229:67   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n  269:286  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/frontend/components/presentation-single-image-scene.tsx\n  178:69   warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n  273:257  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/frontend/components/reports-center.tsx\n  56:1566  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/frontend/components/viewer/fullscreen-image-viewer.tsx\n  32:5  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/frontend/components/viewer/image-viewer.tsx\n  15:12  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n\u2716 27 problems (0 errors, 27 warnings)\n\n"
+    },
+    {
+      "command": "npm run build",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": "https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n./components/presentation-cross-modal-scene.tsx\n229:67  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n269:286  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n./components/presentation-single-image-scene.tsx\n178:69  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n273:257  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n./components/reports-center.tsx\n56:1566  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n./components/viewer/fullscreen-image-viewer.tsx\n32:5  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\n./components/viewer/image-viewer.tsx\n15:12  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element\n\ninfo  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules\n   Collecting page data ...\n   Generating static pages (0/13) ...\n   Generating static pages (3/13) \n   Generating static pages (6/13) \n   Generating static pages (9/13) \n \u2713 Generating static pages (13/13)\n   Finalizing page optimization ...\n   Collecting build traces ...\n\nRoute (app)                                 Size  First Load JS\n\u250c \u25cb /                                    3.27 kB         150 kB\n\u251c \u25cb /_not-found                            995 B         103 kB\n\u251c \u0192 /[workspace]                          238 kB         425 kB\n\u251c \u25cb /assistant/analytics                 7.64 kB         187 kB\n\u251c \u25cb /assistant/compare                   10.3 kB         193 kB\n\u251c \u25cb /assistant/compliance                 3.1 kB         182 kB\n\u251c \u25cf /models/[model]                      2.08 kB         176 kB\n\u251c   \u251c /models/vision-encoder\n\u251c   \u251c /models/pix2pix\n\u251c   \u251c /models/sarfusionformer\n\u251c   \u2514 [+2 more paths]\n\u2514 \u25cb /presentation                        37.5 kB         150 kB\n+ First Load JS shared by all             102 kB\n  \u251c chunks/255-c129482c05370c17.js       46.1 kB\n  \u251c chunks/4bd1b696-409494caf8c83275.js  54.2 kB\n  \u2514 other shared chunks (total)          2.09 kB\n\n\n\u25cb  (Static)   prerendered as static content\n\u25cf  (SSG)      prerendered as static HTML (uses generateStaticParams)\n\u0192  (Dynamic)  server-rendered on demand\n\n"
+    },
+    {
+      "command": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/bin/python scripts/smoke_all_workflows.py --output artifacts/final_readiness/workflow_smoke.json",
+      "passed": true,
+      "returncode": 0,
+      "output_tail": "SatQuery workflow smoke: passed\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020\n  warnings.warn(\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/lib/python3.9/site-packages/google/auth/__init__.py:54: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.\n  warnings.warn(eol_message.format(\"3.9\"), FutureWarning)\n/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/venv/lib/python3.9/site-packages/google/oauth2/__init__.py:40: FutureWarning: You are using a Python version 3.9 past its end of life. Google will update google-auth with critical bug fixes on a best-effort basis, but not with any other fixes or features. Please upgrade your Python version, and then update google-auth.\n  warnings.warn(eol_message.format(\"3.9\"), FutureWarning)\nINFO:sar-colorization:Pix2Pix loaded successfully on cpu\nINFO:sar-colorization:SARFusionFormer loaded successfully on cpu\nINFO:sar-colorization:Color corrector loaded successfully on cpu\nINFO:root:Parsing model identifier. Schema: None, Identifier: ViT-L-14\nINFO:root:Loaded built-in ViT-L-14 model config.\nINFO:root:Instantiating model architecture: CLIP\nINFO:root:Loading full pretrained weights from: /Users/anirudhshashikumar/.cache/huggingface/hub/models--laion--CLIP-ViT-L-14-laion2B-s32B-b82K/snapshots/1627032197142fbe2a7cfec626f4ced3ae60d07a/open_clip_pytorch_model.bin\nINFO:root:Final image preprocessing configuration set: {'size': (224, 224), 'mode': 'RGB', 'mean': (0.5, 0.5, 0.5), 'std': (0.5, 0.5, 0.5), 'interpolation': 'bicubic', 'resize_mode': 'shortest', 'fill_color': 0}\nINFO:root:Model ViT-L-14 creation process complete.\nINFO:root:Parsing tokenizer identifier. Schema: None, Identifier: ViT-L-14\nINFO:root:Attempting to load config from built-in: ViT-L-14\nINFO:root:Using default SimpleTokenizer.\nINFO:httpx:HTTP Request: POST http://testserver/api/agent/query \"HTTP/1.1 200 OK\"\nINFO:httpx:HTTP Request: POST http://testserver/api/agent/query \"HTTP/1.1 200 OK\"\nINFO:httpx:HTTP Request: POST http://testserver/api/agent/query \"HTTP/1.1 200 OK\"\nINFO:httpx:HTTP Request: POST http://testserver/api/agent/report \"HTTP/1.1 200 OK\"\nINFO:httpx:HTTP Request: GET http://testserver/api/agent/health \"HTTP/1.1 200 OK\"\n"
+    }
+  ]
+}

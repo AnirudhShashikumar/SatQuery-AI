@@ -1,0 +1,65 @@
+{
+  "benchmark_started_monotonic": 0.536874625,
+  "benchmark_wall_clock_seconds": 316.067,
+  "checkpoint_every": 25,
+  "command": "venv/bin/python scripts/run_rsvqa_full.py --manifest /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_full_specialist_v1/rsvqa_lr_test_manifest.jsonl --image-root /Users/anirudhshashikumar/Desktop/RSVQA/images/Images_LR --endpoint http://127.0.0.1:8010/api/analysis/image --output-dir /Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_full_specialist_v1 --timeout 120 --checkpoint-every 25 --max-retries 3",
+  "completed_at": "2026-08-29T14:57:00.806969+00:00",
+  "endpoint": "http://127.0.0.1:8010/api/analysis/image",
+  "endpoint_errors": 0,
+  "exact_correct": 7108,
+  "expected_official_records": 10004,
+  "expected_records": 10004,
+  "image_root": "/Users/anirudhshashikumar/Desktop/RSVQA/images/Images_LR",
+  "manifest": "/Users/anirudhshashikumar/Documents/Projects/SatQuery AI/sar-colorization-app/artifacts/rsvqa_full_specialist_v1/rsvqa_lr_test_manifest.jsonl",
+  "manifest_sha256": "bf2c4e8154db156cb6530811dc1a46e0d4b3976420ea9b62ffa732cf2a7654d0",
+  "max_retries": 3,
+  "overflow_correct": 7434,
+  "processed_records": 10004,
+  "resume": false,
+  "started_at": "2026-08-29T14:49:19.629023+00:00",
+  "status": "complete",
+  "successful_responses": 10004,
+  "updated_at": "2026-08-29T14:54:35.840073+00:00",
+  "validation_gates": {
+    "all_model_used_present": true,
+    "duplicate_question_ids": 0,
+    "expected_questions": true,
+    "ground_truth_sent_to_endpoint": false,
+    "missing_question_ids": 0,
+    "official_manifest_questions": 10004,
+    "preprocessing": "smoke benchmark first-three-band per-band 2nd-98th percentile stretch",
+    "processed_records": true,
+    "question_type_sent_to_model": false,
+    "task_family_counts_match": true
+  },
+  "warmups": [
+    {
+      "attempts": 1,
+      "elapsed_ms": 224,
+      "model_used": "RSVQA Specialist v1",
+      "question_id": "23209",
+      "task": "presence"
+    },
+    {
+      "attempts": 1,
+      "elapsed_ms": 31,
+      "model_used": "RSVQA Specialist v1",
+      "question_id": "23213",
+      "task": "comp"
+    },
+    {
+      "attempts": 1,
+      "elapsed_ms": 31,
+      "model_used": "RSVQA Specialist v1",
+      "question_id": "23210",
+      "task": "count"
+    },
+    {
+      "attempts": 1,
+      "elapsed_ms": 30,
+      "model_used": "RSVQA Specialist v1",
+      "question_id": "23208",
+      "task": "rural_urban"
+    }
+  ]
+}
