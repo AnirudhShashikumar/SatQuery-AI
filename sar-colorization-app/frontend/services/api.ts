@@ -1,7 +1,12 @@
 import type { BenchmarkData, Health, ImageAnalysisResult, Pix2PixResult, ProviderId, ProviderModels, ProviderSettings, ProviderTestResult, SARFusionResult } from "@/types/api";
 import type { AgentHealth, AgentImageQueryRequest, AgentQueryRequest, AgentResponse, AnalyticsResponse, ChangeAnalysisRequest, ChangeAnalysisResponse, ComparisonAssessment, ComparisonItem, ComparisonItemSummary, ComparisonReportResponse, ComplianceResponse, CrossModalAnalysisRequest, CrossModalAnalysisResponse, DemoManifest, ImageInspectionResponse, ReportFormat, ReportResponse, ToolDefinition } from "@/types/agent";
 
-const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8010").replace(/\/$/, "");
+const API_URL = "";
+
+function sameOriginUrl(path: string) {
+  if (/^https?:\/\//i.test(path)) return path;
+  return path.startsWith("/") ? path : `/${path}`;
+}
 
 export class ApiRequestError extends Error {
   constructor(message: string, public readonly code: string, public readonly status: number) { super(message); this.name = "ApiRequestError"; }
@@ -105,7 +110,7 @@ export async function generateComparisonReport(requestIds: string[], userNote: s
   return response.json() as Promise<ComparisonReportResponse>;
 }
 
-export const agentArtifactUrl = (path: string) => new URL(path, `${API_URL}/`).toString();
+export const agentArtifactUrl = sameOriginUrl;
 
 export async function getAgentTools() {
   const response = await fetch(`${API_URL}/api/agent/tools`, { cache: "no-store" });
@@ -168,7 +173,7 @@ export async function runCrossModalAnalysis(input: CrossModalAnalysisRequest) {
 }
 
 export function agentPreviewUrl(path?: string | null) {
-  return path ? new URL(path, `${API_URL}/`).toString() : undefined;
+  return path ? sameOriginUrl(path) : undefined;
 }
 
 export function runPix2Pix(file: File, groundTruth?: File) {

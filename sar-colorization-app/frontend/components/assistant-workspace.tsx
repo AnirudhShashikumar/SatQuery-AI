@@ -490,7 +490,8 @@ export function AssistantWorkspace() {
   const sarDetected = secondaryInspection?.metadata.auto_detected_modality ?? "unknown";
   const opticalCompatible = ["optical_rgb", "optical_grayscale", "panchromatic", "multispectral"].includes(opticalDetected);
   const sarCompatible = ["sar_preview", "sar_vv", "sar_vh", "sar_vv_vh"].includes(sarDetected);
-  const modalityValid = mode !== "cross_modal" || (opticalCompatible && sarCompatible);
+  const inspectionsAvailable = Boolean(primaryInspection && secondaryInspection);
+  const modalityValid = mode !== "cross_modal" || !inspectionsAvailable || (opticalCompatible && sarCompatible);
   const reversedPair = opticalDetected.startsWith("sar_") && ["optical_rgb", "optical_grayscale", "panchromatic", "multispectral"].includes(sarDetected);
   const datesValid = mode !== "bi_temporal" || Boolean(primaryDate && secondaryDate && primaryDate < secondaryDate);
   const pairIncompatible = result?.pair_compatibility?.compatible === false || changeResult?.compatibility.compatible === false;
